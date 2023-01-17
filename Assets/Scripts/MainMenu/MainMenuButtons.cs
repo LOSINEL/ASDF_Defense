@@ -7,6 +7,5 @@ public class MainMenuButtons : MonoBehaviour
 {
     public void SelectGameStartButton()
     {
-
     }
 }
