@@ -7,5 +7,6 @@ public class MainMenuButtons : MonoBehaviour
 {
     public void SelectGameStartButton()
     {
+        SceneManager.LoadScene("Lobby");
     }
 }
