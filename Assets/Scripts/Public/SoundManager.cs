@@ -22,7 +22,8 @@ public class SoundManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
-        }else
+        }
+        else
         {
             Destroy(this.gameObject);
         }
@@ -53,5 +54,15 @@ public class SoundManager : MonoBehaviour
     public void ResumeBGM()
     {
         bgmPlayer.UnPause();
+    }
+
+    public void SetBgmVolume(float _volume)
+    {
+        bgmPlayer.volume = _volume;
+    }
+
+    public void SetSfxVolume(float _volume)
+    {
+        sfxPlayer.volume = _volume;
     }
 }
