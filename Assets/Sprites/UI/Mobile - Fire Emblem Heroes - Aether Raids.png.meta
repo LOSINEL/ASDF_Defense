@@ -1,0 +1,927 @@
+fileFormatVersion: 2
+guid: 14d25fb158195ab4b9a37a14a94dd07f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1572
+        width: 975
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298c620ecc4fc124a937465373291ff6
+      internalID: 361000019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1341
+        width: 68
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d285edd941a6240813a5706d7a5ec1
+      internalID: -1102579934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1379
+        width: 65
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fcdbf20a2df214bb86025e3b5df93f
+      internalID: 805918495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1383
+        width: 129
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab47a4061d655f438429776f76d7237
+      internalID: -1363563232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_4
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1424
+        width: 137
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3cd071d703ecf4a9476f204a0e9b8e
+      internalID: -1384506074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_5
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1425
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641c5bbf73a060142970f17b9c43b512
+      internalID: -1744505278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_6
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1436
+        width: 454
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b74952e42c5cf4ca3a5958f103a3be
+      internalID: 1922715747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_7
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1516
+        width: 524
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e61383c04631744a8dc383cb831a2fc
+      internalID: 1290894205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_8
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1397
+        width: 376
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276fb568b24ab2c4b835151d498bd851
+      internalID: 1308983226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_9
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1314
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b0da773a873584d83b5d7071709c07
+      internalID: -1214587058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_10
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1276
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563294d6258b1054da935387dfc47ae7
+      internalID: 1797840847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_11
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 1373
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e66466ca3f8fd4c802e5bb65b0f806
+      internalID: -530358106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_12
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1309
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f8527957371ca4b9ff9ca759684c8f
+      internalID: 1213297994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_13
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1318
+        width: 109
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2235f140db1e709499125243e2cf93bd
+      internalID: 913527668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_14
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1316
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5278a9728586ee74298cf0ba0ae274a6
+      internalID: 77944235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_15
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1321
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c11a41d26ecf2246bbaac69376fff10
+      internalID: 818126437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_16
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1276
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde4f1ab65b27a84f9530e8fdef3f1af
+      internalID: -895943509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_17
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1276
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47dd12c19b1d63478c3ec9b89122f39
+      internalID: 897274510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_18
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1280
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8252f61cfc064f148a7133619025605a
+      internalID: 1082813726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_19
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1334
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd894b162711644dab633b888f7314f
+      internalID: -401122059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_20
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1331
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c484c7ad4c34f5449b60f97c1ce7db44
+      internalID: 905326540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_21
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 1325
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec4695ba64404f44bbd1c1260a91e16
+      internalID: 2146410288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_22
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1289
+        width: 64
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421e89f9daef55242982ea2d59fdefba
+      internalID: -242112034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_23
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1286
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6babdda382d296b4f8c73e3aea48a149
+      internalID: 1048048499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_24
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1280
+        width: 86
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d26986f16e46d49be7f814693ec081
+      internalID: -315141638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1277
+        width: 57
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d43402bee37c39428b9e488a570d9f6
+      internalID: -1051916671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_26
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1355
+        width: 340
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ae1dd3c73e99743b6d929b758ea149
+      internalID: 1104854358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_27
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1316
+        width: 340
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98262cde646ede34aa85f9343b184b44
+      internalID: -1984239190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_28
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1275
+        width: 340
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b9bf389778e374ea918baac2f75ecf
+      internalID: 1848643665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_29
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1095
+        width: 180
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659d9590ae610384baf0d0d55a856c9c
+      internalID: 788701542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_30
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 912
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7837eae074d08e049901940fb69d3bd2
+      internalID: -937050470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_31
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 736
+        width: 173
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395c5957fc69c6a4fa091fd6315f6fe8
+      internalID: 1267522968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_32
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 619
+        width: 1076
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2609873b7540d4eae31f7dc494f40d
+      internalID: -1944989529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_33
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 109
+        width: 862
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05740c20864a79418216c515e84b052
+      internalID: 1846576575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_34
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 144
+        width: 613
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2134df29b44c5b4987fd5178cb80c91
+      internalID: -2141632745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_35
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 0
+        width: 670
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5daac78077d719a43b192a7f10415fbf
+      internalID: -614118856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mobile - Fire Emblem Heroes - Aether Raids_6: 1922715747
+      Mobile - Fire Emblem Heroes - Aether Raids_26: 1104854358
+      Mobile - Fire Emblem Heroes - Aether Raids_35: -614118856
+      Mobile - Fire Emblem Heroes - Aether Raids_5: -1744505278
+      Mobile - Fire Emblem Heroes - Aether Raids_22: -242112034
+      Mobile - Fire Emblem Heroes - Aether Raids_27: -1984239190
+      Mobile - Fire Emblem Heroes - Aether Raids_8: 1308983226
+      Mobile - Fire Emblem Heroes - Aether Raids_31: 1267522968
+      Mobile - Fire Emblem Heroes - Aether Raids_24: -315141638
+      Mobile - Fire Emblem Heroes - Aether Raids_16: -895943509
+      Mobile - Fire Emblem Heroes - Aether Raids_33: 1846576575
+      Mobile - Fire Emblem Heroes - Aether Raids_9: -1214587058
+      Mobile - Fire Emblem Heroes - Aether Raids_14: 77944235
+      Mobile - Fire Emblem Heroes - Aether Raids_3: -1363563232
+      Mobile - Fire Emblem Heroes - Aether Raids_34: -2141632745
+      Mobile - Fire Emblem Heroes - Aether Raids_15: 818126437
+      Mobile - Fire Emblem Heroes - Aether Raids_25: -1051916671
+      Mobile - Fire Emblem Heroes - Aether Raids_19: -401122059
+      Mobile - Fire Emblem Heroes - Aether Raids_30: -937050470
+      Mobile - Fire Emblem Heroes - Aether Raids_32: -1944989529
+      Mobile - Fire Emblem Heroes - Aether Raids_4: -1384506074
+      Mobile - Fire Emblem Heroes - Aether Raids_10: 1797840847
+      Mobile - Fire Emblem Heroes - Aether Raids_13: 913527668
+      Mobile - Fire Emblem Heroes - Aether Raids_1: -1102579934
+      Mobile - Fire Emblem Heroes - Aether Raids_17: 897274510
+      Mobile - Fire Emblem Heroes - Aether Raids_23: 1048048499
+      Mobile - Fire Emblem Heroes - Aether Raids_12: 1213297994
+      Mobile - Fire Emblem Heroes - Aether Raids_2: 805918495
+      Mobile - Fire Emblem Heroes - Aether Raids_20: 905326540
+      Mobile - Fire Emblem Heroes - Aether Raids_7: 1290894205
+      Mobile - Fire Emblem Heroes - Aether Raids_28: 1848643665
+      Mobile - Fire Emblem Heroes - Aether Raids_18: 1082813726
+      Mobile - Fire Emblem Heroes - Aether Raids_21: 2146410288
+      Mobile - Fire Emblem Heroes - Aether Raids_0: 361000019
+      Mobile - Fire Emblem Heroes - Aether Raids_11: -530358106
+      Mobile - Fire Emblem Heroes - Aether Raids_29: 788701542
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

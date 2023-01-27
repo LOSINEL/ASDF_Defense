@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class MenuTabButtons : MonoBehaviour
 {
     [SerializeField] float menuTabMoveSpeed;
+    [SerializeField] GameObject worldMapWindow;
+    [SerializeField] GameObject inventoryWindow;
+    [SerializeField] GameObject castleWindow;
+    [SerializeField] GameObject missionWindow;
     RectTransform rectTransform;
 
     private void Start()
@@ -35,7 +39,7 @@ public class MenuTabButtons : MonoBehaviour
         _btn.interactable = false;
         while(true)
         {
-            if (rectTransform.anchoredPosition.x < 0f)
+            if (rectTransform.anchoredPosition.x - menuTabMoveSpeed * Time.deltaTime < 0f)
             {
                 basePos.x = 0f;
                 rectTransform.anchoredPosition = basePos;
@@ -54,7 +58,7 @@ public class MenuTabButtons : MonoBehaviour
         _btn.interactable = false;
         while (true)
         {
-            if (rectTransform.anchoredPosition.x > moveDistance)
+            if (rectTransform.anchoredPosition.x + menuTabMoveSpeed * Time.deltaTime > moveDistance)
             {
                 basePos.x = moveDistance;
                 rectTransform.anchoredPosition = basePos;
@@ -66,19 +70,23 @@ public class MenuTabButtons : MonoBehaviour
         }
     }
 
-    public void SelectDungeonButton()
+    public void SelectWorldMapButton()
     {
+        worldMapWindow.SetActive(true);
     }
 
     public void SelectInventoryButton()
     {
+        inventoryWindow.SetActive(true);
     }
 
     public void SelectCastleButton()
     {
+        castleWindow.SetActive(true);
     }
 
     public void SelectMissionButton()
     {
+        missionWindow.SetActive(true);
     }
 }
