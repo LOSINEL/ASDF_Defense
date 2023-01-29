@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,679 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Black Knight_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 513
+        width: 78
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91610ab4db747234eb0842cac99e53d2
+      internalID: 1002571762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 507
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c866d4bf32e5b7e4f9b913da08777ddf
+      internalID: -1949308228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 510
+        width: 83
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a784abb435a27540add79469002e2af
+      internalID: -685829938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_3
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 557
+        width: 90
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c07c54cf83dc92429f0f887a896fea0
+      internalID: 1956357922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 497
+        width: 77
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530814d64fab6c24abc686be3a5d1621
+      internalID: -895600164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_5
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 414
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714070d065af3ef41b387f28de43c2ff
+      internalID: 305964325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 410
+        width: 39
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723c3784ad672634389fc95ad7473b75
+      internalID: 1289005611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 415
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7ce8826130b1e4ead9ffef9d4978f2
+      internalID: -1665876145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_8
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 415
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2da1cedf471f8b46b2e4f0d7d36c9d9
+      internalID: 1701864021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_9
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 417
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda9f7f8ce4ef954486c4f4ece3ae247
+      internalID: -1246883877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 410
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce39327c389faf4499067377d18be752
+      internalID: -103848577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 422
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b60b76233707446bae37f3334e79cb
+      internalID: -1001736073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 409
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72345c2735d6ab048a4e52853d74c95d
+      internalID: -867643405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 336
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e163241af2a23e04eb2bac45dac2f0ee
+      internalID: 325933954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 336
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b086e6ae43cac4c8626f60231a580e
+      internalID: -43547397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_15
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 334
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b3873bfaf985d4aac5e1da2ece44d2
+      internalID: -2031116336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_16
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 335
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75630a8b51026ac439a7812250f683a8
+      internalID: 1762959220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_17
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 326
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32991a238eec2ba49b73701f732af800
+      internalID: -1327366363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_18
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 326
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574aebb6609425d4085001cb2fb7c3be
+      internalID: -1781394947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_19
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 324
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2182a07a9724fa49a182c16e855b637
+      internalID: -1409185016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_20
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 320
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64eee27ff2b46474ea18d04c90ba8e8e
+      internalID: -1944564562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_21
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 262
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7bc73af7a66c94ebedaed369899638
+      internalID: -414641358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_22
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 263
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81cb9af1704fd0745beb7cec454a53fd
+      internalID: 1346474266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_23
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 269
+        width: 54
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1816047e9c82b4e919a37f9026ad6e
+      internalID: -1887758551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_24
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 249
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bb64fadcda4874b93838c4b911d359
+      internalID: -1151328413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_25
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 249
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e478eacfa10b3614fbfdccfc3957e934
+      internalID: -452762764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_26
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 144
+        width: 158
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e4251cff4b76c4f930344c89a9e55b
+      internalID: 1432228012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_27
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 150
+        width: 149
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93331567007380d43b0798f7a8be2a7a
+      internalID: -1631730592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_28
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 153
+        width: 156
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abafd1d0e3e0eda458bce8fbc3fde77e
+      internalID: 1819292473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 161
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127d86520711f474a9f959a24cdc4b8e
+      internalID: 1902810371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_30
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 23
+        width: 167
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdab0ecf33824d41ae730c1cea2daf0
+      internalID: -403086272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Knight_31
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 21
+        width: 173
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abb34f989820cd43861acc65e2852c3
+      internalID: -432935819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +798,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Black Knight_27: 1432228012
+      Black Knight_5: 305964325
+      Black Knight_13: 325933954
+      Black Knight_14: -43547397
+      Black Knight_6: 1289005611
+      Black Knight_3: 1956357922
+      Black Knight_10: -103848577
+      Black Knight_23: -1887758551
+      Black Knight_20: -1944564562
+      Black Knight_28: -1631730592
+      Black Knight_8: 1701864021
+      Black Knight_12: -867643405
+      Black Knight_29: 1819292473
+      Black Knight_30: 1902810371
+      Black Knight_16: 1762959220
+      Black Knight_22: 1346474266
+      Black Knight_2: -685829938
+      Black Knight_11: -1001736073
+      Black Knight_17: -1327366363
+      Black Knight_18: -1781394947
+      Black Knight_15: -2031116336
+      Black Knight_26: -723454055
+      Black Knight_7: -1665876145
+      Black Knight_9: -1246883877
+      Black Knight_19: -1409185016
+      Black Knight_1: -1949308228
+      Black Knight_0: 1002571762
+      Black Knight_4: -895600164
+      Black Knight_21: -414641358
+      Black Knight_24: -1151328413
+      Black Knight_25: -452762764
+      Black Knight_31: -403086272
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,910 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Etie_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 407
+        width: 84
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b730a22168d3f0c438c28b1b69741c73
+      internalID: -799967432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 406
+        width: 87
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84eba3fae9465b4f836a2d8d1dc18ec
+      internalID: 1721787221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 404
+        width: 81
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54c71f6d8c9a454ca8ba9a6de0259ce
+      internalID: 752618767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_3
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 450
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7387949b8f7fc341b7eb5b422f4c59f
+      internalID: 377340983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_4
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 383
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb53f96cd0c9dad4f96933e480a1ed1c
+      internalID: 1921064184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_5
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 309
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e631c7ed65840479569456d7e85553
+      internalID: 1215746763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 314
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a1c176efeab4c409a8361dd00bf891
+      internalID: -931397629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_7
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 308
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c6f79dc02a5d74e873ea12ba20becf
+      internalID: 671716084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_8
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 316
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d438a717a74c3419e69fd93e2194f2
+      internalID: 579117888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_9
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 304
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7362288b35371ef459a36e97b56f7a9d
+      internalID: 2044696850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 317
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2d248cbbce7434e825fd9f6d225da2
+      internalID: 1528985965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_11
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 304
+        width: 45
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dd7de0e5a87b14a8732e52a910adef
+      internalID: -1596582113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_12
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 315
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d1c3f35c42ccc46be4e1253da7e10e
+      internalID: 2131386925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_13
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 237
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f51a3127c2ea040a3b862ddcb580bb
+      internalID: 532652564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_14
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 239
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6370f965f3b1acc43a3a60e05e6e5741
+      internalID: 396982579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_15
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 235
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613ac4a2120032e41bbae274ab7f1e78
+      internalID: -1860498528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_16
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 234
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868f71f41697e624182addd8fec586ee
+      internalID: -111246101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_17
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 220
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59201d7eab268c3438008c66edb99bbf
+      internalID: 1340260706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_18
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 240
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f4f8a9bf6f8c541950ba67a76580d9
+      internalID: -1102309656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 233
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92591d6bcde38874997a9efbc74d6d7c
+      internalID: -711328064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d26a72098344247b4992be1eb8e8ff
+      internalID: -412592700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_21
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 191
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea985372f07cd341bdb8b799cbe8f70
+      internalID: 1763480033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_22
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 187
+        width: 58
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5a552c16ff68d4a9cef08bfc328c3d
+      internalID: 634502379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_23
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 187
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affb7d14eb7569f439e572529f29c3e1
+      internalID: -1716889926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_24
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 188
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72743f481e2d9fa4abdaa4d759762e5a
+      internalID: -255501091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_25
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 205
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07875a885e44da4984bd5d977ffb78c
+      internalID: 1138803428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_26
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 185
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5289f5246940835478087b489433a802
+      internalID: -95733163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_27
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 200
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed645f0ed9c17374f9b16393dd28755e
+      internalID: 2096956637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38633fc798626ca4499cfaf2142ca820
+      internalID: -1034450661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 133
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c806eb0132c704f820e23d597d0ccd
+      internalID: -307863621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 138
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a817449e8af3b4fa9982bcb10eb169
+      internalID: -1320686934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_31
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 136
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fafc3b7f68af1548b1a897e47ae7865
+      internalID: 1687990243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_32
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 130
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e88a0424049cac4f9f9d7756fec7c05
+      internalID: 8812334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_33
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 129
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32f79efdeeedee41ba99df782232b99
+      internalID: -2031480157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_34
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 131
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2916939d53c4743a4220671bc0b282
+      internalID: -1599288026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 34
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c367616f9bfd25443a5fe0c767aeea1d
+      internalID: 1558735516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_36
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 66
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d047aa6c6946b42b76aab1fcdc7fe2
+      internalID: -665835580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_37
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 69
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b570627d77be45c45883a0a4cf8bf1e2
+      internalID: 434427157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_38
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 74
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac911a7152694c4ab83affcfae6349b
+      internalID: 526671235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_39
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 75
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fecbd3e4463ed43aa311c743b7af28
+      internalID: 2107669670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_40
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 133
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5448217ef4364ba448949eb4947d15a4
+      internalID: -1002402173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_41
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 131
+        width: 78
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee41b32c87d92c24f9ab88db9536e3c2
+      internalID: -1040886100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etie_42
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 24
+        width: 77
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f20136382e67a444aa0c9c26f7558e8
+      internalID: -46663439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +1029,50 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Etie_39: 2107669670
+      Etie_7: 671716084
+      Etie_31: 1687990243
+      Etie_15: -1860498528
+      Etie_18: -1102309656
+      Etie_26: -95733163
+      Etie_28: -1034450661
+      Etie_4: 1921064184
+      Etie_25: 1138803428
+      Etie_32: 8812334
+      Etie_8: 579117888
+      Etie_17: 1340260706
+      Etie_0: -799967432
+      Etie_34: -1599288026
+      Etie_41: -1040886100
+      Etie_19: -711328064
+      Etie_14: 396982579
+      Etie_35: 1558735516
+      Etie_13: 532652564
+      Etie_21: 1763480033
+      Etie_3: 377340983
+      Etie_12: 2131386925
+      Etie_16: -111246101
+      Etie_20: -412592700
+      Etie_30: -1320686934
+      Etie_1: 1721787221
+      Etie_2: 752618767
+      Etie_9: 2044696850
+      Etie_11: -1596582113
+      Etie_24: -255501091
+      Etie_10: 1528985965
+      Etie_23: -1716889926
+      Etie_29: -307863621
+      Etie_22: 634502379
+      Etie_40: -1002402173
+      Etie_37: 434427157
+      Etie_27: 2096956637
+      Etie_6: -931397629
+      Etie_36: -665835580
+      Etie_5: 1215746763
+      Etie_38: 526671235
+      Etie_42: -46663439
+      Etie_33: -2031480157
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

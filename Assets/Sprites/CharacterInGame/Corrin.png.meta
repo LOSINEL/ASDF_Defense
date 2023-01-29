@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,826 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Corrin_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 565
+        width: 104
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c04302dfba81a4eb9a64ec85b1f937
+      internalID: 2114675887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 566
+        width: 105
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b8a4dca0022e142897129e16e171d2
+      internalID: 1716686487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 561
+        width: 106
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaec400169748974cb855eab46c965e2
+      internalID: 1743383388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_3
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 611
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ab8a062fad96f41a46b5f44e5b92fc
+      internalID: 510280221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_4
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 560
+        width: 56
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c72e8b5b06b770469e6a2df970af6cc
+      internalID: -195694783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 456
+        width: 44
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec68dc9e9adcbfc4eb9af6c70ec3901f
+      internalID: -1372215831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 473
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a23843a14a9c04496036047cecc3c2
+      internalID: 1943004764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 463
+        width: 36
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8266f9c4f5334d84b8566c5216792a27
+      internalID: -1639139455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_8
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 485
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fadd346c52d1bc408220fc213042647
+      internalID: 54148151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_9
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 472
+        width: 43
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea93dd8b69c49c45b5faaa545e6f596
+      internalID: 163010723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_10
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 481
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a319399267ed1545b487ca1ce321a27
+      internalID: 1055986949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_11
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 474
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fee3ae1cbe79f47842bbd31849a60c
+      internalID: -2034433547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_12
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 477
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c640c25fb0455224da3d8115967bc643
+      internalID: -813861497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_13
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 399
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdd5188489cd8f42ae0bf463fc4db8d
+      internalID: -1734962407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_14
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 401
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6fefe46d432c84f8cd7699bb228063
+      internalID: -1224369147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 400
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d0da3fc5859b74faff70eeb1378ae2
+      internalID: 1945722857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_16
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 403
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f4afc936ee15a4b9315c8ab7fdc630
+      internalID: -2139049713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_17
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 356
+        width: 104
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31db606b64113d940ab16f93ce4122dc
+      internalID: 1507548629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 357
+        width: 104
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42255413ba4bca24eba42d837a374a1a
+      internalID: 1992341966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_19
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 357
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b8ac70802799f429701dbaa981b805
+      internalID: 322099085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_20
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 357
+        width: 40
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3959b4c6343c55458190e41c3a8a26d
+      internalID: 1250463432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_21
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 353
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e567ee7b66d1434a935c5566629f841
+      internalID: -1257270531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_22
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 356
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bdc83c6e5ae2443930d9d44c7669e2
+      internalID: -813214779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_23
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 356
+        width: 45
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ad7202357e68d41ae6d3f48ad782ef
+      internalID: -1083457043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_24
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 359
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca2ddbee07c4144fb15d6df1e4d1bb2
+      internalID: 2141894049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 261
+        width: 76
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1cbcf2998556a4ab9745b7d4cb10f7
+      internalID: 395991264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_26
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 261
+        width: 65
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204e073244183d346aed27adf905837b
+      internalID: 14516607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_27
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 287
+        width: 64
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415ed7044a2e51d4aa3a9a694cfca4a2
+      internalID: 1576238278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_29
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 215
+        width: 75
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3432309e245deb42981dc1a4c78d2ad
+      internalID: 628210823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_31
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 291
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b34086a148827f449941601f6c0275d
+      internalID: -673567017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_32
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 299
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf92f6141d64ad74596980118b4bb67d
+      internalID: -610931041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_33
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 217
+        width: 50
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdb7ee548a197b45a474ef5c424750d
+      internalID: -1129284898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_34
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 216
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087d022f898196248a89a0ab9ac0000e
+      internalID: -1467640327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_35
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 99
+        width: 132
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b452aa46525aae42ba385d5098e47ba
+      internalID: -187779550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_36
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 108
+        width: 134
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b6171146c1f9c43b6f0d9c70c88bd1
+      internalID: 158034266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_37
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 115
+        width: 136
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb1d393038eb934b866cc2ab15270d4
+      internalID: 1867775407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_38
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 17
+        width: 140
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725b772b110291145abcc748727c8c9e
+      internalID: 100730300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_39
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 17
+        width: 154
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2c0f799e90aea40a5407718a2a6ba2
+      internalID: -1509389831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrin_40
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 21
+        width: 144
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4d7df1b2cddc2488002fd3e02d4680
+      internalID: 1289049793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +945,48 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Corrin_38: 100730300
+      Corrin_0: 2114675887
+      Corrin_35: -187779550
+      Corrin_17: 1507548629
+      Corrin_5: -1372215831
+      Corrin_10: 1055986949
+      Corrin_32: -610931041
+      Corrin_40: 1289049793
+      Corrin_37: 1867775407
+      Corrin_30: 584467710
+      Corrin_7: -1639139455
+      Corrin_1: 1716686487
+      Corrin_11: -2034433547
+      Corrin_14: -1224369147
+      Corrin_22: -813214779
+      Corrin_27: 1576238278
+      Corrin_4: -195694783
+      Corrin_16: -2139049713
+      Corrin_26: 14516607
+      Corrin_28: -1616768308
+      Corrin_19: 322099085
+      Corrin_15: 1945722857
+      Corrin_33: -1129284898
+      Corrin_25: 395991264
+      Corrin_36: 158034266
+      Corrin_39: -1509389831
+      Corrin_9: 163010723
+      Corrin_20: 1250463432
+      Corrin_2: 1743383388
+      Corrin_12: -813861497
+      Corrin_18: 1992341966
+      Corrin_8: 54148151
+      Corrin_31: -673567017
+      Corrin_24: 2141894049
+      Corrin_29: 628210823
+      Corrin_3: 510280221
+      Corrin_23: -1083457043
+      Corrin_6: 1943004764
+      Corrin_13: -1734962407
+      Corrin_21: -1257270531
+      Corrin_34: -1467640327
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

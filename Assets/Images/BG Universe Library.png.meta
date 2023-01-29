@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74d11f2a7ebccf84b9fb0d89c0f97dab
+guid: 4e04de5ca61778442ad6dc0e2611ce09
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sophia_0
+      name: BG Universe Library_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 51
-        height: 64
+        y: 450
+        width: 1024
+        height: 450
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8efa2c299dca3543a19d5a1a2fe3196
-      internalID: -2053840077
+      spriteID: 2beaefcbdcf313d47a60f6c5cfacb48c
+      internalID: -287748368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sophia_1
+      name: BG Universe Library_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 0
-        width: 60
-        height: 64
+        x: 1024
+        y: 450
+        width: 1024
+        height: 450
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b09615da75f16546bf7c136afa6e074
-      internalID: -2101371083
+      spriteID: d3ccd68334c1d5b4c8f71bf7f95d5e9e
+      internalID: -983695975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Universe Library_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333a0d827fc43bb49adbe4b2b2f5a759
+      internalID: 1127422110
       vertices: []
       indices: 
       edges: []
@@ -169,8 +190,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sophia_0: -2053840077
-      Sophia_1: -2101371083
+      BG Universe Library_0: -287748368
+      BG Universe Library_2: -1777846194
+      BG Universe Library_1: -983695975
+      BG Universe Library_3: 1127422110
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

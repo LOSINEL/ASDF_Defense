@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,658 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Navarre_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 414
+        width: 74
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18883bbdb705a349a40d0cfa78ae359
+      internalID: 1932221278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 416
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fb064d2d89c5e4babe7890b462d49a
+      internalID: 2064672511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_2
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 415
+        width: 73
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ca1fa138dfe8b4f9ea5ac068626396
+      internalID: -2034194424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_3
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 460
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c15d73c3f509143912d6b3309e6223
+      internalID: 525027183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_4
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 402
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8296e216649ad545bce0307758ff006
+      internalID: 1061317651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_5
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 317
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17a7e51cd9b24e40b5af93b9dad2938
+      internalID: 1509360663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 313
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2798db6e8bf381499d370fe9451c452
+      internalID: 81069677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_7
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 318
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882aa0db31c09094cb35c97e50ae0d62
+      internalID: 734806818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_8
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 310
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30ec61a3b0848541819317724f33b94
+      internalID: -1287369905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_9
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 324
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fef42c3473f1f042a796fd2775b3231
+      internalID: -674822716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_10
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 308
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492337f5ad11a8348bc36b7067b84412
+      internalID: -1957750512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_11
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 320
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d3c8f57de3e5e4badb5e058091d115
+      internalID: 969087991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_12
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 304
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413c8b39b2b7ecf49bafcc9f79b6cfe8
+      internalID: -1213873915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 238
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7ba6c938470d04eade86bc3ee7aba3
+      internalID: 591550287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_14
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 242
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fdfce4b6d6c8847a579cbf772d45ff
+      internalID: -869819313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 243
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c02ddb001d693a4f97b08ec718b7af9
+      internalID: 765284364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_16
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 243
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24dfb3c959a330a4f8656677e12923d3
+      internalID: 534253314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_17
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 170
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f5f063a4fa8fa41adc669d8693a6b7
+      internalID: -1346940644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_18
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 111
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5c376fff2e55d40960c6217614ac20
+      internalID: -1738104257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 120
+        width: 27
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b9c58656dce5c47a85d4eb92cbda52
+      internalID: -1348971290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_20
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 163
+        width: 17
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a208687791d804b989aaacaa8425a0
+      internalID: 2110439164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_21
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 98
+        width: 72
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a418edde86fde724b833365c06fbd97d
+      internalID: -1610810123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_22
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 159
+        width: 82
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad20f66150b28f44b6afa35183f1fd4
+      internalID: 1256555422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_23
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 157
+        width: 78
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839305e201c59ab4ca1261a65a0ca770
+      internalID: -573826031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 22
+        width: 38
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5beb3ef7dbde6864f835abf0aaccd45b
+      internalID: -1045093411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_25
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 61
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453f9a099e9c5714bb0107ba3dc9b877
+      internalID: -1743663207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_26
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 15
+        width: 44
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10e0ed914c0e334ca3d2d497e55649f
+      internalID: -2020525960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_27
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 28
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ddf532111f35245baa558a5ba1cf64
+      internalID: 1771346234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_28
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 29
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fa1ab8317b0b74295d6d0b556c955f
+      internalID: 365738644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_29
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 27
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1b82e7634eb0b4085f95c1c51f213e
+      internalID: 1929798841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Navarre_30
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 27
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67af7c5d592eba4ca6cd443893b77b2
+      internalID: -879404513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +777,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Navarre_11: 969087991
+      Navarre_13: 591550287
+      Navarre_12: -1213873915
+      Navarre_10: -1957750512
+      Navarre_24: -1045093411
+      Navarre_6: 81069677
+      Navarre_14: -869819313
+      Navarre_21: -1610810123
+      Navarre_1: 2064672511
+      Navarre_30: -879404513
+      Navarre_27: 1771346234
+      Navarre_22: 1256555422
+      Navarre_3: 525027183
+      Navarre_16: 534253314
+      Navarre_17: -1346940644
+      Navarre_4: 1061317651
+      Navarre_0: 1932221278
+      Navarre_26: -2020525960
+      Navarre_20: 2110439164
+      Navarre_29: 1929798841
+      Navarre_15: 765284364
+      Navarre_8: -1287369905
+      Navarre_23: -573826031
+      Navarre_9: -674822716
+      Navarre_25: -1743663207
+      Navarre_18: -1738104257
+      Navarre_2: -2034194424
+      Navarre_5: 1509360663
+      Navarre_28: 365738644
+      Navarre_19: -1348971290
+      Navarre_7: 734806818
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
