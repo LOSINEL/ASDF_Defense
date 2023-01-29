@@ -818,7 +818,7 @@ TextureImporter:
         width: 862
         height: 173
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -839,7 +839,7 @@ TextureImporter:
         width: 613
         height: 134
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -860,7 +860,7 @@ TextureImporter:
         width: 670
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -868,6 +868,69 @@ TextureImporter:
       bones: []
       spriteID: 5daac78077d719a43b192a7f10415fbf
       internalID: -614118856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_36
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 313
+        width: 162
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f44675bbfbd0b4780ff9abd013fc9f
+      internalID: 425338693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_37
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 313
+        width: 162
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2122bf51118dec14f8d60cf59bfff200
+      internalID: -177567671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Fire Emblem Heroes - Aether Raids_38
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 313
+        width: 162
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6525f5423a875ce4881b132cde81b904
+      internalID: -1256945936
       vertices: []
       indices: 
       edges: []
@@ -894,6 +957,7 @@ TextureImporter:
       Mobile - Fire Emblem Heroes - Aether Raids_24: -315141638
       Mobile - Fire Emblem Heroes - Aether Raids_16: -895943509
       Mobile - Fire Emblem Heroes - Aether Raids_33: 1846576575
+      Mobile - Fire Emblem Heroes - Aether Raids_36: 425338693
       Mobile - Fire Emblem Heroes - Aether Raids_9: -1214587058
       Mobile - Fire Emblem Heroes - Aether Raids_14: 77944235
       Mobile - Fire Emblem Heroes - Aether Raids_3: -1363563232
@@ -901,7 +965,9 @@ TextureImporter:
       Mobile - Fire Emblem Heroes - Aether Raids_15: 818126437
       Mobile - Fire Emblem Heroes - Aether Raids_25: -1051916671
       Mobile - Fire Emblem Heroes - Aether Raids_19: -401122059
+      Mobile - Fire Emblem Heroes - Aether Raids_37: -177567671
       Mobile - Fire Emblem Heroes - Aether Raids_30: -937050470
+      Mobile - Fire Emblem Heroes - Aether Raids_38: -1256945936
       Mobile - Fire Emblem Heroes - Aether Raids_32: -1944989529
       Mobile - Fire Emblem Heroes - Aether Raids_4: -1384506074
       Mobile - Fire Emblem Heroes - Aether Raids_10: 1797840847
