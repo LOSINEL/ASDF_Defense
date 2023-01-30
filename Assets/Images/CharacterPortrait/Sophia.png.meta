@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,7 +125,7 @@ TextureImporter:
         width: 1612
         height: 1947
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,27 +133,6 @@ TextureImporter:
       bones: []
       spriteID: d18a086f9539e1940b4fd1eaca71376d
       internalID: -1412485636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sophia_1
-      rect:
-        serializedVersion: 2
-        x: 1617
-        y: 2384
-        width: 1781
-        height: 1924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2d083c4fc8cc9e4e83b591e74e1828b
-      internalID: -1888981807
       vertices: []
       indices: 
       edges: []
@@ -167,7 +146,7 @@ TextureImporter:
         width: 1613
         height: 1718
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,7 +167,7 @@ TextureImporter:
         width: 1699
         height: 1886
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +188,7 @@ TextureImporter:
         width: 416
         height: 316
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,27 +196,6 @@ TextureImporter:
       bones: []
       spriteID: 365fbda2868c055419c3a30a9d2cb2db
       internalID: 498843475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sophia_5
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 41
-        width: 405
-        height: 317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07cabf831e78bd74783886791dc53c9c
-      internalID: 1657119875
       vertices: []
       indices: 
       edges: []
@@ -251,7 +209,7 @@ TextureImporter:
         width: 156
         height: 164
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

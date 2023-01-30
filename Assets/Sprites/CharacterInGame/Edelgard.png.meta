@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -989,7 +989,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Edelgard_0: -1885623875
-      Edelgard_37: -1909580453
       Edelgard_20: 1366218465
       Edelgard_12: -2027567282
       Edelgard_23: 1486929202
@@ -999,7 +998,6 @@ TextureImporter:
       Edelgard_15: -1151835803
       Edelgard_18: -545914081
       Edelgard_38: -1576733043
-      Edelgard_40: -344525763
       Edelgard_22: 1386400011
       Edelgard_25: -112910010
       Edelgard_11: -1889321511
@@ -1011,15 +1009,17 @@ TextureImporter:
       Edelgard_1: 1892169868
       Edelgard_6: -1358242143
       Edelgard_10: -1200906096
-      Edelgard_8: 779178571
+      Edelgard_37: -1909580453
       Edelgard_16: 1982889611
+      Edelgard_8: 779178571
       Edelgard_2: -40075489
       Edelgard_21: 835653878
       Edelgard_17: 1233349607
       Edelgard_7: 747889006
       Edelgard_9: 1585149486
-      Edelgard_34: -238821973
+      Edelgard_40: -344525763
       Edelgard_24: -747626966
+      Edelgard_34: -238821973
       Edelgard_3: -1951013845
       Edelgard_4: 605979274
       Edelgard_31: 978100181

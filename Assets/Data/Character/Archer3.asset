@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
+  m_Name: Archer3
+  m_EditorClassIdentifier: 
+  portraits:
+  - {fileID: 697638021, guid: 2e1cac133f07ec642970d6320be8e43c, type: 3}
+  - {fileID: -19454901, guid: 2e1cac133f07ec642970d6320be8e43c, type: 3}
+  - {fileID: -739439838, guid: 2e1cac133f07ec642970d6320be8e43c, type: 3}
+  - {fileID: -747431623, guid: 2e1cac133f07ec642970d6320be8e43c, type: 3}
+  - {fileID: -925002070, guid: 2e1cac133f07ec642970d6320be8e43c, type: 3}
+  moveSpeed: 0
+  attackSpeed: 0
+  damage: 0
+  maxHp: 0
+  summonCost: 200

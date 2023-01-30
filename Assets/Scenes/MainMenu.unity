@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3000
-  startPos: {x: 0, y: 1800}
+  startPos: {x: 0, y: 1500}
 --- !u!1 &111815128
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +721,7 @@ GameObject:
   - component: {fileID: 314162185}
   - component: {fileID: 314162187}
   - component: {fileID: 314162186}
+  - component: {fileID: 314162188}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -738,7 +739,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1545688316}
   m_RootOrder: 0
@@ -845,6 +846,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314162184}
   m_CullTransparentMesh: 1
+--- !u!114 &314162188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314162184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5f858762988964baddae7ca881e826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSize: 0.95
+  maxSize: 1.05
+  scaleSpeed: 0.25
 --- !u!1 &321146331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4056,7 +4072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3000
-  startPos: {x: 0, y: 2400}
+  startPos: {x: 0, y: 1800}
 --- !u!1 &1359998440
 GameObject:
   m_ObjectHideFlags: 0
@@ -4324,7 +4340,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 314162185}
   m_Father: {fileID: 1051566581}

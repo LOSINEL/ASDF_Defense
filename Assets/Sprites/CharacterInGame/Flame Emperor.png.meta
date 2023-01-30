@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -946,19 +946,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Flame Emperor_17: -2086039285
-      Flame Emperor_16: 2082135399
       Flame Emperor_20: 1658617659
-      Flame Emperor_35: -583690442
+      Flame Emperor_16: 2082135399
       Flame Emperor_23: -1308279225
+      Flame Emperor_35: -583690442
+      Flame Emperor_33: -1377659124
       Flame Emperor_11: 1419079488
       Flame Emperor_25: 462927393
       Flame Emperor_28: -96249350
       Flame Emperor_32: 1014206372
       Flame Emperor_19: -1722938631
       Flame Emperor_15: 1403048952
-      Flame Emperor_33: -1377659124
+      Flame Emperor_38: 946669484
       Flame Emperor_13: 472943037
+      Flame Emperor_17: -2086039285
       Flame Emperor_3: 470976043
       Flame Emperor_12: -488251382
       Flame Emperor_37: 276524499
@@ -974,7 +975,6 @@ TextureImporter:
       Flame Emperor_22: -1058032032
       Flame Emperor_9: -1720849877
       Flame Emperor_6: 4993864
-      Flame Emperor_38: 946669484
       Flame Emperor_4: -400900791
       Flame Emperor_30: 696623049
       Flame Emperor_29: 1297794414

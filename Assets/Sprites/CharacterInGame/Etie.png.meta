@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -1062,9 +1062,9 @@ TextureImporter:
       Etie_24: -255501091
       Etie_10: 1528985965
       Etie_23: -1716889926
-      Etie_29: -307863621
-      Etie_22: 634502379
       Etie_40: -1002402173
+      Etie_22: 634502379
+      Etie_29: -307863621
       Etie_37: 434427157
       Etie_27: 2096956637
       Etie_6: -931397629

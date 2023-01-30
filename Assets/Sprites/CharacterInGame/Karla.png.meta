@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -947,7 +947,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Karla_38: -1453773049
-      Karla_29: -599987378
       Karla_3: -216291506
       Karla_4: 1909594493
       Karla_5: -818770187
@@ -976,14 +975,15 @@ TextureImporter:
       Karla_27: 919801289
       Karla_16: -1150968818
       Karla_1: -1351167256
-      Karla_10: 889427708
-      Karla_7: -171023738
-      Karla_9: -1573077923
-      Karla_13: 343434147
-      Karla_24: -130677025
       Karla_22: 2024712442
-      Karla_25: 256608519
       Karla_26: 839368740
+      Karla_7: -171023738
+      Karla_29: -599987378
+      Karla_24: -130677025
+      Karla_9: -1573077923
+      Karla_10: 889427708
+      Karla_25: 256608519
+      Karla_13: 343434147
       Karla_36: -1809055900
   spritePackingTag: 
   pSDRemoveMatte: 0

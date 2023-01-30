@@ -7,7 +7,7 @@ public class MenuTabButtons : MonoBehaviour
 {
     [SerializeField] float menuTabMoveSpeed;
     [SerializeField] GameObject worldMapWindow;
-    [SerializeField] GameObject inventoryWindow;
+    [SerializeField] GameObject manaWindow;
     [SerializeField] GameObject castleWindow;
     [SerializeField] GameObject missionWindow;
     RectTransform rectTransform;
@@ -75,9 +75,9 @@ public class MenuTabButtons : MonoBehaviour
         worldMapWindow.SetActive(true);
     }
 
-    public void SelectInventoryButton()
+    public void SelectManaButton()
     {
-        inventoryWindow.SetActive(true);
+        manaWindow.SetActive(true);
     }
 
     public void SelectCastleButton()

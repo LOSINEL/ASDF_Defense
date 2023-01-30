@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -821,7 +821,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Sophia_20: 1567602922
-      Sophia_27: -225776697
       Sophia_10: -413409339
       Sophia_9: 1959096204
       Sophia_3: -1479708157
@@ -849,10 +848,11 @@ TextureImporter:
       Sophia_0: 2079167988
       Sophia_1: 7304963
       Sophia_28: 78412835
-      Sophia_18: 827439977
-      Sophia_6: 1488214578
-      Sophia_21: -344038447
       Sophia_22: -1380505636
+      Sophia_18: 827439977
+      Sophia_21: -344038447
+      Sophia_27: -225776697
+      Sophia_6: 1488214578
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
