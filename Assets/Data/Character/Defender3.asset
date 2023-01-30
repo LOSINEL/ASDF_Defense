@@ -23,3 +23,4 @@ MonoBehaviour:
   damage: 0
   maxHp: 0
   summonCost: 500
+  summonCoolTime: 7

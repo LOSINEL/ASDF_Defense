@@ -11,6 +11,8 @@ public class CharacterData : ScriptableObject
     [SerializeField] float damage;
     [SerializeField] float maxHp;
     [SerializeField] float summonCost;
+    [SerializeField] float summonCoolTime;
+    [SerializeField] GameObject character;
 
     public Sprite[] Portraits { get { return portraits; } }
     public float MoveSpeed { get { return moveSpeed; } }
@@ -18,4 +20,6 @@ public class CharacterData : ScriptableObject
     public float Damage { get { return damage; } }
     public float MaxHp { get { return maxHp; } }
     public float SummonCost { get { return summonCost; } }
+    public float SummonCoolTime { get { return summonCoolTime; } }
+    public GameObject Character { get { return character; } }
 }
