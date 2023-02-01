@@ -12,7 +12,8 @@ public class CharacterData : ScriptableObject
     [SerializeField] float maxHp;
     [SerializeField] float summonCost;
     [SerializeField] float summonCoolTime;
-    [SerializeField] GameObject character;
+
+    [SerializeField] Enums.CHAR_TYPE charType;
 
     public Sprite[] Portraits { get { return portraits; } }
     public float MoveSpeed { get { return moveSpeed; } }
@@ -21,5 +22,6 @@ public class CharacterData : ScriptableObject
     public float MaxHp { get { return maxHp; } }
     public float SummonCost { get { return summonCost; } }
     public float SummonCoolTime { get { return summonCoolTime; } }
-    public GameObject Character { get { return character; } }
+
+    public Enums.CHAR_TYPE CharType { get { return charType; } }
 }
