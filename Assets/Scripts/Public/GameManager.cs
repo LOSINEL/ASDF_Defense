@@ -25,19 +25,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        InitInfo();
-    }
-
-    void InitInfo()
-    {
-        gold = 0;
-        level = 1;
-        maxExp = level * level + 10;
-        nowExp = 0;
-    }
-
     public void AddExp(int _exp)
     {
         nowExp += _exp;

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class WorldMapButtons : MonoBehaviour
 {
-    float lengthW;
-    float lengthH;
+    const float lengthW = 2000f;
+    const float lengthH = 1080f;
     [SerializeField] GameObject worldMapBase;
     [SerializeField] Button[] worldMapButtons;
     [SerializeField] Vector3[] buttonSizes = new Vector3[9];
@@ -15,37 +15,17 @@ public class WorldMapButtons : MonoBehaviour
     {
         worldMapButtons = worldMapBase.GetComponentsInChildren<Button>();
         SaveButtons();
-        lengthW = 2000f;
-        lengthH = 1080f;
-    }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            InitButtons();
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Debug.Log(GetComponent<RectTransform>().rect.size);
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            float sizeW = worldMapBase.GetComponent<RectTransform>().rect.width / lengthW;
-            float sizeH = worldMapBase.GetComponent<RectTransform>().rect.height / lengthH;
-            for (int i = 0; i < worldMapButtons.Length; i++)
-            {
-                worldMapButtons[i].transform.localScale = new Vector3(worldMapButtons[i].transform.localScale.x * sizeW, worldMapButtons[i].transform.localScale.y * sizeH, 1f);
-                worldMapButtons[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(worldMapButtons[i].GetComponent<RectTransform>().anchoredPosition.x * sizeW, worldMapButtons[i].GetComponent<RectTransform>().anchoredPosition.y * sizeH, 0f);
-            }
-        }
+        InitButtonSize();
     }
 
-    void InitButtons()
+    void InitButtonSize()
     {
+        float sizeW = worldMapBase.GetComponent<RectTransform>().rect.width / lengthW;
+        float sizeH = worldMapBase.GetComponent<RectTransform>().rect.height / lengthH;
         for (int i = 0; i < worldMapButtons.Length; i++)
         {
-            worldMapButtons[i].GetComponent<RectTransform>().localScale = buttonSizes[i];
-            worldMapButtons[i].GetComponent<RectTransform>().anchoredPosition = buttonPos[i];
+            worldMapButtons[i].transform.localScale = new Vector3(worldMapButtons[i].transform.localScale.x * sizeW, worldMapButtons[i].transform.localScale.y * sizeH, 1f);
+            worldMapButtons[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(worldMapButtons[i].GetComponent<RectTransform>().anchoredPosition.x * sizeW, worldMapButtons[i].GetComponent<RectTransform>().anchoredPosition.y * sizeH, 0f);
         }
     }
 
