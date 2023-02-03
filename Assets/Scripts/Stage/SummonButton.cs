@@ -31,8 +31,9 @@ public class SummonButton : MonoBehaviour
 
     public void SummonCharacter()
     {
-        if (canSummon)
+        if (canSummon && StageManaManager.instance.NowMana >= summonCost)
         {
+            StageManaManager.instance.UseMana(summonCost);
             Instantiate(character, StageManager.instance.CharacterSummonTransform.position, Quaternion.identity);
             StartCoroutine(RefreshSummonCooltime());
         }

@@ -6,15 +6,19 @@ public class ManaManager : MonoBehaviour
 {
     public static ManaManager instance;
 
-
-
     [SerializeField] int manaLevel = 0;
-    [SerializeField] float manaRecovery = 0f;
     [SerializeField] float maxMana = 0f;
+    [SerializeField] float manaRecovery = 0f;
+    [SerializeField] float maxManaUpgradeNum;
+    [SerializeField] float manaRecoveryUpgradeNum;
+    [SerializeField] int upgradeGold;
 
     public int ManaLevel { get { return manaLevel; } }
     public float ManaRecovery { get { return manaRecovery; } }
     public float MaxMana { get { return maxMana; } }
+    public float MaxManaUpgradeNum { get { return maxManaUpgradeNum; } }
+    public float ManaRecoveryUpgradeNum { get { return manaRecoveryUpgradeNum; } }
+    public int UpgradeGold { get { return upgradeGold; } }
 
     private void Awake()
     {
@@ -29,10 +33,28 @@ public class ManaManager : MonoBehaviour
         }
     }
 
-    public void LevelUpMana()
+    private void Start()
     {
-        manaLevel++;
-        manaRecovery += 1.0f;
-        maxMana += 25f;
+        RefreshUpgradeNum();
+    }
+
+    public void UpgradeMana()
+    {
+        if (GameManager.instance.Gold >= upgradeGold)
+        {
+            GameManager.instance.SubGold(upgradeGold);
+            manaLevel++;
+            maxMana += maxManaUpgradeNum;
+            manaRecovery += manaRecoveryUpgradeNum;
+            RefreshUpgradeNum();
+            ManaWindowText.instance.RefreshTexts();
+        }
+    }
+
+    void RefreshUpgradeNum()
+    {
+        maxManaUpgradeNum = 25f + manaLevel * 2f;
+        manaRecoveryUpgradeNum = 1.0f + manaLevel * 0.1f;
+        upgradeGold = (manaLevel + 1) * 100;
     }
 }

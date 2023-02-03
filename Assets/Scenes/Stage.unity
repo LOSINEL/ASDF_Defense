@@ -3442,6 +3442,8 @@ MonoBehaviour:
   - enemies: []
   - enemies: []
   - enemies: []
+  stageBackgroundImages: []
+  summonButtonGroup: {fileID: 1235525502}
 --- !u!1 &1879538449
 GameObject:
   m_ObjectHideFlags: 0

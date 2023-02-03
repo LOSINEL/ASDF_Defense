@@ -46,16 +46,8 @@ public class GameManager : MonoBehaviour
         gold += _gold;
     }
 
-    public bool SubGold(int _gold)
+    public void SubGold(int _gold)
     {
-        if (gold >= _gold)
-        {
-            gold -= _gold;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        gold -= _gold;
     }
 }

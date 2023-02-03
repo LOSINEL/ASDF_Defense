@@ -9,6 +9,7 @@ public class TeamManager : MonoBehaviour
     [SerializeField] CharacterData[] teamCharacters = new CharacterData[8];
 
     public SerializableDictionary<Enums.CHAR_TYPE, CharacterData> CharacterDatas { get { return charactersDatas; } }
+    public CharacterData[] TeamCharacters { get { return teamCharacters; } }
 
     private void Awake()
     {

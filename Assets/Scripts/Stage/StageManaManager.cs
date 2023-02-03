@@ -20,6 +20,8 @@ public class StageManaManager : MonoBehaviour
     [SerializeField] float manaRecoveryTime;
     WaitForSeconds recoveryTime;
 
+    public float NowMana { get { return nowMana; } }
+
     private void Awake()
     {
         instance = this;
@@ -48,6 +50,12 @@ public class StageManaManager : MonoBehaviour
         manaRecovery += manaLevel * 0.5f;
         maxMana *= 1.5f;
         RefreshNeedManaText();
+    }
+
+    public void UseMana(float _mana)
+    {
+        nowMana -= _mana;
+        RefreshManaText();
     }
 
     IEnumerator RecoverMana()
