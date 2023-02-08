@@ -11,8 +11,9 @@ public class SummonButton : MonoBehaviour
     [SerializeField] float summonCost;
     [SerializeField] float coolTime;
     [SerializeField] bool canSummon;
-
     [SerializeField] Image coolTimeImage;
+
+    public float SummonCost { get { return summonCost; } }
 
     private void Start()
     {
