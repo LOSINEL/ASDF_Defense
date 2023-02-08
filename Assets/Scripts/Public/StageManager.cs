@@ -16,22 +16,12 @@ public class StageManager : MonoBehaviour
     [SerializeField] float[] stageBalanceNum = new float[5];
     [SerializeField] SpawnGroup[] spawnGroups = new SpawnGroup[5];
     [SerializeField] Sprite[] stageBackgroundImages;
-    [SerializeField] GameObject summonButtonGroup;
 
     public Transform CharacterSummonTransform { get { return CharacterSummonTransform; } }
 
-    private void Awake()
+    void Awake()
     {
         instance = this;
-    }
-
-    private void Start()
-    {
-        for (int i = 0; i < summonButtonGroup.transform.childCount; i++)
-        {
-            summonButtonGroup.transform.GetChild(i).GetComponent<Image>().sprite = TeamManager.instance.TeamCharacters[i].Portraits[(int)Enums.PORTRAIT_TYPE.BUTTON];
-            summonButtonGroup.transform.GetChild(i).GetComponent<TextMeshPro>().text = $"{TeamManager.instance.TeamCharacters[i].SummonCost}";
-        }
     }
 
     public void SetStageLevel(int _stageLevel)

@@ -7,26 +7,30 @@ public class StartButtonScaler : MonoBehaviour
     [SerializeField] float minSize;
     [SerializeField] float maxSize;
     [SerializeField] float scaleSpeed;
-    float _scaleAmount;
+    float scaleAmount;
     bool goBigger = true;
+    Transform tr;
+    Vector3 scaleVector3;
 
     private void Start()
     {
-        transform.localScale = Vector3.one;
+        tr = GetComponent<Transform>();
+        tr.localScale = Vector3.one;
     }
 
     private void Update()
     {
-        _scaleAmount = scaleSpeed * Time.deltaTime;
+        scaleAmount = scaleSpeed * Time.deltaTime;
+        scaleVector3 = new Vector3(scaleAmount, scaleAmount, scaleAmount);
         if (goBigger)
         {
-            if (transform.localScale.x >= maxSize) goBigger = false;
-            transform.localScale += new Vector3(_scaleAmount, _scaleAmount, _scaleAmount);
+            if (tr.localScale.x >= maxSize) goBigger = false;
+            tr.localScale += scaleVector3;
         }
         else
         {
-            if (transform.localScale.x <= minSize) goBigger = true;
-            transform.localScale -= new Vector3(_scaleAmount, _scaleAmount, _scaleAmount);
+            if (tr.localScale.x <= minSize) goBigger = true;
+            tr.localScale -= scaleVector3;
         }
     }
 }

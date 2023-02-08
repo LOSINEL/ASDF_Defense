@@ -5,8 +5,10 @@ using UnityEngine;
 public class TeamManager : MonoBehaviour
 {
     public static TeamManager instance;
+
+    const int teamSize = 8;
     [SerializeField] SerializableDictionary<Enums.CHAR_TYPE, CharacterData> charactersDatas = new();
-    [SerializeField] CharacterData[] teamCharacters = new CharacterData[8];
+    [SerializeField] CharacterData[] teamCharacters = new CharacterData[teamSize];
 
     public SerializableDictionary<Enums.CHAR_TYPE, CharacterData> CharacterDatas { get { return charactersDatas; } }
     public CharacterData[] TeamCharacters { get { return teamCharacters; } }
@@ -39,7 +41,7 @@ public class TeamManager : MonoBehaviour
 
     bool CheckDoubleCharacter(Enums.CHAR_TYPE _charType)
     {
-        for (int i = 0; i < teamCharacters.Length; i++)
+        for (int i = 0; i < teamSize; i++)
         {
             if (teamCharacters[i].CharType == _charType) return true;
         }
@@ -48,7 +50,7 @@ public class TeamManager : MonoBehaviour
 
     int GetDoubleCharacterIndex(Enums.CHAR_TYPE _charType)
     {
-        for (int i = 0; i < teamCharacters.Length; i++)
+        for (int i = 0; i < teamSize; i++)
         {
             if (teamCharacters[i].CharType == _charType) return i;
         }

@@ -10,10 +10,13 @@ public class PlayerInterfaceText : MonoBehaviour
     [SerializeField] TMP_Text levelText;
     [SerializeField] TMP_Text goldText;
     [SerializeField] Image expBar;
-    [SerializeField] float goldRollingTime;
+    [SerializeField] float goldRollingTime_;
+    float goldRollingTime;
 
     private void Start()
     {
+        if (goldRollingTime_ < 0.01f) goldRollingTime_ = 0.01f;
+        goldRollingTime = 1f / goldRollingTime_;
         gold = GameManager.instance.Gold;
         goldText.text = $"{gold}";
         RefreshLevelText();
@@ -56,7 +59,7 @@ public class PlayerInterfaceText : MonoBehaviour
         int _gold;
         while (true)
         {
-            _gold = (int)(_goldGap * Time.deltaTime / goldRollingTime) + 1;
+            _gold = (int)(_goldGap * Time.deltaTime * goldRollingTime) + 1;
             if (gold + _gold >= GameManager.instance.Gold)
             {
                 gold = GameManager.instance.Gold;
@@ -75,7 +78,7 @@ public class PlayerInterfaceText : MonoBehaviour
         int _gold;
         while (true)
         {
-            _gold = (int)(_goldGap * Time.deltaTime / goldRollingTime) + 1;
+            _gold = (int)(_goldGap * Time.deltaTime * goldRollingTime) + 1;
             if (gold - _gold <= GameManager.instance.Gold)
             {
                 gold = GameManager.instance.Gold;

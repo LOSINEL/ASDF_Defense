@@ -11,25 +11,27 @@ public class MenuTabButtons : MonoBehaviour
     [SerializeField] GameObject castleWindow;
     [SerializeField] GameObject missionWindow;
     RectTransform rectTransform;
+    Transform tr;
 
     private void Start()
     {
+        tr = GetComponent<Transform>();
         rectTransform = GetComponent<RectTransform>();
     }
 
     public void SelectMenuTabBar()
     {
-        GameObject menuTabBar;
-        menuTabBar = EventSystem.current.currentSelectedGameObject;
-        if (menuTabBar.transform.localScale.x == 1f)
+        Transform menuTabBarTr;
+        menuTabBarTr = EventSystem.current.currentSelectedGameObject.transform;
+        if (menuTabBarTr.localScale.x == 1f)
         {
-            menuTabBar.transform.localScale = new Vector3(-1f, 1f, 1f);
-            StartCoroutine(MoveRightMenuTab(menuTabBar.GetComponent<Button>()));
+            menuTabBarTr.localScale = new Vector3(-1f, 1f, 1f);
+            StartCoroutine(MoveRightMenuTab(menuTabBarTr.GetComponent<Button>()));
         }
         else
         {
-            menuTabBar.transform.localScale = new Vector3(1f, 1f, 1f);
-            StartCoroutine(MoveLeftMenuTab(menuTabBar.GetComponent<Button>()));
+            menuTabBarTr.localScale = new Vector3(1f, 1f, 1f);
+            StartCoroutine(MoveLeftMenuTab(menuTabBarTr.GetComponent<Button>()));
         }
     }
 
@@ -46,7 +48,7 @@ public class MenuTabButtons : MonoBehaviour
                 _btn.interactable = true;
                 yield break;
             }
-            transform.Translate(new Vector2(menuTabMoveSpeed * Time.deltaTime * -1, 0f));
+            tr.Translate(new Vector2(menuTabMoveSpeed * Time.deltaTime * -1, 0f));
             yield return null;
         }
     }
@@ -65,7 +67,7 @@ public class MenuTabButtons : MonoBehaviour
                 _btn.interactable = true;
                 yield break;
             }
-            transform.Translate(new Vector2(menuTabMoveSpeed * Time.deltaTime, 0f));
+            tr.Translate(new Vector2(menuTabMoveSpeed * Time.deltaTime, 0f));
             yield return null;
         }
     }

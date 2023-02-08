@@ -8,21 +8,21 @@ public class SuperSummonButton : MonoBehaviour
 {
     [SerializeField] GameObject summonButtonGroup;
     [SerializeField] bool superSummonOn = false;
-    [SerializeField] Transform[] summonButtonTransforms;
-    [SerializeField] TMP_Text[] summonButtonTexts;
-    int summonButtonCount;
+    [SerializeField] RectTransform[] summonButtonRectTransforms = new RectTransform[8];
+    [SerializeField] TMP_Text[] summonButtonTexts = new TMP_Text[8];
+    [SerializeField] int summonButtonNum;
     Image image;
 
     public bool SuperSummonOn { get { return superSummonOn; } }
 
-    private void Start()
+    void Start()
     {
+        summonButtonNum = summonButtonGroup.transform.childCount;
         image = GetComponent<Image>();
-        summonButtonCount = summonButtonGroup.transform.childCount;
-        for (int i = 0; i < summonButtonCount; i++)
+        for (int i = 0; i < summonButtonNum; i++)
         {
-            summonButtonTransforms[i] = summonButtonGroup.transform.GetChild(i).transform;
-            summonButtonTexts[i] = summonButtonGroup.transform.GetChild(i).GetComponent<TMP_Text>();
+            summonButtonRectTransforms[i] = summonButtonGroup.transform.GetChild(i).GetComponent<RectTransform>();
+            summonButtonTexts[i] = summonButtonGroup.transform.GetChild(i).GetComponentInChildren<TMP_Text>();
         }
     }
 
@@ -32,7 +32,7 @@ public class SuperSummonButton : MonoBehaviour
         if (superSummonOn)
         {
             image.color = Color.red;
-            for (int i = 0; i < summonButtonCount; i++)
+            for (int i = 0; i < summonButtonNum; i++)
             {
                 summonButtonTexts[i].text = TeamManager.instance.TeamCharacters[i].SuperSummonCost.ToString();
             }
@@ -40,6 +40,10 @@ public class SuperSummonButton : MonoBehaviour
         else
         {
             image.color = Color.white;
+            for (int i = 0; i < summonButtonNum; i++)
+            {
+                summonButtonTexts[i].text = TeamManager.instance.TeamCharacters[i].SummonCost.ToString();
+            }
         }
     }
 }

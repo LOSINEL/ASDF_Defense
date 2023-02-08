@@ -7,24 +7,27 @@ public class TitleImage : MonoBehaviour
     const float startWaitTime = 0.5f;
     [SerializeField] float moveSpeed;
     [SerializeField] Vector2 startPos;
+    Transform tr;
+    WaitForSeconds waitForSeconds = new WaitForSeconds(startWaitTime);
 
     private void Start()
     {
-        transform.localPosition = startPos;
+        tr = GetComponent<Transform>();
+        tr.localPosition = startPos;
         StartCoroutine(DropTitleImage());
     }
 
     IEnumerator DropTitleImage()
     {
-        yield return new WaitForSeconds(startWaitTime);
+        yield return waitForSeconds;
         while (true)
         {
-            if (transform.localPosition.y - moveSpeed * Time.deltaTime <= 0f)
+            if (tr.localPosition.y - moveSpeed * Time.deltaTime <= 0f)
             {
-                transform.localPosition = new Vector2(0f, 0f);
+                tr.localPosition = new Vector2(0f, 0f);
                 yield break;
             }
-            transform.Translate(Vector2.down * moveSpeed * Time.deltaTime);
+            tr.Translate(Vector2.down * moveSpeed * Time.deltaTime);
             yield return null;
         }
     }
