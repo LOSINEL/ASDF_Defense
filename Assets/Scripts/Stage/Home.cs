@@ -20,6 +20,7 @@ public class Home : MonoBehaviour
 
     private void Start()
     {
+        maxHp = GameManager.instance.NowStage * 10000;
         nowHp = maxHp;
         waitTime = new WaitForSeconds(hpBarRefreshTime);
         StartCoroutine(RefreshHpBar());
@@ -29,7 +30,7 @@ public class Home : MonoBehaviour
     {
         while (true)
         {
-            hpBarText.text = $"{(int)nowHp}/{(int)maxHp}";
+            hpBarText.text = $"{(int)nowHp}";
             hpBar.fillAmount = nowHp / maxHp;
             yield return waitTime;
         }

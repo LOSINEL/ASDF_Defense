@@ -11,10 +11,11 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] float nowHp;
     [SerializeField] float maxHp;
     [SerializeField] bool isEnemyChecked;
-
+    Transform tr;
 
     private void Start()
     {
+        tr = GetComponent<Transform>();
         InitStat();
     }
 
