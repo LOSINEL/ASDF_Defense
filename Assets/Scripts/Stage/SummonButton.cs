@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,11 +24,13 @@ public class SummonButton : MonoBehaviour
     void InitButton()
     {
         coolTimeImage.fillAmount = 0f;
-        characterData = TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)transform.GetSiblingIndex());
+        characterData = TeamManager.instance.TeamCharacters[transform.GetSiblingIndex()];
         summonCooltime = characterData.SummonCoolTime;
         summonCost = characterData.SummonCost;
         coolTime = 0f;
         canSummon = true;
+        GetComponent<Image>().sprite = characterData.Portraits[(int)Enums.PORTRAIT_TYPE.BUTTON];
+        GetComponentInChildren<TMP_Text>().text = $"{(int)summonCost}";
     }
 
     public void SummonCharacter()

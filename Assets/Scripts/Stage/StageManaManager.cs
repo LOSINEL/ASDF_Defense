@@ -60,13 +60,17 @@ public class StageManaManager : MonoBehaviour
 
     IEnumerator RecoverMana()
     {
-        while(true)
+        while (true)
         {
-            if (nowMana < maxMana)
+            if (nowMana + manaRecovery * manaRecoveryTime > maxMana)
+            {
+                nowMana = maxMana;
+            }
+            else
             {
                 nowMana += manaRecovery * manaRecoveryTime;
-                RefreshManaText();
             }
+            RefreshManaText();
             yield return recoveryTime;
         }
     }

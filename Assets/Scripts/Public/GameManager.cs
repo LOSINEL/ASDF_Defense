@@ -10,11 +10,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] int level;
     [SerializeField] int maxExp;
     [SerializeField] int nowExp;
+    [SerializeField] int maxStage;
+    [SerializeField] int nowStage;
 
     public int Gold { get { return gold; } }
     public int Level { get { return level; } }
     public int MaxExp { get { return maxExp; } }
     public int NowExp { get { return nowExp; } }
+    public int MaxStage { get { return maxStage; } }
+    public int NowStage { get { return nowStage; } }
 
     private void Awake()
     {
@@ -23,6 +27,22 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+    }
+
+    private void Start()
+    {
+        nowStage = 1;
+        maxStage = 1;
+    }
+
+    public void SetNowStage(int _num)
+    {
+        nowStage = _num;
+    }
+
+    public void GameClear()
+    {
+        if (nowStage > maxStage) maxStage = nowStage;
     }
 
     public void AddExp(int _exp)

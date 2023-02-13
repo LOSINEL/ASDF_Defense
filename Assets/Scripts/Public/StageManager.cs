@@ -24,10 +24,10 @@ public class StageManager : MonoBehaviour
         instance = this;
     }
 
-    public void SetStageLevel(int _stageLevel)
+    private void Start()
     {
-        stageLevel = _stageLevel;
-        SpawnEnemy();
+        stageLevel = GameManager.instance.NowStage;
+        //SpawnEnemy();
     }
 
     void SpawnEnemy()

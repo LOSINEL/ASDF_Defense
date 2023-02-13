@@ -24,3 +24,5 @@ MonoBehaviour:
   maxHp: 0
   summonCost: 70
   summonCoolTime: 2.5
+  superSummonCost: 140
+  charType: 9
