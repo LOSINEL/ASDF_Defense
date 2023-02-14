@@ -39,6 +39,7 @@ public class SummonButton : MonoBehaviour
         {
             StageManaManager.instance.UseMana(summonCost);
             Instantiate(character, StageManager.instance.CharacterSummonTransform.position, Quaternion.identity);
+            SummonPortraitGroup.instance.SummonPortrait(characterData.CharType);
             StartCoroutine(RefreshSummonCooltime());
         }
     }
