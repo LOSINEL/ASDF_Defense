@@ -8,6 +8,7 @@ public class SummonPortrait : MonoBehaviour
     Image image;
     RectTransform rectTransform;
     [SerializeField] float moveSpeed;
+    Sprite superSprite;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class SummonPortrait : MonoBehaviour
             if (rectTransform.anchoredPosition.x - moveSpeed * Time.deltaTime < 0f)
             {
                 rectTransform.anchoredPosition = Vector3.zero;
+                SetSuperImage();
                 yield break;
             }
             rectTransform.Translate(-1 * moveSpeed * Time.deltaTime, 0f, 0f);
@@ -70,7 +72,14 @@ public class SummonPortrait : MonoBehaviour
 
     public void SetImage(Enums.CHAR_TYPE _charType)
     {
-        image.sprite = TeamManager.instance.CharacterDatas.GetValue(_charType).Portraits[(int)Enums.PORTRAIT_TYPE.SUPER];
+        image.sprite = TeamManager.instance.CharacterDatas.GetValue(_charType).Portraits[(int)Enums.PORTRAIT_TYPE.SUMMON];
+        image.SetNativeSize();
+        superSprite = TeamManager.instance.CharacterDatas.GetValue(_charType).Portraits[(int)Enums.PORTRAIT_TYPE.SUPER];
+    }
+
+    void SetSuperImage()
+    {
+        image.sprite = superSprite;
         image.SetNativeSize();
     }
 

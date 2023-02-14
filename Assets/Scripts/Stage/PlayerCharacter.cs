@@ -10,13 +10,23 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float nowHp;
     [SerializeField] float maxHp;
-    [SerializeField] bool isEnemyChecked;
+    [SerializeField] protected bool isEnemyChecked;
+    [SerializeField] bool isSuper;
     Transform tr;
+
+    private void Awake()
+    {
+        tr = GetComponent<Transform>();
+    }
 
     private void Start()
     {
-        tr = GetComponent<Transform>();
         InitStat();
+    }
+
+    protected void Move()
+    {
+        tr.Translate(moveSpeed * Time.deltaTime, 0f, 0f);
     }
 
     void InitStat()
@@ -26,5 +36,22 @@ public class PlayerCharacter : MonoBehaviour
         damage = characterData.Damage;
         maxHp = nowHp = characterData.MaxHp;
         isEnemyChecked = false;
+        if (isSuper && characterData.Damage > 0)
+        {
+            moveSpeed *= 1.4f;
+            attackSpeed *= 1.4f;
+            damage = 1.4f;
+            nowHp = maxHp *= 1.4f;
+        }
+        else if (isSuper)
+        {
+            moveSpeed *= 1.6f;
+            nowHp = maxHp *= 2.5f;
+        }
+    }
+
+    public void CheckSuper(bool _isSuper)
+    {
+        isSuper = _isSuper;
     }
 }
