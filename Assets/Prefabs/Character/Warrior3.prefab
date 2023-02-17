@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6043666331822207157}
   - component: {fileID: 6043666331822207156}
+  - component: {fileID: 8138425852995476042}
   m_Layer: 0
   m_Name: AttackRange
   m_TagString: Untagged
@@ -58,6 +59,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 280, y: 200}
   m_EdgeRadius: 0
+--- !u!114 &8138425852995476042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6043666331822207154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cf68a22b4ee4d4c811d9e08eba5a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6043666332791555680
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +167,7 @@ GameObject:
   - component: {fileID: 6043666333183868150}
   - component: {fileID: 6043666333183868136}
   - component: {fileID: 6043666333183868139}
+  - component: {fileID: -635186165632251515}
   m_Layer: 0
   m_Name: Warrior3
   m_TagString: Character
@@ -277,6 +291,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-635186165632251515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6043666333183868151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f85bd9a093dec42a1662497636afc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 73cfc1efe9ad2e543b0594922156fcec, type: 2}
+  moveSpeed: 0
+  attackSpeed: 0
+  attackCooltime: 0
+  damage: 0
+  nowHp: 0
+  maxHp: 0
+  isEnemyChecked: 0
+  isSuper: 0
+  weaponCollider: {fileID: 6043666331822207156}
 --- !u!1 &9054062147256378827
 GameObject:
   m_ObjectHideFlags: 0

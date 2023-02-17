@@ -19,10 +19,10 @@ MonoBehaviour:
   - {fileID: -841253079, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
   - {fileID: -2077223725, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
   - {fileID: 732472358, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
-  moveSpeed: 0
-  attackSpeed: 0
-  damage: 0
-  maxHp: 0
+  damage: 64
+  maxHp: 320
+  moveSpeed: 360
+  attackSpeed: 0.9
   summonCost: 70
   summonCoolTime: 2.3
   superSummonCost: 210

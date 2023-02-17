@@ -17,7 +17,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] SpawnGroup[] spawnGroups = new SpawnGroup[5];
     [SerializeField] Sprite[] stageBackgroundImages;
 
-    public Transform CharacterSummonTransform { get { return CharacterSummonTransform; } }
+    public Transform CharacterSummonTransform { get { return characterSummonTransform; } }
 
     void Awake()
     {

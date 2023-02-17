@@ -37,7 +37,7 @@ public class SummonButton : MonoBehaviour
         if (canSummon && StageManaManager.instance.NowMana >= summonCost)
         {
             StageManaManager.instance.UseMana(summonCost);
-            Instantiate(characterData.Character, StageManager.instance.CharacterSummonTransform.position, Quaternion.identity);
+            Instantiate(characterData.Character, StageManager.instance.CharacterSummonTransform.position - new Vector3(0f, Random.Range(80f, 128f), 0f), Quaternion.identity);
             SummonPortraitGroup.instance.SummonPortrait(characterData.CharType);
             StartCoroutine(RefreshSummonCooltime());
         }

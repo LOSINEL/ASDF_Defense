@@ -8,10 +8,10 @@ public class CharacterData : ScriptableObject
     [SerializeField] GameObject character;
 
     [SerializeField] Sprite[] portraits;
-    [SerializeField] float moveSpeed;
-    [SerializeField] float attackSpeed;
     [SerializeField] float damage;
     [SerializeField] float maxHp;
+    [SerializeField] float moveSpeed;
+    [SerializeField] float attackSpeed;
     [SerializeField] float summonCost;
     [SerializeField] float summonCoolTime;
     [SerializeField] float superSummonCost;
