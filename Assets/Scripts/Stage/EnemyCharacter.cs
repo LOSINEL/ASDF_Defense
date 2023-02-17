@@ -31,23 +31,25 @@ public class EnemyCharacter : MonoBehaviour
         isEnemyChecked = false;
     }
 
-    private void Update()
-    {
-        if (isEnemyChecked)
-        {
-            Attack();
-        }
-        else
-        {
-            Move();
-        }
-    }
-
-    void Attack()
-    {
-    }
-
     void Move()
+    {
+    }
+
+    public void GetDamage(float _damage)
+    {
+        nowHp -= _damage;
+        CheckDead();
+    }
+
+    void CheckDead()
+    {
+        if (nowHp <= 0f)
+        {
+            Die();
+        }
+    }
+
+    void Die()
     {
     }
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
   m_Name: Defender3
   m_EditorClassIdentifier: 
+  character: {fileID: 2999719608535197810, guid: 54ea7f4bd8aadda42a923ac9570aae6f, type: 3}
   portraits:
   - {fileID: 218102039, guid: d453ace5df3916249b50219cb309423d, type: 3}
   - {fileID: -738062017, guid: d453ace5df3916249b50219cb309423d, type: 3}
@@ -24,5 +25,5 @@ MonoBehaviour:
   maxHp: 0
   summonCost: 500
   summonCoolTime: 7
-  superSummonCost: 1000
+  superSummonCost: 1500
   charType: 14

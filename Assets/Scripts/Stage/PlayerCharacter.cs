@@ -7,12 +7,19 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] CharacterData characterData;
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
+    [SerializeField] float attackCooltime;
     [SerializeField] float damage;
     [SerializeField] float nowHp;
     [SerializeField] float maxHp;
-    [SerializeField] protected bool isEnemyChecked;
-    [SerializeField] bool isSuper;
+    [SerializeField] bool isEnemyChecked;
+    [SerializeField] bool isSuper = false;
+    protected Animator animator;
+    BoxCollider2D characterCollider;
     Transform tr;
+
+    public float AttackCooltime { get { return attackCooltime; } }
+    public bool IsEnemyChecked { get { return isEnemyChecked; } }
+    public float Damage { get { return damage; } }
 
     private void Awake()
     {
@@ -21,6 +28,7 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         InitStat();
     }
 
@@ -33,6 +41,14 @@ public class PlayerCharacter : MonoBehaviour
     {
         moveSpeed = characterData.MoveSpeed;
         attackSpeed = characterData.AttackSpeed;
+        if (attackSpeed > 0f)
+        {
+            attackCooltime = 1f / attackSpeed;
+        }
+        else
+        {
+            attackCooltime = -1f;
+        }
         damage = characterData.Damage;
         maxHp = nowHp = characterData.MaxHp;
         isEnemyChecked = false;
@@ -50,8 +66,15 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    public void CheckSuper(bool _isSuper)
+    public void CheckSuper()
     {
-        isSuper = _isSuper;
+        isSuper = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyAttack"))
+        {
+        }
     }
 }

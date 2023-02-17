@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class SummonButton : MonoBehaviour
 {
     [SerializeField] CharacterData characterData;
-    [SerializeField] GameObject character;
     [SerializeField] float summonCooltime;
     [SerializeField] float summonCost;
     [SerializeField] float coolTime;
@@ -38,7 +37,7 @@ public class SummonButton : MonoBehaviour
         if (canSummon && StageManaManager.instance.NowMana >= summonCost)
         {
             StageManaManager.instance.UseMana(summonCost);
-            Instantiate(character, StageManager.instance.CharacterSummonTransform.position, Quaternion.identity);
+            Instantiate(characterData.Character, StageManager.instance.CharacterSummonTransform.position, Quaternion.identity);
             SummonPortraitGroup.instance.SummonPortrait(characterData.CharType);
             StartCoroutine(RefreshSummonCooltime());
         }

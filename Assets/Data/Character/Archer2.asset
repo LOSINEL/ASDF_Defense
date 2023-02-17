@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
   m_Name: Archer2
   m_EditorClassIdentifier: 
+  character: {fileID: 2048057528291006727, guid: 7584e9a1d042929499a702281d3eed5c, type: 3}
   portraits:
   - {fileID: 679531390, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
   - {fileID: -1367609573, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
@@ -24,5 +25,5 @@ MonoBehaviour:
   maxHp: 0
   summonCost: 70
   summonCoolTime: 2.3
-  superSummonCost: 140
+  superSummonCost: 210
   charType: 4

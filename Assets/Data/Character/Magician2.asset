@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
   m_Name: Magician2
   m_EditorClassIdentifier: 
+  character: {fileID: 3270378974831109734, guid: a42e10dba7e3af74695215d3726160f7, type: 3}
   portraits:
   - {fileID: -1412485636, guid: f8a9abcf967a3574daf877ad7eb8ef31, type: 3}
   - {fileID: -1754250542, guid: f8a9abcf967a3574daf877ad7eb8ef31, type: 3}
@@ -24,5 +25,5 @@ MonoBehaviour:
   maxHp: 0
   summonCost: 300
   summonCoolTime: 5.5
-  superSummonCost: 600
+  superSummonCost: 900
   charType: 10

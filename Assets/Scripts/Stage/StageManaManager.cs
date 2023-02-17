@@ -40,6 +40,7 @@ public class StageManaManager : MonoBehaviour
         nowMana = 0f;
         maxMana = baseMaxMana + ManaManager.instance.MaxMana;
         manaRecovery = baseManaRecovery + ManaManager.instance.ManaRecovery;
+        RefreshNeedManaText();
     }
 
     public void UpgradeMana() // 마나스톤 버튼

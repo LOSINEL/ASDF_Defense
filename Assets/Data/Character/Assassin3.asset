@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
   m_Name: Assassin3
   m_EditorClassIdentifier: 
+  character: {fileID: 33423359823383222, guid: 4b95ab40974f4fc4aa941ceec2416127, type: 3}
   portraits:
   - {fileID: -969911541, guid: 9913cabcc443d5940bd7f2439dfacea5, type: 3}
   - {fileID: 1531752705, guid: 9913cabcc443d5940bd7f2439dfacea5, type: 3}
@@ -24,5 +25,5 @@ MonoBehaviour:
   maxHp: 0
   summonCost: 380
   summonCoolTime: 6.2
-  superSummonCost: 760
+  superSummonCost: 1140
   charType: 8

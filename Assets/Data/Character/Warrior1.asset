@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
   m_Name: Warrior1
   m_EditorClassIdentifier: 
+  character: {fileID: 5522284971786939013, guid: 08187f3de1f19824fb7c36bc59efa0fa, type: 3}
   portraits:
   - {fileID: -968889582, guid: 97fb87bf91a2eb246a2f15ed5a2b9da3, type: 3}
   - {fileID: -414410974, guid: 97fb87bf91a2eb246a2f15ed5a2b9da3, type: 3}
@@ -24,5 +25,5 @@ MonoBehaviour:
   maxHp: 0
   summonCost: 10
   summonCoolTime: 1
-  superSummonCost: 20
+  superSummonCost: 30
   charType: 0

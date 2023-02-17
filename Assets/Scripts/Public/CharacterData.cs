@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu (fileName ="Character",menuName ="Character")]
 public class CharacterData : ScriptableObject
 {
+    [SerializeField] GameObject character;
+
     [SerializeField] Sprite[] portraits;
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
@@ -16,6 +18,7 @@ public class CharacterData : ScriptableObject
 
     [SerializeField] Enums.CHAR_TYPE charType;
 
+    public GameObject Character { get { return character; } }
     public Sprite[] Portraits { get { return portraits; } }
     public float MoveSpeed { get { return moveSpeed; } }
     public float AttackSpeed { get { return attackSpeed; } }
