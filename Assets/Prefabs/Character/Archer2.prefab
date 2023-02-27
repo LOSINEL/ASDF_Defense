@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2569540597600672680}
   - component: {fileID: 1059110523548935446}
   - component: {fileID: -3646155557757075935}
+  - component: {fileID: -3079585922257418166}
   m_Layer: 0
   m_Name: Archer2
   m_TagString: Character
@@ -147,6 +148,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be98372161e0fbe4ca2c77234c2d5d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: bc1a71059e4611c44850e8f520a0971d, type: 2}
+  moveSpeed: 0
+  attackSpeed: 0
+  attackCooltime: 0
+  damage: 0
+  nowHp: 0
+  maxHp: 0
+  isEnemyChecked: 0
+  isSuper: 0
+  arrow: {fileID: 540270789515710607, guid: b302fe5412ddb6f4ba5ab13f3ca887a0, type: 3}
+--- !u!50 &-3079585922257418166
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048057528291006727}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2048057528674657168
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4992827458945599052}
   - component: {fileID: 8251060515412879286}
+  - component: {fileID: 8809604496904178757}
   m_Layer: 0
   m_Name: SightRange
   m_TagString: Untagged
@@ -289,3 +322,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 660, y: 200}
   m_EdgeRadius: 0
+--- !u!114 &8809604496904178757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3608859359422316603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f3ca07468dac4429e03ee5fde7a006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -36,7 +36,7 @@ public class Assassin : PlayerCharacter
 
     IEnumerator Attack()
     {
-        animator.SetTrigger(0);
+        animator.SetTrigger("Attack");
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);

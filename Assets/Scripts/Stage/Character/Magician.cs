@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior : PlayerCharacter
+public class Magician : PlayerCharacter
 {
-    [SerializeField] float cooltimeCheck = 0f;
-    [SerializeField] bool canAttack = true;
+    float cooltimeCheck = 0f;
+    bool canAttack = true;
     [SerializeField] BoxCollider2D weaponCollider;
 
     private void Update()
@@ -37,7 +37,6 @@ public class Warrior : PlayerCharacter
     IEnumerator Attack()
     {
         animator.SetTrigger("Attack");
-        canAttack = false;
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);

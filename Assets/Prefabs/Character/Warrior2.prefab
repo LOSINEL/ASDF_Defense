@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6832773513588087898}
   - component: {fileID: 6955561323161897236}
   - component: {fileID: -5045666185503977481}
+  - component: {fileID: 7850411417802987127}
   m_Layer: 0
   m_Name: Warrior2
   m_TagString: Character
@@ -157,7 +158,30 @@ MonoBehaviour:
   maxHp: 0
   isEnemyChecked: 0
   isSuper: 0
+  cooltimeCheck: 0
+  canAttack: 1
   weaponCollider: {fileID: 6832773514982117382}
+--- !u!50 &7850411417802987127
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6832773513588087877}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6832773514013157074
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 573325123281535758}
   - component: {fileID: 3476618268476416756}
+  - component: {fileID: 2396600860630284674}
   m_Layer: 0
   m_Name: SightRange
   m_TagString: Untagged
@@ -371,3 +396,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 240, y: 200}
   m_EdgeRadius: 0
+--- !u!114 &2396600860630284674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118851309315163513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f3ca07468dac4429e03ee5fde7a006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

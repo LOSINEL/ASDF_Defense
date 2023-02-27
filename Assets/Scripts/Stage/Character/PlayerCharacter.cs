@@ -11,15 +11,17 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float nowHp;
     [SerializeField] float maxHp;
-    [SerializeField] bool isEnemyChecked;
+    [SerializeField] protected bool isEnemyChecked;
     [SerializeField] bool isSuper = false;
+    protected List<GameObject> enemies = new();
     protected Animator animator;
     BoxCollider2D characterCollider;
-    Transform tr;
+    protected Transform tr;
 
     public float AttackCooltime { get { return attackCooltime; } }
     public bool IsEnemyChecked { get { return isEnemyChecked; } }
     public float Damage { get { return damage; } }
+    public List<GameObject> Enemies { get { return enemies; } }
 
     private void Awake()
     {
@@ -30,6 +32,24 @@ public class PlayerCharacter : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         InitStat();
+        StartCoroutine(CheckEnemy());
+    }
+
+    IEnumerator CheckEnemy()
+    {
+        WaitForSeconds waitTime = new WaitForSeconds(0.1f);
+        while (true)
+        {
+            if (enemies.Count > 0)
+            {
+                isEnemyChecked = true;
+            }
+            else
+            {
+                isEnemyChecked = false;
+            }
+            yield return waitTime;
+        }
     }
 
     protected void Move()

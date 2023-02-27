@@ -11,6 +11,7 @@ public class Arrow : MonoBehaviour
     private void Start()
     {
         tr = transform;
+        tr.Rotate(0f, 0f, 90f);
         Destroy(this.gameObject, 1f);
     }
 
@@ -29,6 +30,11 @@ public class Arrow : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponent<EnemyCharacter>().GetDamage(damage);
+            Destroy(this.gameObject);
+        }
+        if (collision.CompareTag("EnemyHome"))
+        {
+            collision.GetComponent<Home>().GetDamage(damage);
             Destroy(this.gameObject);
         }
     }

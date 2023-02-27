@@ -36,7 +36,7 @@ public class Home : MonoBehaviour
         }
     }
 
-    public void SubHp(float _damage)
+    public void GetDamage(float _damage)
     {
         if (nowHp - _damage <= 0f)
         {

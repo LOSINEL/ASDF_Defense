@@ -5,18 +5,24 @@ using UnityEngine;
 public class WarriorWeapon : MonoBehaviour
 {
     BoxCollider2D weaponCollider;
-    float damage;
+    Warrior warrior;
+
     private void Start()
     {
         weaponCollider = GetComponent<BoxCollider2D>();
-        damage = transform.parent.GetComponent<PlayerCharacter>().Damage;
+        warrior = GetComponentInParent<Warrior>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyCharacter>().GetDamage(damage);
+            collision.GetComponent<EnemyCharacter>().GetDamage(warrior.Damage);
+            weaponCollider.enabled = false;
+        }
+        if (collision.CompareTag("EnemyHome"))
+        {
+            collision.GetComponent<Home>().GetDamage(warrior.Damage);
             weaponCollider.enabled = false;
         }
     }

@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Defender : MonoBehaviour
+public class Defender : PlayerCharacter
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] BoxCollider2D sightCollider;
+
+    private void Update()
     {
-        
+        if (!IsEnemyChecked)
+        {
+            Move();
+        }
+        else
+        {
+            Defense();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Defense()
     {
-        
+        animator.SetTrigger("Defense");
     }
 }
