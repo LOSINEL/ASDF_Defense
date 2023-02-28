@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Warrior : PlayerCharacter
 {
-    float cooltimeCheck = 0f;
-    bool canAttack = true;
+    [SerializeField] float cooltimeCheck = 0f;
+    [SerializeField] bool canAttack = true;
     [SerializeField] BoxCollider2D weaponCollider;
 
     private void Update()
@@ -19,7 +19,8 @@ public class Warrior : PlayerCharacter
             canAttack = false;
             StartCoroutine(Attack());
         }
-        CheckAttackCooltime();
+        if (!canAttack)
+            CheckAttackCooltime();
     }
 
     void CheckAttackCooltime()

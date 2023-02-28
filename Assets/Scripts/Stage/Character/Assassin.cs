@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Assassin : PlayerCharacter
 {
-    float cooltimeCheck = 0f;
-    bool canAttack = true;
+    [SerializeField] float cooltimeCheck = 0f;
+    [SerializeField] bool canAttack = true;
     [SerializeField] BoxCollider2D weaponCollider;
 
     private void Update()
@@ -16,14 +16,16 @@ public class Assassin : PlayerCharacter
         }
         else if (IsEnemyChecked && canAttack)
         {
+            canAttack = false;
             StartCoroutine(Attack());
         }
-        CheckAttackCooltime();
+        if (!canAttack)
+            CheckAttackCooltime();
     }
 
     void CheckAttackCooltime()
     {
-        if (cooltimeCheck > AttackCooltime)
+        if (cooltimeCheck >= AttackCooltime)
         {
             cooltimeCheck = 0f;
             canAttack = true;
@@ -37,7 +39,6 @@ public class Assassin : PlayerCharacter
     IEnumerator Attack()
     {
         animator.SetTrigger("Attack");
-        canAttack = false;
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);

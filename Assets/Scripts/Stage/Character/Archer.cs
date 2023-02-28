@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Archer : PlayerCharacter
 {
-    float cooltimeCheck = 0f;
-    bool canAttack = true;
+    [SerializeField] float cooltimeCheck = 0f;
+    [SerializeField] bool canAttack = true;
     [SerializeField] GameObject arrow;
 
     private void Update()
@@ -16,9 +16,11 @@ public class Archer : PlayerCharacter
         }
         else if (IsEnemyChecked && canAttack)
         {
+            canAttack = false;
             StartCoroutine(Attack());
         }
-        CheckAttackCooltime();
+        if (!canAttack)
+            CheckAttackCooltime();
     }
 
     void CheckAttackCooltime()
@@ -37,7 +39,6 @@ public class Archer : PlayerCharacter
     IEnumerator Attack()
     {
         animator.SetTrigger("Attack");
-        canAttack = false;
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
