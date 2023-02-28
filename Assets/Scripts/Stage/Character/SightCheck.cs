@@ -13,7 +13,7 @@ public class SightCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("EnemyHome"))
+        if (collision.CompareTag("Enemy"))
         {
             playerCharacter.Enemies.Add(collision.gameObject);
         }
@@ -21,7 +21,7 @@ public class SightCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("EnemyHome"))
+        if (collision.CompareTag("Enemy"))
         {
             playerCharacter.Enemies.Remove(collision.gameObject);
         }

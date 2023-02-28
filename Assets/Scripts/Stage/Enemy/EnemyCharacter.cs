@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCharacter : MonoBehaviour
+public class EnemyCharacter : Hp
 {
     [SerializeField] EnemyData enemyData;
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
     [SerializeField] float damage;
-    [SerializeField] float nowHp;
-    [SerializeField] float maxHp;
     [SerializeField] float recoverManaNum;
     [SerializeField] bool isEnemyChecked;
-
+    Transform tr;
     Animator animator;
 
     private void Start()
     {
+        tr = transform;
         animator = GetComponent<Animator>();
         InitStat();
     }
@@ -33,6 +32,7 @@ public class EnemyCharacter : MonoBehaviour
 
     void Move()
     {
+        tr.Translate(moveSpeed * Time.deltaTime, 0f, 0f);
     }
 
     public void GetDamage(float _damage)

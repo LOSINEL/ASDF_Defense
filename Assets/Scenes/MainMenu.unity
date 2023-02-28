@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb7f457fce012f43b16e041c118b08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3000
+  moveSpeed: 4200
   startPos: {x: 0, y: 1500}
 --- !u!1 &150820436
 GameObject:
@@ -567,12 +567,13 @@ GameObject:
   - component: {fileID: 961243264}
   - component: {fileID: 961243263}
   - component: {fileID: 961243266}
+  - component: {fileID: 961243267}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!81 &961243263
 AudioListener:
@@ -653,6 +654,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmSound: 0
+--- !u!114 &961243267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961243262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba264e807ba3bcc4fa77d04b7fd6c95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1045794493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb7f457fce012f43b16e041c118b08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3000
+  moveSpeed: 4200
   startPos: {x: 0, y: 1800}
 --- !u!1 &1359998440
 GameObject:
@@ -1572,7 +1585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb7f457fce012f43b16e041c118b08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3000
+  moveSpeed: 4200
   startPos: {x: 0, y: 1200}
 --- !u!1001 &520265164892600761
 PrefabInstance:

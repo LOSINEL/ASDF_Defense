@@ -120,9 +120,9 @@ TextureImporter:
       name: Black Knight_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 2309
-        width: 1699
+        width: 1688
         height: 1929
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -141,9 +141,9 @@ TextureImporter:
       name: Black Knight_1
       rect:
         serializedVersion: 2
-        x: 1699
+        x: 1705
         y: 2309
-        width: 1699
+        width: 1688
         height: 1929
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

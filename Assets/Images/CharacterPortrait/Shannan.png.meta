@@ -122,7 +122,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1920
-        width: 1630
+        width: 1628
         height: 1920
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -141,9 +141,9 @@ TextureImporter:
       name: Shannan_1
       rect:
         serializedVersion: 2
-        x: 1682
+        x: 1741
         y: 1920
-        width: 1828
+        width: 1628
         height: 1920
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

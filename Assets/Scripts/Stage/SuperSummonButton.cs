@@ -35,6 +35,7 @@ public class SuperSummonButton : MonoBehaviour
             for (int i = 0; i < summonButtonNum; i++)
             {
                 summonButtonTexts[i].text = TeamManager.instance.TeamCharacters[i].SuperSummonCost.ToString();
+                summonButtonGroup.transform.GetChild(i).GetComponent<SummonButton>().SetSuper(superSummonOn);
             }
         }
         else
@@ -43,6 +44,7 @@ public class SuperSummonButton : MonoBehaviour
             for (int i = 0; i < summonButtonNum; i++)
             {
                 summonButtonTexts[i].text = TeamManager.instance.TeamCharacters[i].SummonCost.ToString();
+                summonButtonGroup.transform.GetChild(i).GetComponent<SummonButton>().SetSuper(superSummonOn);
             }
         }
     }

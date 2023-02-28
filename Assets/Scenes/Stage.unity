@@ -353,6 +353,7 @@ MonoBehaviour:
   coolTime: 0
   canSummon: 0
   coolTimeImage: {fileID: 1447063432}
+  isSuper: 0
 --- !u!1 &131352286
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +369,7 @@ GameObject:
   - component: {fileID: 131352291}
   m_Layer: 0
   m_Name: EnemyHome
-  m_TagString: EnemyHome
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,7 +434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131352286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -800, y: 96, z: 0}
+  m_LocalPosition: {x: -600, y: 96, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -481,9 +482,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 10000
   nowHp: 0
+  boxCollider: {fileID: 0}
   isBreak: 0
-  isAlly: 0
-  boxCollider2D: {fileID: 131352289}
   hpBar: {fileID: 223417330}
   hpBarText: {fileID: 1346430836}
   hpBarRefreshTime: 0.06
@@ -1056,6 +1056,7 @@ MonoBehaviour:
   coolTime: 0
   canSummon: 0
   coolTimeImage: {fileID: 980628166}
+  isSuper: 0
 --- !u!114 &330196060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,7 +1504,7 @@ GameObject:
   - component: {fileID: 366984258}
   m_Layer: 0
   m_Name: AllyHome
-  m_TagString: AllyHome
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1616,9 +1617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 10000
   nowHp: 0
+  boxCollider: {fileID: 0}
   isBreak: 0
-  isAlly: 1
-  boxCollider2D: {fileID: 366984256}
   hpBar: {fileID: 1789902913}
   hpBarText: {fileID: 1640165304}
   hpBarRefreshTime: 0.06
@@ -2184,6 +2184,7 @@ MonoBehaviour:
   coolTime: 0
   canSummon: 0
   coolTimeImage: {fileID: 710882138}
+  isSuper: 0
 --- !u!114 &812376781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2785,6 +2786,7 @@ MonoBehaviour:
   coolTime: 0
   canSummon: 0
   coolTimeImage: {fileID: 1520344172}
+  isSuper: 0
 --- !u!114 &977550605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3460,6 +3462,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d104c7535ba5ac42a07119a148682d9, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 73cfc1efe9ad2e543b0594922156fcec, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: d7b2c3c7f3864c649940bad03fbc4a62, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: bc1a71059e4611c44850e8f520a0971d, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: d90928e46a557fd4e96039cbefa54f23, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 65c3de3aed74f294688af35cd2580836, type: 2}
     - target: {fileID: 6248880624057658791, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: m_Name
       value: TeamManager
@@ -3714,6 +3740,7 @@ MonoBehaviour:
   coolTime: 0
   canSummon: 0
   coolTimeImage: {fileID: 1520966329}
+  isSuper: 0
 --- !u!114 &1310652735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4171,6 +4198,7 @@ MonoBehaviour:
   coolTime: 0
   canSummon: 0
   coolTimeImage: {fileID: 13284140}
+  isSuper: 0
 --- !u!114 &1352870728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4325,6 +4353,7 @@ MonoBehaviour:
   coolTime: 0
   canSummon: 0
   coolTimeImage: {fileID: 844329303}
+  isSuper: 0
 --- !u!114 &1358387631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4798,6 +4827,7 @@ MonoBehaviour:
   coolTime: 0
   canSummon: 0
   coolTimeImage: {fileID: 1704508637}
+  isSuper: 0
 --- !u!114 &1572971928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5519,6 +5549,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 520265165737556737, guid: 012cebabe7d48dc4aac0675a9948dcb7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 520265165998432914, guid: 012cebabe7d48dc4aac0675a9948dcb7, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharacter : MonoBehaviour
+public class PlayerCharacter : Hp
 {
     [SerializeField] CharacterData characterData;
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
     [SerializeField] float attackCooltime;
     [SerializeField] float damage;
-    [SerializeField] float nowHp;
-    [SerializeField] float maxHp;
     [SerializeField] protected bool isEnemyChecked;
     [SerializeField] bool isSuper = false;
     protected List<GameObject> enemies = new();
     protected Animator animator;
-    BoxCollider2D characterCollider;
     protected Transform tr;
 
     public float AttackCooltime { get { return attackCooltime; } }
@@ -30,6 +27,7 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Start()
     {
+        boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         InitStat();
         StartCoroutine(CheckEnemy());
@@ -76,7 +74,7 @@ public class PlayerCharacter : MonoBehaviour
         {
             moveSpeed *= 1.4f;
             attackSpeed *= 1.4f;
-            damage = 1.4f;
+            damage *= 1.4f;
             nowHp = maxHp *= 1.4f;
         }
         else if (isSuper)

@@ -11,7 +11,7 @@ public class EnemyData : ScriptableObject
     [SerializeField] float maxHp;
     [SerializeField] float recoverManaNum;
 
-    public float MoveSpeed { get { return moveSpeed; } }
+    public float MoveSpeed { get { return -moveSpeed; } }
     public float AttackSpeed { get { return attackSpeed; } }
     public float Damage { get { return damage; } }
     public float MaxHp { get { return maxHp; } }

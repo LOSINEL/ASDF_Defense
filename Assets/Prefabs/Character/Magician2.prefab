@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3270378974320009657}
   - component: {fileID: 3270378974320009658}
+  - component: {fileID: 5686320078366509654}
   m_Layer: 0
   m_Name: AttackRange
   m_TagString: Untagged
@@ -39,7 +40,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3270378974320009656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -58,6 +59,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 660, y: 200}
   m_EdgeRadius: 0
+--- !u!114 &5686320078366509654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270378974320009656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6b7674049b55d4884251961ad281eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3270378974831109734
 GameObject:
   m_ObjectHideFlags: 0

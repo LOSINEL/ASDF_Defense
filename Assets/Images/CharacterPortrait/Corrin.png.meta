@@ -141,9 +141,9 @@ TextureImporter:
       name: Corrin_1
       rect:
         serializedVersion: 2
-        x: 1487
+        x: 1492
         y: 2238
-        width: 1740
+        width: 1698
         height: 1935
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

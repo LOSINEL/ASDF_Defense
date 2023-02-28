@@ -141,10 +141,10 @@ TextureImporter:
       name: Karla_1
       rect:
         serializedVersion: 2
-        x: 1594
+        x: 1600
         y: 2276
-        width: 1774
-        height: 1864
+        width: 1684
+        height: 1861
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

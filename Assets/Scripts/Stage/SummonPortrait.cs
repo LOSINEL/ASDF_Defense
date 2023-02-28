@@ -26,7 +26,7 @@ public class SummonPortrait : MonoBehaviour
     {
         while(true)
         {
-            if (rectTransform.anchoredPosition.x - moveSpeed * Time.deltaTime < 0f)
+            if (rectTransform.anchoredPosition.x - moveSpeed * Time.deltaTime <= 0f)
             {
                 rectTransform.anchoredPosition = Vector3.zero;
                 SetSuperImage();

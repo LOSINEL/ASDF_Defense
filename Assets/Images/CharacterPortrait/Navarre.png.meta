@@ -141,10 +141,10 @@ TextureImporter:
       name: Navarre_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 382
-        width: 1699
-        height: 1912
+        width: 1690
+        height: 1925
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,9 +162,9 @@ TextureImporter:
       name: Navarre_3
       rect:
         serializedVersion: 2
-        x: 1699
+        x: 1704
         y: 381
-        width: 1699
+        width: 1690
         height: 1925
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

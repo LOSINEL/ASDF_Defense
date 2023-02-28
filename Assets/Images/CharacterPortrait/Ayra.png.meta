@@ -141,9 +141,9 @@ TextureImporter:
       name: Ayra_1
       rect:
         serializedVersion: 2
-        x: 1595
+        x: 1600
         y: 2221
-        width: 1773
+        width: 1684
         height: 1919
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicianWeapon : MonoBehaviour
+public class MagicianWeapon : Weapon
 {
     BoxCollider2D weaponCollider;
-    float damage;
+
     private void Start()
     {
         weaponCollider = GetComponent<BoxCollider2D>();
@@ -16,12 +16,7 @@ public class MagicianWeapon : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyCharacter>().GetDamage(damage);
-            weaponCollider.enabled = false;
-        }
-        if (collision.CompareTag("EnemyHome"))
-        {
-            collision.GetComponent<Home>().GetDamage(damage);
+            collision.GetComponent<Hp>().SubHp(damage);
             weaponCollider.enabled = false;
         }
     }

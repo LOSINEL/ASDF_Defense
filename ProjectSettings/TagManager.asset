@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Character
   - Enemy
-  - AllyHome
-  - EnemyHome
   - CharacterAttack
   - EnemyAttack
   layers:

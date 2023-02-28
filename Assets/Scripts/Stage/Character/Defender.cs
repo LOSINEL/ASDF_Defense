@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Defender : PlayerCharacter
 {
-    [SerializeField] BoxCollider2D sightCollider;
-
     private void Update()
     {
         if (!IsEnemyChecked)
