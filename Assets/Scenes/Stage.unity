@@ -3463,29 +3463,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e6aceab234324bc42b47b1f45892d2bf, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: teamCharacters.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 5d104c7535ba5ac42a07119a148682d9, type: 2}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: teamCharacters.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 73cfc1efe9ad2e543b0594922156fcec, type: 2}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: teamCharacters.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: d7b2c3c7f3864c649940bad03fbc4a62, type: 2}
     - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 65c3de3aed74f294688af35cd2580836, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 964144958930abb41861aeb557b2047e, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: teamCharacters.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: bc1a71059e4611c44850e8f520a0971d, type: 2}
+      objectReference: {fileID: 11400000, guid: ebd6ea4f8a482544484088f431b0ad4c, type: 2}
     - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: teamCharacters.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: d90928e46a557fd4e96039cbefa54f23, type: 2}
+      objectReference: {fileID: 11400000, guid: ad86f28ca998a134181979e7d7d90461, type: 2}
     - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: teamCharacters.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 65c3de3aed74f294688af35cd2580836, type: 2}
+      objectReference: {fileID: 11400000, guid: ebd6ea4f8a482544484088f431b0ad4c, type: 2}
+    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
+      propertyPath: teamCharacters.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: cc821ffa0946ab943aa6fb03d2793724, type: 2}
     - target: {fileID: 6248880624057658791, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: m_Name
       value: TeamManager

@@ -14,11 +14,7 @@ public class AreaAttack : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyCharacter>().GetDamage(damage);
-        }
-        if (collision.CompareTag("EnemyHome"))
-        {
-            collision.GetComponent<Home>().SubHp(damage);
+            collision.GetComponent<Hp>().SubHp(damage);
         }
     }
 }

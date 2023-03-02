@@ -165,6 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2409832179253001237}
   - component: {fileID: 2409832179253001238}
+  - component: {fileID: 6408666920885434347}
   m_Layer: 0
   m_Name: AttackRange
   m_TagString: Untagged
@@ -213,6 +214,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 175, y: 200}
   m_EdgeRadius: 0
+--- !u!114 &6408666920885434347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2409832179253001236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bf785b88ff6094189fb1ee197c69b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2409832179464933312
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 0
   nowHp: 0
+  boxCollider: {fileID: 0}
   characterData: {fileID: 11400000, guid: f2a245880babd694481709d3b6c5b014, type: 2}
   moveSpeed: 0
   attackSpeed: 0
@@ -371,6 +385,8 @@ MonoBehaviour:
   damage: 0
   isEnemyChecked: 0
   isSuper: 0
+  cooltimeCheck: 0
+  canAttack: 1
   weaponCollider: {fileID: 2409832179253001238}
 --- !u!50 &-5402268906783149075
 Rigidbody2D:
