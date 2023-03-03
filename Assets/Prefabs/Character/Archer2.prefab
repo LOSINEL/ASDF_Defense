@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ac4083227fa094c4cae99cb5997aabcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,16 +148,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be98372161e0fbe4ca2c77234c2d5d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHp: 0
+  nowHp: 0
+  boxCollider: {fileID: 0}
   characterData: {fileID: 11400000, guid: bc1a71059e4611c44850e8f520a0971d, type: 2}
   moveSpeed: 0
   attackSpeed: 0
   attackCooltime: 0
   damage: 0
-  nowHp: 0
-  maxHp: 0
   isEnemyChecked: 0
   isSuper: 0
+  cooltimeCheck: 0
+  canAttack: 1
   arrow: {fileID: 540270789515710607, guid: b302fe5412ddb6f4ba5ab13f3ca887a0, type: 3}
+  archerNum: 1
 --- !u!50 &-3079585922257418166
 Rigidbody2D:
   serializedVersion: 4
@@ -251,7 +255,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 26df26cbbd876074385f39a6260f580e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

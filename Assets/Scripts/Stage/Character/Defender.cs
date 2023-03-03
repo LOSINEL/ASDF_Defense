@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class Defender : PlayerCharacter
 {
+    [SerializeField] bool isDefending = false;
+
     private void Update()
     {
         if (!IsEnemyChecked)
         {
-            Move();
+            if (isDefending)
+            {
+                DefenseOff();
+            }
         }
-        else
+        else if (!isDefending)
         {
-            Defense();
+            DefenseOn();
         }
     }
 
-    void Defense()
+    void DefenseOn()
     {
-        animator.SetTrigger("Defense");
+        isDefending = true;
+        animator.SetBool("Defense", true);
+    }
+
+    void DefenseOff()
+    {
+        isDefending = false;
+        animator.SetBool("Defense", false);
     }
 }

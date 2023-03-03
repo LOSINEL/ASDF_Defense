@@ -348,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6479125394617300724}
   - component: {fileID: 6479125394617300715}
-  - component: {fileID: 2597699018867254910}
+  - component: {fileID: 3397290768367343889}
   m_Layer: 0
   m_Name: AttackRange
   m_TagString: Untagged
@@ -378,7 +378,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6479125394617300725}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -397,7 +397,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 150, y: 200}
   m_EdgeRadius: 0
---- !u!114 &2597699018867254910
+--- !u!114 &3397290768367343889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -406,6 +406,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6479125394617300725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51bf785b88ff6094189fb1ee197c69b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ba50947a82ec2c4681e31a58e922cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0

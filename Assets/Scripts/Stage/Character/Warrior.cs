@@ -10,11 +10,7 @@ public class Warrior : PlayerCharacter
 
     private void Update()
     {
-        if (!IsEnemyChecked)
-        {
-            Move();
-        }
-        else if (IsEnemyChecked && canAttack)
+        if (IsEnemyChecked && canAttack)
         {
             canAttack = false;
             StartCoroutine(Attack());

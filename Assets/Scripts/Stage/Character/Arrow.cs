@@ -2,29 +2,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : Weapon
+public class Arrow : SingleAttack
 {
     [SerializeField] float moveSpeed;
+    [SerializeField] int arrowNum;
     Transform tr;
+    float time;
 
-    private void Start()
+    private void Awake()
     {
         tr = transform;
-        tr.Rotate(0f, 0f, 90f);
-        Destroy(this.gameObject, 1f);
+        tr.rotation = Quaternion.Euler(new Vector3(0f, 0f, 90f));
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        tr.Translate(new Vector2(moveSpeed * Time.deltaTime, 0f), Space.World);
+        InitArrow();
+    }
+
+    private void FixedUpdate()
+    {
+        tr.Translate(new Vector2(moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
+        if (Enemies.Count > 0)
+        {
+            Enemies[0].GetComponent<Hp>().SubHp(damage);
+            gameObject.SetActive(false);
+        }
+        if (time >= 1f)
+        {
+            tr.parent = PoolManager.instance.ArrowGroups[arrowNum].transform;
+            gameObject.SetActive(false);
+        }
+        time += Time.deltaTime;
+    }
+
+    public void InitArrow()
+    {
+        time = 0f;
+        Enemies.Clear();
+    }
+
+    public void SetPosition(Vector3 _position)
+    {
+        tr.position = _position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<Hp>().SubHp(damage);
-            Destroy(this.gameObject);
+            Enemies.Add(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Enemies.Remove(collision.gameObject);
         }
     }
 }

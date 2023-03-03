@@ -23,10 +23,6 @@ public class PlayerCharacter : Hp
     private void Awake()
     {
         tr = GetComponent<Transform>();
-    }
-
-    private void Start()
-    {
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         InitStat();
@@ -35,7 +31,7 @@ public class PlayerCharacter : Hp
 
     IEnumerator CheckEnemy()
     {
-        WaitForSeconds waitTime = new WaitForSeconds(0.1f);
+        WaitForSeconds _waitTime = new WaitForSeconds(0.1f);
         while (true)
         {
             if (enemies.Count > 0)
@@ -46,13 +42,21 @@ public class PlayerCharacter : Hp
             {
                 isEnemyChecked = false;
             }
-            yield return waitTime;
+            yield return _waitTime;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (!IsEnemyChecked)
+        {
+            Move();
         }
     }
 
     protected void Move()
     {
-        tr.Translate(moveSpeed * Time.deltaTime, 0f, 0f);
+        tr.Translate(moveSpeed * Time.fixedDeltaTime, 0f, 0f);
     }
 
     void InitStat()
@@ -87,12 +91,5 @@ public class PlayerCharacter : Hp
     public void CheckSuper()
     {
         isSuper = true;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("EnemyAttack"))
-        {
-        }
     }
 }

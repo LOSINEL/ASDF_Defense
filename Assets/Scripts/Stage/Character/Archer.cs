@@ -7,14 +7,11 @@ public class Archer : PlayerCharacter
     [SerializeField] float cooltimeCheck = 0f;
     [SerializeField] bool canAttack = true;
     [SerializeField] GameObject arrow;
-
+    [SerializeField] int archerNum;
+    
     private void Update()
     {
-        if (!IsEnemyChecked)
-        {
-            Move();
-        }
-        else if (IsEnemyChecked && canAttack)
+        if (IsEnemyChecked && canAttack)
         {
             canAttack = false;
             StartCoroutine(Attack());
@@ -42,7 +39,10 @@ public class Archer : PlayerCharacter
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
-        GameObject _arrow = Instantiate(arrow, tr.position, Quaternion.identity);
+        GameObject _arrow = PoolManager.instance.GetArrow(archerNum);
+        _arrow.transform.SetAsFirstSibling();
+        _arrow.SetActive(true);
+        _arrow.GetComponent<Arrow>().SetPosition(tr.position);
         _arrow.GetComponent<Arrow>().SetDamage(Damage);
     }
 }
