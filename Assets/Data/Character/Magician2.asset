@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 3270378974831109734, guid: a42e10dba7e3af74695215d3726160f7, type: 3}
   portraits:
-  - {fileID: -1412485636, guid: f8a9abcf967a3574daf877ad7eb8ef31, type: 3}
-  - {fileID: -1754250542, guid: f8a9abcf967a3574daf877ad7eb8ef31, type: 3}
-  - {fileID: 1979777971, guid: f8a9abcf967a3574daf877ad7eb8ef31, type: 3}
-  - {fileID: -2014779851, guid: f8a9abcf967a3574daf877ad7eb8ef31, type: 3}
-  - {fileID: 498843475, guid: f8a9abcf967a3574daf877ad7eb8ef31, type: 3}
-  damage: 294
-  maxHp: 240
+  - {fileID: -406755588, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
+  - {fileID: -16597320, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
+  - {fileID: 1224001919, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
+  - {fileID: -193616013, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
+  - {fileID: 2097252063, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
+  damage: 194
+  maxHp: 340
   moveSpeed: 180
   attackSpeed: 0.65
-  summonCost: 300
-  summonCoolTime: 5.5
-  superSummonCost: 900
+  summonCost: 240
+  summonCoolTime: 4.8
+  superSummonCost: 720
   charType: 10

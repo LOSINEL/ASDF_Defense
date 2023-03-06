@@ -13,14 +13,16 @@ public class Hp : MonoBehaviour
         if (nowHp - _damage <= 0f)
         {
             nowHp = 0f;
-            if (boxCollider.enabled)
-            {
-                boxCollider.enabled = false;
-            }
+            Die();
         }
         else
         {
             nowHp -= _damage;
         }
+    }
+
+    void Die()
+    {
+        Destroy(this.gameObject);
     }
 }

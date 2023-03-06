@@ -7,26 +7,32 @@ public class PlayerCharacter : Hp
     [SerializeField] CharacterData characterData;
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
-    [SerializeField] float attackCooltime;
+    [SerializeField] protected float attackCooltime;
     [SerializeField] float damage;
     [SerializeField] protected bool isEnemyChecked;
     [SerializeField] bool isSuper = false;
-    protected List<GameObject> enemies = new();
+    List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
 
-    public float AttackCooltime { get { return attackCooltime; } }
-    public bool IsEnemyChecked { get { return isEnemyChecked; } }
     public float Damage { get { return damage; } }
     public List<GameObject> Enemies { get { return enemies; } }
 
     private void Awake()
     {
-        tr = GetComponent<Transform>();
+        tr = transform;
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         InitStat();
         StartCoroutine(CheckEnemy());
+    }
+
+    private void FixedUpdate()
+    {
+        if (!isEnemyChecked)
+        {
+            Move();
+        }
     }
 
     IEnumerator CheckEnemy()
@@ -43,14 +49,6 @@ public class PlayerCharacter : Hp
                 isEnemyChecked = false;
             }
             yield return _waitTime;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (!IsEnemyChecked)
-        {
-            Move();
         }
     }
 

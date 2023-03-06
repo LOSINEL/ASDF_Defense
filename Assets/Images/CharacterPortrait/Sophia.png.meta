@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f8a9abcf967a3574daf877ad7eb8ef31
+guid: 4419452f350122549a43e2a19d5dc88f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sophia_0
+      name: Sophia__0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2361
-        width: 1612
-        height: 1947
+        y: 1829
+        width: 1500
+        height: 1900
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d18a086f9539e1940b4fd1eaca71376d
-      internalID: -1412485636
+      spriteID: 9d0b7dd88466ede47a0239d5e49336de
+      internalID: -16597320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sophia_2
+      name: Sophia__1
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 1829
+        width: 1500
+        height: 1900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e93af9d360061418c094c410550d61
+      internalID: 1224001919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sophia__2
       rect:
         serializedVersion: 2
         x: 0
-        y: 436
-        width: 1699
-        height: 1886
+        y: 0
+        width: 1293
+        height: 1789
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e520c313942dbf4aa264c42365c6a1a
-      internalID: -1754250542
+      spriteID: d3562ae68d305f841bab6b140b4af24f
+      internalID: -406755588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sophia_3
+      name: Sophia__3
       rect:
         serializedVersion: 2
-        x: 1699
-        y: 436
-        width: 1699
-        height: 1886
+        x: 2705
+        y: 1464
+        width: 475
+        height: 312
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 205ed1b880dfae249849989743e3d206
-      internalID: 1979777971
+      spriteID: a911a15d2dd312c47ab86bb2425fb892
+      internalID: 2097252063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sophia_4
+      name: Sophia__4
       rect:
         serializedVersion: 2
-        x: 9
-        y: 42
-        width: 416
-        height: 316
+        x: 3022
+        y: 987
+        width: 158
+        height: 157
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,29 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 365fbda2868c055419c3a30a9d2cb2db
-      internalID: 498843475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sophia_6
-      rect:
-        serializedVersion: 2
-        x: 982
-        y: 180
-        width: 156
-        height: 164
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8694abc9e48934c4584407c3affd30b1
-      internalID: -2014779851
+      spriteID: 8d897a05ffa23cc4788e884afd3c8b84
+      internalID: -193616013
       vertices: []
       indices: 
       edges: []
@@ -232,13 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sophia_3: 1979777971
-      Sophia_2: -1754250542
-      Sophia_4: 498843475
-      Sophia_5: 1657119875
-      Sophia_0: -1412485636
-      Sophia_1: -1888981807
-      Sophia_6: -2014779851
+      Sophia__1: 1224001919
+      Sophia__3: 2097252063
+      Sophia__4: -193616013
+      Sophia__2: -406755588
+      Sophia__0: -16597320
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

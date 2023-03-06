@@ -5,12 +5,16 @@ using UnityEngine;
 [CreateAssetMenu (fileName = "Enemy", menuName = "Enemy")]
 public class EnemyData : ScriptableObject
 {
-    [SerializeField] float moveSpeed;
-    [SerializeField] float attackSpeed;
+    [SerializeField] GameObject enemy;
+
     [SerializeField] float damage;
     [SerializeField] float maxHp;
+    [SerializeField] float moveSpeed;
+    [SerializeField] float attackSpeed;
     [SerializeField] float recoverManaNum;
 
+
+    public GameObject Enemy { get { return enemy; } }
     public float MoveSpeed { get { return -moveSpeed; } }
     public float AttackSpeed { get { return attackSpeed; } }
     public float Damage { get { return damage; } }

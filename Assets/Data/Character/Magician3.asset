@@ -19,8 +19,8 @@ MonoBehaviour:
   - {fileID: -840618630, guid: f964633e83baf34489aef612d2c9b7c2, type: 3}
   - {fileID: -2015138776, guid: f964633e83baf34489aef612d2c9b7c2, type: 3}
   - {fileID: -641029367, guid: f964633e83baf34489aef612d2c9b7c2, type: 3}
-  damage: 2060
-  maxHp: 480
+  damage: 733
+  maxHp: 800
   moveSpeed: 210
   attackSpeed: 0.7
   summonCost: 1000

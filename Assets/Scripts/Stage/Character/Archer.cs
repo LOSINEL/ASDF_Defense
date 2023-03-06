@@ -11,7 +11,7 @@ public class Archer : PlayerCharacter
     
     private void Update()
     {
-        if (IsEnemyChecked && canAttack)
+        if (isEnemyChecked && canAttack)
         {
             canAttack = false;
             StartCoroutine(Attack());
@@ -22,7 +22,7 @@ public class Archer : PlayerCharacter
 
     void CheckAttackCooltime()
     {
-        if (cooltimeCheck > AttackCooltime)
+        if (cooltimeCheck > attackCooltime)
         {
             cooltimeCheck = 0f;
             canAttack = true;

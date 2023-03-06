@@ -59,6 +59,18 @@ public class StageManaManager : MonoBehaviour
         RefreshManaText();
     }
 
+    public void AddMana(float _mana)
+    {
+        if (nowMana + _mana >= maxMana)
+        {
+            nowMana = maxMana;
+        }
+        else
+        {
+            nowMana += _mana;
+        }
+    }
+
     IEnumerator RecoverMana()
     {
         while (true)

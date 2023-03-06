@@ -8,7 +8,7 @@ public class Defender : PlayerCharacter
 
     private void Update()
     {
-        if (!IsEnemyChecked)
+        if (!isEnemyChecked)
         {
             if (isDefending)
             {

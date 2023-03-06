@@ -23,7 +23,7 @@ MonoBehaviour:
   maxHp: 560
   moveSpeed: 144
   attackSpeed: 0.9
-  summonCost: 30
-  summonCoolTime: 1.6
-  superSummonCost: 90
+  summonCost: 60
+  summonCoolTime: 2.6
+  superSummonCost: 180
   charType: 1
