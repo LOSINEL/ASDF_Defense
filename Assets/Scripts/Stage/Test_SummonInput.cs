@@ -5,55 +5,67 @@ using UnityEngine;
 
 public class Test_SummonInput : MonoBehaviour
 {
-    [SerializeField] CharacterData[] characterData;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Instantiate(characterData[0].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[0], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Instantiate(characterData[1].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[1], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Instantiate(characterData[2].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[2], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Instantiate(characterData[3].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[3], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            Instantiate(characterData[4].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[4], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            Instantiate(characterData[5].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[5], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            Instantiate(characterData[6].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[6], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
-            Instantiate(characterData[7].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[7], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            Instantiate(characterData[8].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[8], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            Instantiate(characterData[9].Character, transform.position, Quaternion.identity, transform);
+            Instantiate(SummonManager.instance.Characters[9], transform.position, Quaternion.identity, transform);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                transform.GetChild(i).transform.Translate(-400f, 0f, 0f);
-            }
+            Instantiate(SummonManager.instance.Characters[10], transform.position, Quaternion.identity, transform);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Instantiate(SummonManager.instance.Characters[11], transform.position, Quaternion.identity, transform);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Instantiate(SummonManager.instance.Characters[12], transform.position, Quaternion.identity, transform);
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(SummonManager.instance.Characters[13], transform.position, Quaternion.identity, transform);
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Instantiate(SummonManager.instance.Characters[14], transform.position, Quaternion.identity, transform);
         }
     }
 }

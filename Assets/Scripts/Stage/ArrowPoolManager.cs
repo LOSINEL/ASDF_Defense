@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoolManager : MonoBehaviour
+public class ArrowPoolManager : MonoBehaviour
 {
-    public static PoolManager instance;
+    public static ArrowPoolManager instance;
 
     [SerializeField] int arrowNum;
     [SerializeField] GameObject[] arrows;

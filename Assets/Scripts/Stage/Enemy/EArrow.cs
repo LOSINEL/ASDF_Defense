@@ -12,7 +12,7 @@ public class EArrow : SingleAttack
     private void Awake()
     {
         tr = transform;
-        tr.rotation = Quaternion.Euler(new Vector3(0f, 0f, 90f));
+        tr.rotation = Quaternion.Euler(new Vector3(0f, 0f, -90f));
     }
 
     private void OnEnable()
@@ -22,7 +22,7 @@ public class EArrow : SingleAttack
 
     private void FixedUpdate()
     {
-        tr.Translate(new Vector2(moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
+        tr.Translate(new Vector2(-moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
         if (Enemies.Count > 0)
         {
             Enemies[0].GetComponent<Hp>().SubHp(damage);
@@ -30,7 +30,6 @@ public class EArrow : SingleAttack
         }
         if (time >= 1f)
         {
-            tr.parent = PoolManager.instance.ArrowGroups[arrowNum].transform;
             gameObject.SetActive(false);
         }
         time += Time.deltaTime;

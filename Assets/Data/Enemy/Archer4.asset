@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f116a7b9f583e488edfa1a9b871693, type: 3}
   m_Name: Archer4
   m_EditorClassIdentifier: 
+  enemy: {fileID: 7698765676266153419, guid: d2ff01e3ffcb2f74388454716550afee, type: 3}
   damage: 95
   maxHp: 760
   moveSpeed: 320

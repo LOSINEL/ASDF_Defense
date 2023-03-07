@@ -30,7 +30,6 @@ public class Arrow : SingleAttack
         }
         if (time >= 1f)
         {
-            tr.parent = PoolManager.instance.ArrowGroups[arrowNum].transform;
             gameObject.SetActive(false);
         }
         time += Time.deltaTime;

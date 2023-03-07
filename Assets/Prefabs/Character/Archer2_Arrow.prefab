@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7390956695154534437}
   m_Layer: 0
   m_Name: Archer2_Arrow
-  m_TagString: CharacterAttack
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   damage: 0
   moveSpeed: 900
   arrowNum: 1
+  rotation: {x: 0, y: 0, z: 90}
 --- !u!61 &7390956695154534437
 BoxCollider2D:
   m_ObjectHideFlags: 0

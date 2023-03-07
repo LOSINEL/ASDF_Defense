@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EWarriorWeapon : MonoBehaviour
+public class EWarriorWeapon : Weapon
 {
-    // Start is called before the first frame update
-    void Start()
+    BoxCollider2D weaponCollider;
+
+    private void Start()
     {
-        
+        weaponCollider = GetComponent<BoxCollider2D>();
+        damage = GetComponentInParent<EWarrior>().Damage;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Character"))
+        {
+            collision.GetComponent<Hp>().SubHp(damage);
+            weaponCollider.enabled = false;
+        }
     }
 }

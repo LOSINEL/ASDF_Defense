@@ -9,7 +9,7 @@ public class MagicianWeapon : Weapon
     private void Start()
     {
         weaponCollider = GetComponent<BoxCollider2D>();
-        damage = GetComponentInParent<PlayerCharacter>().Damage;
+        damage = GetComponentInParent<Magician>().Damage;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

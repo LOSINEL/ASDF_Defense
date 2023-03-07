@@ -72,7 +72,13 @@ public class PlayerCharacter : Hp
         damage = characterData.Damage;
         maxHp = nowHp = characterData.MaxHp;
         isEnemyChecked = false;
-        if (isSuper && characterData.Damage > 0)
+    }
+
+    public void CheckSuper()
+    {
+        isSuper = true;
+        GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f);
+        if (isSuper && damage > 0)
         {
             moveSpeed *= 1.4f;
             attackSpeed *= 1.4f;
@@ -84,10 +90,5 @@ public class PlayerCharacter : Hp
             moveSpeed *= 1.6f;
             nowHp = maxHp *= 2.5f;
         }
-    }
-
-    public void CheckSuper()
-    {
-        isSuper = true;
     }
 }

@@ -6,7 +6,6 @@ public class Archer : PlayerCharacter
 {
     [SerializeField] float cooltimeCheck = 0f;
     [SerializeField] bool canAttack = true;
-    [SerializeField] GameObject arrow;
     [SerializeField] int archerNum;
     
     private void Update()
@@ -39,7 +38,7 @@ public class Archer : PlayerCharacter
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
-        GameObject _arrow = PoolManager.instance.GetArrow(archerNum);
+        GameObject _arrow = ArrowPoolManager.instance.GetArrow(archerNum);
         _arrow.transform.SetAsFirstSibling();
         _arrow.SetActive(true);
         _arrow.GetComponent<Arrow>().SetPosition(tr.position);

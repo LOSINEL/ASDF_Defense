@@ -13,8 +13,7 @@ public class SummonButton : MonoBehaviour
     [SerializeField] bool canSummon;
     [SerializeField] Image coolTimeImage;
     [SerializeField] bool isSuper = false;
-
-    public float SummonCost { get { return summonCost; } }
+    [SerializeField] int slotNum;
 
     private void Start()
     {
@@ -23,6 +22,8 @@ public class SummonButton : MonoBehaviour
 
     void InitButton()
     {
+        int num = transform.GetSiblingIndex();
+        slotNum = (int)TeamManager.instance.TeamCharacters[num].CharType;
         coolTimeImage.fillAmount = 0f;
         characterData = TeamManager.instance.TeamCharacters[transform.GetSiblingIndex()];
         summonCooltime = characterData.SummonCoolTime;
@@ -36,6 +37,14 @@ public class SummonButton : MonoBehaviour
     public void SetSuper(bool _tf)
     {
         isSuper = _tf;
+        if (isSuper)
+        {
+            summonCost = characterData.SuperSummonCost;
+        }
+        else
+        {
+            summonCost = characterData.SummonCost;
+        }
     }
 
     public void SummonCharacter()
@@ -43,7 +52,7 @@ public class SummonButton : MonoBehaviour
         if (canSummon && StageManaManager.instance.NowMana >= summonCost)
         {
             StageManaManager.instance.UseMana(summonCost);
-            GameObject tmpObj = Instantiate(characterData.Character, StageManager.instance.CharacterSummonTransform.position - new Vector3(0f, Random.Range(80f, 128f), 0f), Quaternion.identity);
+            GameObject tmpObj = Instantiate(SummonManager.instance.Characters[slotNum], SummonManager.instance.GetRandomPositionRange(), Quaternion.identity);
             if (isSuper) tmpObj.GetComponent<PlayerCharacter>().CheckSuper();
             SummonPortraitGroup.instance.SummonPortrait(characterData.CharType);
             StartCoroutine(RefreshSummonCooltime());

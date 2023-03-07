@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6027130788925139227}
   m_Layer: 0
   m_Name: Archer1_Arrow
-  m_TagString: CharacterAttack
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f69ac6c42e03ec41bee860d685ecfcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   moveSpeed: 800
+  arrowNum: 0
+  rotation: {x: 0, y: 0, z: 90}
 --- !u!61 &6027130788925139227
 BoxCollider2D:
   m_ObjectHideFlags: 0
