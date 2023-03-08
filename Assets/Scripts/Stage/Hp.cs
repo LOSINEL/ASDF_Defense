@@ -23,6 +23,6 @@ public class Hp : MonoBehaviour
 
     void Die()
     {
-        Destroy(this.gameObject);
+        gameObject.SetActive(false);
     }
 }

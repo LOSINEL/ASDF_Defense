@@ -91,7 +91,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7335730186794227897
 Transform:
   m_ObjectHideFlags: 0
@@ -229,9 +229,9 @@ MonoBehaviour:
   damage: 0
   isEnemyChecked: 0
   isSuper: 0
+  enemies: []
   cooltimeCheck: 0
   canAttack: 1
-  arrow: {fileID: 3518270113422312571, guid: c7f746ce37a68e646bc49fb5387c30db, type: 3}
   archerNum: 0
 --- !u!50 &7472702143990545533
 Rigidbody2D:

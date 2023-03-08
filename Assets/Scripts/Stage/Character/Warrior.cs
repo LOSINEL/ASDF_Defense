@@ -13,6 +13,7 @@ public class Warrior : PlayerCharacter
         if (isEnemyChecked && canAttack)
         {
             canAttack = false;
+            isEnemyChecked = false;
             StartCoroutine(Attack());
         }
         if (!canAttack)
@@ -36,8 +37,10 @@ public class Warrior : PlayerCharacter
     {
         animator.SetTrigger("Attack");
         yield return null;
-        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
+        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 3f;
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
+        yield return new WaitForSeconds(waitTime);
+        weaponCollider.enabled = false;
     }
 }

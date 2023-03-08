@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SightCheck : MonoBehaviour
 {
+    const string enemyTag = "Enemy";
+
     PlayerCharacter playerCharacter;
 
     private void Start()
@@ -13,17 +15,9 @@ public class SightCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag(enemyTag))
         {
             playerCharacter.Enemies.Add(collision.gameObject);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            playerCharacter.Enemies.Remove(collision.gameObject);
         }
     }
 }

@@ -36,8 +36,10 @@ public class EMagician : EnemyCharacter
     {
         animator.SetTrigger("Attack");
         yield return null;
-        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
+        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 3f;
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
+        yield return new WaitForSeconds(waitTime);
+        weaponCollider.enabled = false;
     }
 }

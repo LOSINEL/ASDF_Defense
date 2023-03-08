@@ -22,8 +22,7 @@ public class SummonButton : MonoBehaviour
 
     void InitButton()
     {
-        int num = transform.GetSiblingIndex();
-        slotNum = (int)TeamManager.instance.TeamCharacters[num].CharType;
+        slotNum = transform.GetSiblingIndex();
         coolTimeImage.fillAmount = 0f;
         characterData = TeamManager.instance.TeamCharacters[transform.GetSiblingIndex()];
         summonCooltime = characterData.SummonCoolTime;
@@ -52,7 +51,9 @@ public class SummonButton : MonoBehaviour
         if (canSummon && StageManaManager.instance.NowMana >= summonCost)
         {
             StageManaManager.instance.UseMana(summonCost);
-            GameObject tmpObj = Instantiate(SummonManager.instance.Characters[slotNum], SummonManager.instance.GetRandomPositionRange(), Quaternion.identity);
+            GameObject tmpObj = SummonManager.instance.GetCharacter(slotNum);
+            tmpObj.transform.SetAsFirstSibling();
+            tmpObj.SetActive(true);
             if (isSuper) tmpObj.GetComponent<PlayerCharacter>().CheckSuper();
             SummonPortraitGroup.instance.SummonPortrait(characterData.CharType);
             StartCoroutine(RefreshSummonCooltime());
@@ -61,10 +62,12 @@ public class SummonButton : MonoBehaviour
 
     IEnumerator RefreshSummonCooltime()
     {
+        canSummon = false;
         coolTime = summonCooltime;
+        coolTimeImage.fillAmount = 1f;
         while(true)
         {
-            if (coolTime <= summonCooltime)
+            if (coolTime <= 0)
             {
                 coolTime = 0f;
                 canSummon = true;

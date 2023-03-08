@@ -21,7 +21,7 @@ public class EArcher : EnemyCharacter
 
     void CheckAttackCooltime()
     {
-        if (cooltimeCheck > attackCooltime)
+        if (cooltimeCheck >= attackCooltime)
         {
             cooltimeCheck = 0f;
             canAttack = true;

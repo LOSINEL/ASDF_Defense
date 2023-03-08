@@ -38,7 +38,6 @@ public class EArrow : SingleAttack
     public void InitArrow()
     {
         time = 0f;
-        Enemies.Clear();
     }
 
     public void SetPosition(Vector3 _position)
@@ -51,14 +50,6 @@ public class EArrow : SingleAttack
         if (collision.CompareTag("Character"))
         {
             Enemies.Add(collision.gameObject);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Character"))
-        {
-            Enemies.Remove(collision.gameObject);
         }
     }
 }

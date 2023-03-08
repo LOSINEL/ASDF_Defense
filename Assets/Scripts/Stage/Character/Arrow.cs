@@ -38,7 +38,6 @@ public class Arrow : SingleAttack
     public void InitArrow()
     {
         time = 0f;
-        Enemies.Clear();
     }
 
     public void SetPosition(Vector3 _position)
@@ -51,14 +50,6 @@ public class Arrow : SingleAttack
         if (collision.CompareTag("Enemy"))
         {
             Enemies.Add(collision.gameObject);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            Enemies.Remove(collision.gameObject);
         }
     }
 }

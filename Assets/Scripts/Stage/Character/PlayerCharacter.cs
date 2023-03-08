@@ -11,7 +11,7 @@ public class PlayerCharacter : Hp
     [SerializeField] float damage;
     [SerializeField] protected bool isEnemyChecked;
     [SerializeField] bool isSuper = false;
-    List<GameObject> enemies = new();
+    [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
 
@@ -23,32 +23,57 @@ public class PlayerCharacter : Hp
         tr = transform;
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(CheckEnemyList());
+    }
+
+    private void OnEnable()
+    {
+        tr.position = SummonManager.instance.GetRandomPosition();
         InitStat();
-        StartCoroutine(CheckEnemy());
+    }
+
+    private void OnDisable()
+    {
+        enemies.Clear();
     }
 
     private void FixedUpdate()
     {
+        CheckEnemy();
         if (!isEnemyChecked)
         {
             Move();
         }
     }
 
-    IEnumerator CheckEnemy()
+    IEnumerator CheckEnemyList()
     {
-        WaitForSeconds _waitTime = new WaitForSeconds(0.1f);
         while (true)
         {
-            if (enemies.Count > 0)
+            for (int i = enemies.Count - 1; i >= 0; i--)
             {
-                isEnemyChecked = true;
+                if (enemies[i].activeSelf == false)
+                {
+                    enemies.Remove(enemies[i]);
+                }
             }
-            else
-            {
-                isEnemyChecked = false;
-            }
-            yield return _waitTime;
+            yield return null;
+        }
+    }
+
+    public void CheckEnemy()
+    {
+        if (enemies.Count > 0)
+        {
+            isEnemyChecked = true;
+        }
+        else
+        {
+            isEnemyChecked = false;
         }
     }
 

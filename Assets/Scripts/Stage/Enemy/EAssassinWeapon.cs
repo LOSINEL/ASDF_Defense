@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class EAssassinWeapon : SingleAttack
 {
-    BoxCollider2D weaponCollider;
-
     private void Start()
     {
-        weaponCollider = GetComponent<BoxCollider2D>();
         damage = GetComponentInParent<EAssassin>().Damage;
     }
 
@@ -26,14 +23,6 @@ public class EAssassinWeapon : SingleAttack
         if (collision.CompareTag("Character"))
         {
             Enemies.Add(collision.gameObject);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Character"))
-        {
-            Enemies.Remove(collision.gameObject);
         }
     }
 }

@@ -6,26 +6,46 @@ public class SummonManager : MonoBehaviour
 {
     public static SummonManager instance;
 
-    [SerializeField] Transform characterSummonTransform;
+    [SerializeField] int summonNum;
     [SerializeField] GameObject[] characters;
+    [SerializeField] Transform[] characterGroups = new Transform[8];
+    Transform tr;
+    int groupNum;
 
     public GameObject[] Characters { get { return characters; } }
-    public Transform CharacterSummonTransform { get { return characterSummonTransform; } }
 
     private void Awake()
     {
         instance = this;
     }
 
-    public Vector3 GetRandomPositionRange(Vector3 _pos)
+    private void Start()
     {
-        Vector3 tmpPos = new Vector3(0f, Random.Range(80f, 128f), 0f);
-        return _pos - tmpPos;
+        groupNum = characterGroups.Length;
+        tr = transform;
+        SetCharacter();
     }
 
-    public Vector3 GetRandomPositionRange()
+    void SetCharacter()
     {
-        Vector3 tmpPos = new Vector3(0f, Random.Range(80f, 128f), 0f);
-        return CharacterSummonTransform.position - tmpPos;
+        for (int i = 0; i < groupNum; i++)
+        {
+            GameObject tmpObj = characters[(int)TeamManager.instance.TeamCharacters[i].CharType];
+            for (int j = 0; j < summonNum; j++)
+            {
+                Instantiate(tmpObj, characterGroups[i]);
+            }
+        }
+    }
+
+    public Vector3 GetRandomPosition()
+    {
+        Vector3 tmpPos = new Vector3(0f, Random.Range(-40f, 40f), 0f);
+        return tr.position + tmpPos;
+    }
+
+    public GameObject GetCharacter(int _num)
+    {
+        return characterGroups[_num].GetChild(summonNum - 1).gameObject;
     }
 }

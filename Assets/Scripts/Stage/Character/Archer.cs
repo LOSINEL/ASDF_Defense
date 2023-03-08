@@ -21,7 +21,7 @@ public class Archer : PlayerCharacter
 
     void CheckAttackCooltime()
     {
-        if (cooltimeCheck > attackCooltime)
+        if (cooltimeCheck >= attackCooltime)
         {
             cooltimeCheck = 0f;
             canAttack = true;

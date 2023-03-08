@@ -10,9 +10,8 @@ public class Home : Hp
     [SerializeField] Image hpBar;
     [SerializeField] TMP_Text hpBarText;
     [SerializeField] float hpBarRefreshTime;
+    [SerializeField] bool isAlly;
     WaitForSeconds waitTime;
-
-    public bool IsBreak { get { return isBreak; } }
 
     private void Start()
     {
@@ -21,6 +20,14 @@ public class Home : Hp
         nowHp = maxHp;
         waitTime = new WaitForSeconds(hpBarRefreshTime);
         StartCoroutine(RefreshHpBar());
+    }
+
+    private void OnDisable()
+    {
+        nowHp = 0f;
+        isBreak = true;
+        if (!isAlly) EnemySummonManager.instance.StopSummon();
+        // StageManager.instance.ActivateWinWindow(isAlly);
     }
 
     IEnumerator RefreshHpBar()

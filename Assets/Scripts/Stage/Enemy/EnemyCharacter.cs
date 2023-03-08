@@ -11,7 +11,7 @@ public class EnemyCharacter : Hp
     [SerializeField] float damage;
     [SerializeField] float recoverManaNum;
     [SerializeField] protected bool isEnemyChecked;
-    List<GameObject> enemies = new();
+    [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
 
@@ -23,15 +23,58 @@ public class EnemyCharacter : Hp
         tr = transform;
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(CheckEnemyList());
+    }
+
+    private void OnEnable()
+    {
+        tr.position = EnemySummonManager.instance.GetRandomPosition();
         InitStat();
-        StartCoroutine(CheckEnemy());
+    }
+
+    private void OnDisable()
+    {
+        enemies.Clear();
+        StageManaManager.instance.AddMana(recoverManaNum);
     }
 
     private void FixedUpdate()
     {
+        CheckEnemy();
         if (!isEnemyChecked)
         {
             Move();
+        }
+    }
+
+    IEnumerator CheckEnemyList()
+    {
+        while (true)
+        {
+            for (int i = enemies.Count - 1; i >= 0; i--)
+            {
+                if (enemies[i].activeSelf == false)
+                {
+                    enemies.Remove(enemies[i]);
+                }
+            }
+            yield return null;
+        }
+    }
+
+    public void CheckEnemy()
+    {
+        if (enemies.Count > 0)
+        {
+            isEnemyChecked = true;
+        }
+        else
+        {
+            isEnemyChecked = false;
         }
     }
 
@@ -56,41 +99,5 @@ public class EnemyCharacter : Hp
     void Move()
     {
         tr.Translate(moveSpeed * Time.fixedDeltaTime, 0f, 0f);
-    }
-
-    IEnumerator CheckEnemy()
-    {
-        WaitForSeconds _waitTime = new WaitForSeconds(0.1f);
-        while (true)
-        {
-            if (enemies.Count > 0)
-            {
-                isEnemyChecked = true;
-            }
-            else
-            {
-                isEnemyChecked = false;
-            }
-            yield return _waitTime;
-        }
-    }
-
-    public void SubHp(float _damage)
-    {
-        if (nowHp - _damage <= 0f)
-        {
-            nowHp = 0f;
-            Die();
-        }
-        else
-        {
-            nowHp -= _damage;
-        }
-    }
-
-    void Die()
-    {
-        StageManaManager.instance.AddMana(recoverManaNum);
-        Destroy(this.gameObject);
     }
 }

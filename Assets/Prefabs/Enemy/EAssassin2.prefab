@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9092406410946156448
 Transform:
   m_ObjectHideFlags: 0
@@ -180,9 +180,10 @@ MonoBehaviour:
   damage: 0
   recoverManaNum: 0
   isEnemyChecked: 0
+  enemies: []
   cooltimeCheck: 0
   canAttack: 1
-  weaponCollider: {fileID: 9092406411040223655}
+  weaponCollider: {fileID: 9092406411040223673}
 --- !u!1 &9092406411040223673
 GameObject:
   m_ObjectHideFlags: 0

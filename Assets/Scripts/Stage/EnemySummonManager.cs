@@ -4,78 +4,93 @@ using UnityEngine;
 
 public class EnemySummonManager : MonoBehaviour
 {
-    [SerializeField] Transform enemySummonTransform;
-    [SerializeField] int stageLevel;
-    [SerializeField] SummonGroup[] summonGroups = new SummonGroup[9];
-    [SerializeField] GameObject[] enemies;
-    int summonLevel;
+    public static EnemySummonManager instance;
 
-    public GameObject[] Enemies { get { return enemies; } }
-    public Transform EnemySummonTransform { get { return enemySummonTransform; } }
+    [SerializeField] int stageLevel;
+    [SerializeField] float summonTime;
+    [SerializeField] SummonGroup[] summonGroups = new SummonGroup[9];
+    [SerializeField] int[] summonNums = new int[3];
+    [SerializeField] Transform[] enemyGroups = new Transform[5];
+    Transform tr;
+    int summonLevel;
+    int groupNum;
+    int summonNum;
+    Coroutine summonEnemy;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
+        groupNum = enemyGroups.Length;
+        summonNum = summonNums.Length;
+        tr = transform;
         stageLevel = GameManager.instance.NowStage;
         summonLevel = stageLevel - 1;
         if (summonLevel < 0) summonLevel = 0;
-        StartCoroutine(SummonEnemy());
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Instantiate(enemies[0], SummonManager.instance.GetRandomPositionRange(enemySummonTransform.position), Quaternion.identity);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Instantiate(enemies[1], SummonManager.instance.GetRandomPositionRange(enemySummonTransform.position), Quaternion.identity);
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Instantiate(enemies[2], SummonManager.instance.GetRandomPositionRange(enemySummonTransform.position), Quaternion.identity);
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            Instantiate(enemies[3], SummonManager.instance.GetRandomPositionRange(enemySummonTransform.position), Quaternion.identity);
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Instantiate(enemies[4], SummonManager.instance.GetRandomPositionRange(enemySummonTransform.position), Quaternion.identity);
-        }
+        SetEnemy();
+        summonEnemy = StartCoroutine(SummonEnemy());
     }
 
     IEnumerator SummonEnemy()
     {
-        WaitForSeconds waitTime = new WaitForSeconds(2f);
+        int groupRand;
+        int elementRand;
+        GameObject tmpObj;
+
+        WaitForSeconds waitTime = new WaitForSeconds(summonTime);
         yield return waitTime;
         while (true)
         {
-            Instantiate(summonGroups[summonLevel].GetEnemy(Random.Range(0, 5)), SummonManager.instance.GetRandomPositionRange(enemySummonTransform.position), Quaternion.identity);
+            groupRand = Random.Range(0, groupNum);
+            elementRand = Random.Range(0, summonNum);
+            tmpObj = enemyGroups[groupRand].GetChild(elementRand).GetChild(summonNums[elementRand] - 1).gameObject;
+            tmpObj.SetActive(true);
+            tmpObj.transform.SetAsFirstSibling();
             yield return waitTime;
         }
+    }
+
+    public void StopSummon()
+    {
+        StopCoroutine(summonEnemy);
+    }
+
+    void SetEnemy()
+    {
+        for (int i = 0; i < groupNum; i++)
+        {
+            for (int j = 0; j < summonNum; j++)
+            {
+                for (int k = 0; k < summonNums[j]; k++)
+                {
+                    Instantiate(summonGroups[summonLevel].SummonElements[i].Enemies[j], enemyGroups[i].GetChild(j));
+                }
+            }
+        }
+    }
+
+    public Vector3 GetRandomPosition()
+    {
+        Vector3 tmpPos = new Vector3(0f, Random.Range(-40f, 40f), 0f);
+        return tr.position + tmpPos;
     }
 
     [System.Serializable]
     class SummonGroup
     {
         [SerializeField] SummonElement[] summonElements = new SummonElement[5];
-        public GameObject GetEnemy(int _num)
-        {
-            return summonElements[_num].GetEnemy();
-        }
+
+        public SummonElement[] SummonElements { get { return summonElements; } }
     }
 
     [System.Serializable]
     class SummonElement
     {
         [SerializeField] GameObject[] enemies = new GameObject[3];
-        public GameObject GetEnemy()
-        {
-            int rand = Random.Range(0, 100);
-            if (rand < 75) return enemies[0];
-            else if (rand < 95) return enemies[1];
-            else return enemies[2];
-        }
+
+        public GameObject[] Enemies { get { return enemies; } }
     }
 }
