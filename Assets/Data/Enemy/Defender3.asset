@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f116a7b9f583e488edfa1a9b871693, type: 3}
   m_Name: Defender3
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   damage: 0
   maxHp: 1940
   moveSpeed: 180
   attackSpeed: 0
   recoverManaNum: 58
+  gold: 7

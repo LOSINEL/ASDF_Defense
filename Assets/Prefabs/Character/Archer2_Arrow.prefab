@@ -101,7 +101,6 @@ MonoBehaviour:
   damage: 0
   moveSpeed: 900
   arrowNum: 1
-  rotation: {x: 0, y: 0, z: 90}
 --- !u!61 &7390956695154534437
 BoxCollider2D:
   m_ObjectHideFlags: 0

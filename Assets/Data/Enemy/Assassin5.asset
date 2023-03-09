@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f116a7b9f583e488edfa1a9b871693, type: 3}
   m_Name: Assassin5
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   damage: 387
   maxHp: 1330
   moveSpeed: 352
   attackSpeed: 2.04
   recoverManaNum: 88
+  gold: 16

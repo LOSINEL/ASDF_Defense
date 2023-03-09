@@ -45,8 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 0
-  level: 1
-  maxExp: 11
-  nowExp: 0
   maxStage: 0
   nowStage: 0

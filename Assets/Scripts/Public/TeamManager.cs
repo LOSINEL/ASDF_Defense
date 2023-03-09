@@ -9,9 +9,13 @@ public class TeamManager : MonoBehaviour
     const int teamSize = 8;
     [SerializeField] SerializableDictionary<Enums.CHAR_TYPE, CharacterData> charactersDatas = new();
     [SerializeField] CharacterData[] teamCharacters = new CharacterData[teamSize];
+    [SerializeField] Color[] portraitBackgroundColors = new Color[5];
+
+    int selectedCastleCharacter;
 
     public SerializableDictionary<Enums.CHAR_TYPE, CharacterData> CharacterDatas { get { return charactersDatas; } }
     public CharacterData[] TeamCharacters { get { return teamCharacters; } }
+    public Color[] PortraitBackgroundColors { get { return portraitBackgroundColors; } }
 
     private void Awake()
     {
@@ -26,34 +30,16 @@ public class TeamManager : MonoBehaviour
         }
     }
 
-    public void ChangeCharacter(int _index, Enums.CHAR_TYPE _charType)
+    public void SelectCastleCharacter(int _charType)
     {
-        if (CheckDoubleCharacter(_charType))
-        {
-            teamCharacters[GetDoubleCharacterIndex(_charType)] = teamCharacters[_index];
-            teamCharacters[_index] = charactersDatas.GetValue(_charType);
-        }
-        else
-        {
-            teamCharacters[_index] = charactersDatas.GetValue(_charType);
-        }
+        selectedCastleCharacter = _charType;
     }
 
-    bool CheckDoubleCharacter(Enums.CHAR_TYPE _charType)
+    public void ChangeCharacter(int _index)
     {
-        for (int i = 0; i < teamSize; i++)
-        {
-            if (teamCharacters[i].CharType == _charType) return true;
-        }
-        return false;
-    }
-
-    int GetDoubleCharacterIndex(Enums.CHAR_TYPE _charType)
-    {
-        for (int i = 0; i < teamSize; i++)
-        {
-            if (teamCharacters[i].CharType == _charType) return i;
-        }
-        return -1;
+        Enums.CHAR_TYPE charType = (Enums.CHAR_TYPE)selectedCastleCharacter;
+        if (selectedCastleCharacter == -1) return;
+        teamCharacters[_index] = charactersDatas.GetValue(charType);
+        selectedCastleCharacter = -1;
     }
 }

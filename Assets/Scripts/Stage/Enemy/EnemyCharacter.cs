@@ -39,6 +39,8 @@ public class EnemyCharacter : Hp
     private void OnDisable()
     {
         enemies.Clear();
+        int gold = Random.Range(0, enemyData.Gold + 1);
+        GameManager.instance.AddGold(gold);
         StageManaManager.instance.AddMana(recoverManaNum);
     }
 

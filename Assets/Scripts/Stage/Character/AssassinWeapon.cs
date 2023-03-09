@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AssassinWeapon : SingleAttack
 {
-
     private void Start()
     {
         damage = GetComponentInParent<Assassin>().Damage;

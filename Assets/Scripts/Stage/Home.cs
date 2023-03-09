@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Home : Hp
 {
-    [SerializeField] bool isBreak = false;
     [SerializeField] Image hpBar;
     [SerializeField] TMP_Text hpBarText;
     [SerializeField] float hpBarRefreshTime;
@@ -24,10 +23,9 @@ public class Home : Hp
 
     private void OnDisable()
     {
-        nowHp = 0f;
-        isBreak = true;
         if (!isAlly) EnemySummonManager.instance.StopSummon();
-        // StageManager.instance.ActivateWinWindow(isAlly);
+        StopCoroutine(RefreshHpBar());
+        StageManager.instance.ActivateClearWindow(isAlly);
     }
 
     IEnumerator RefreshHpBar()

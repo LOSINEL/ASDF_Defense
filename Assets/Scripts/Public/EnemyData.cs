@@ -12,7 +12,7 @@ public class EnemyData : ScriptableObject
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
     [SerializeField] float recoverManaNum;
-
+    [SerializeField] int gold;
 
     public GameObject Enemy { get { return enemy; } }
     public float MoveSpeed { get { return -moveSpeed; } }
@@ -20,4 +20,5 @@ public class EnemyData : ScriptableObject
     public float Damage { get { return damage; } }
     public float MaxHp { get { return maxHp; } }
     public float RecoverManaNum { get { return recoverManaNum; } }
+    public int Gold { get { return gold; } }
 }

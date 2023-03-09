@@ -8,6 +8,8 @@ public class EnemySummonManager : MonoBehaviour
 
     [SerializeField] int stageLevel;
     [SerializeField] float summonTime;
+    [SerializeField] int minSummonNum;
+    [SerializeField] int maxSummonNum;
     [SerializeField] SummonGroup[] summonGroups = new SummonGroup[9];
     [SerializeField] int[] summonNums = new int[3];
     [SerializeField] Transform[] enemyGroups = new Transform[5];
@@ -31,26 +33,35 @@ public class EnemySummonManager : MonoBehaviour
         summonLevel = stageLevel - 1;
         if (summonLevel < 0) summonLevel = 0;
         SetEnemy();
-        summonEnemy = StartCoroutine(SummonEnemy());
+        summonEnemy = StartCoroutine(PlaySummonEnemy());
     }
 
-    IEnumerator SummonEnemy()
+    IEnumerator PlaySummonEnemy()
     {
-        int groupRand;
-        int elementRand;
-        GameObject tmpObj;
-
+        int summonRand;
         WaitForSeconds waitTime = new WaitForSeconds(summonTime);
         yield return waitTime;
         while (true)
         {
-            groupRand = Random.Range(0, groupNum);
-            elementRand = Random.Range(0, summonNum);
-            tmpObj = enemyGroups[groupRand].GetChild(elementRand).GetChild(summonNums[elementRand] - 1).gameObject;
-            tmpObj.SetActive(true);
-            tmpObj.transform.SetAsFirstSibling();
+            summonRand = Random.Range(minSummonNum, maxSummonNum + 1);
+            for (int i = 0; i < summonRand; i++)
+            {
+                SummonEnemy();
+            }
             yield return waitTime;
         }
+    }
+
+    void SummonEnemy()
+    {
+        int groupRand;
+        int elementRand;
+        GameObject tmpObj;
+        groupRand = Random.Range(0, groupNum);
+        elementRand = Random.Range(0, summonNum);
+        tmpObj = enemyGroups[groupRand].GetChild(elementRand).GetChild(summonNums[elementRand] - 1).gameObject;
+        tmpObj.SetActive(true);
+        tmpObj.transform.SetAsFirstSibling();
     }
 
     public void StopSummon()

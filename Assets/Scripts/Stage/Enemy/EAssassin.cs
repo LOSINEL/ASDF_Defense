@@ -6,7 +6,7 @@ public class EAssassin : EnemyCharacter
 {
     [SerializeField] float cooltimeCheck = 0f;
     [SerializeField] bool canAttack = true;
-    [SerializeField] GameObject weaponCollider;
+    [SerializeField] BoxCollider2D weaponCollider;
 
     private void Update()
     {
@@ -36,10 +36,8 @@ public class EAssassin : EnemyCharacter
     {
         animator.SetTrigger("Attack");
         yield return null;
-        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 3f;
+        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
-        weaponCollider.SetActive(true);
-        yield return new WaitForSeconds(waitTime);
-        weaponCollider.SetActive(false);
+        weaponCollider.enabled = true;
     }
 }

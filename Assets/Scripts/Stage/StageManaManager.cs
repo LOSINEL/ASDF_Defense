@@ -48,7 +48,7 @@ public class StageManaManager : MonoBehaviour
         if (nowMana < maxMana * 0.5f) return;
         nowMana -= maxMana * 0.5f;
         manaLevel++;
-        manaRecovery += manaLevel * 0.5f;
+        manaRecovery += manaLevel + 2;
         maxMana *= 1.5f;
         RefreshNeedManaText();
     }

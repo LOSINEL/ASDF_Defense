@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f116a7b9f583e488edfa1a9b871693, type: 3}
   m_Name: Warrior4
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   damage: 98
   maxHp: 3140
   moveSpeed: 132
   attackSpeed: 0.8
   recoverManaNum: 42
+  gold: 7

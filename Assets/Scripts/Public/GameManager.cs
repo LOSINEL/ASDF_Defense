@@ -7,16 +7,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] int gold;
-    [SerializeField] int level;
-    [SerializeField] int maxExp;
-    [SerializeField] int nowExp;
     [SerializeField] int maxStage;
     [SerializeField] int nowStage;
 
     public int Gold { get { return gold; } }
-    public int Level { get { return level; } }
-    public int MaxExp { get { return maxExp; } }
-    public int NowExp { get { return nowExp; } }
     public int MaxStage { get { return maxStage; } }
     public int NowStage { get { return nowStage; } }
 
@@ -42,23 +36,8 @@ public class GameManager : MonoBehaviour
 
     public void GameClear()
     {
-        if (nowStage > maxStage) maxStage = nowStage;
-    }
-
-    public void AddExp(int _exp)
-    {
-        nowExp += _exp;
-        CheckLevelUp();
-    }
-
-    void CheckLevelUp()
-    {
-        while (nowExp >= maxExp)
-        {
-            level++;
-            nowExp -= maxExp;
-            maxExp = level * level + 10;
-        }
+        if (nowStage >= maxStage) maxStage = nowStage + 1;
+        AddGold(GetClearGold());
     }
 
     public void AddGold(int _gold)
@@ -69,5 +48,20 @@ public class GameManager : MonoBehaviour
     public void SubGold(int _gold)
     {
         gold -= _gold;
+    }
+
+    public int GetClearGold()
+    {
+        return nowStage * nowStage * 100;
+    }
+
+    public int GetDefeatGold()
+    {
+        return nowStage * nowStage * 20;
+    }
+
+    public void GameDefeat()
+    {
+        AddGold(GetDefeatGold());
     }
 }

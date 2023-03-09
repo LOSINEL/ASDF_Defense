@@ -18,3 +18,4 @@ MonoBehaviour:
   moveSpeed: 300
   attackSpeed: 0.79
   recoverManaNum: 22
+  gold: 8

@@ -25,10 +25,10 @@ public class ManaWindowText : MonoBehaviour
 
     public void RefreshTexts()
     {
-        maxManaText.text = $"MAX MANA {ManaManager.instance.MaxMana}";
+        maxManaText.text = $"MAX MANA {(int)ManaManager.instance.MaxMana}";
         recoverManaText.text = $"MANA RECOVER {ManaManager.instance.ManaRecovery}/s";
-        maxManaUpgradeText.text = $"MAX MANA + {ManaManager.instance.MaxManaUpgradeNum}";
-        recoverManaUpgradeText.text = $"MANA RECOVER + {ManaManager.instance.ManaRecoveryUpgradeNum}/s";
+        maxManaUpgradeText.text = $"MAX MANA + {(int)ManaManager.instance.MaxManaUpgradeNum}";
+        recoverManaUpgradeText.text = $"MANA RECOVER + {ManaManager.instance.ManaRecoveryUpgradeNum:#.#}/s";
         upgradeGoldText.text = $"{ManaManager.instance.UpgradeGold} Gold";
     }
 }

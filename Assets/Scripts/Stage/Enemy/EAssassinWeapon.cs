@@ -15,6 +15,7 @@ public class EAssassinWeapon : SingleAttack
         {
             Enemies[0].GetComponent<Hp>().SubHp(damage);
             weaponCollider.enabled = false;
+            Enemies.Clear();
         }
     }
 

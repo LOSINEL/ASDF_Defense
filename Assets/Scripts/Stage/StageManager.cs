@@ -6,7 +6,7 @@ public class StageManager : MonoBehaviour
 {
     public static StageManager instance;
 
-    [SerializeField] GameObject winWindow;
+    [SerializeField] GameObject clearWindow;
     [SerializeField] GameObject defeatWindow;
 
     private void Awake()
@@ -14,11 +14,11 @@ public class StageManager : MonoBehaviour
         instance = this;
     }
 
-    public void ActivateWinWindow(bool _ally)
+    public void ActivateClearWindow(bool _ally)
     {
-        if (_ally)
+        if (!_ally)
         {
-            winWindow.SetActive(true);
+            clearWindow.SetActive(true);
         }
         else
         {

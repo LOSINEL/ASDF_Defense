@@ -53,8 +53,8 @@ public class ManaManager : MonoBehaviour
 
     void RefreshUpgradeNum()
     {
-        maxManaUpgradeNum = 25f + manaLevel * 2f;
+        maxManaUpgradeNum = 15f + manaLevel;
         manaRecoveryUpgradeNum = 1.0f + manaLevel * 0.1f;
-        upgradeGold = (manaLevel + 1) * 100;
+        upgradeGold = (manaLevel + 1) * 200;
     }
 }
