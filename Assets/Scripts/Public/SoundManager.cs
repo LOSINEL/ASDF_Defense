@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip[] bgm;
     [SerializeField] AudioClip[] sfx;
 
-    public enum BGM { MAIN_MENU, ENUM_SIZE }
+    public enum BGM { MAIN_MENU, LOBBY,  ENUM_SIZE }
     public enum SFX { BUTTON_CLICK, ENUM_SIZE }
 
     private void Awake()
