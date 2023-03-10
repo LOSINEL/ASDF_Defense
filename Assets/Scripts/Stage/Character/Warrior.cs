@@ -37,10 +37,8 @@ public class Warrior : PlayerCharacter
     {
         animator.SetTrigger("Attack");
         yield return null;
-        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 3f;
+        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
-        yield return new WaitForSeconds(waitTime);
-        weaponCollider.enabled = false;
     }
 }

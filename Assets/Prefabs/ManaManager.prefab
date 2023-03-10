@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaLevel: 0
   maxMana: 50
-  manaRecovery: 5
+  manaRecovery: 10
   maxManaUpgradeNum: 0
   manaRecoveryUpgradeNum: 0
   upgradeGold: 0

@@ -17,5 +17,5 @@ MonoBehaviour:
   maxHp: 681
   moveSpeed: 168
   attackSpeed: 0.57
-  recoverManaNum: 137
+  recoverManaNum: 411
   gold: 10

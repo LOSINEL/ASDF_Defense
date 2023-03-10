@@ -20,4 +20,12 @@ public class ESightCheck : MonoBehaviour
             enemyCharacter.Enemies.Add(collision.gameObject);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag(characterTag))
+        {
+            enemyCharacter.Enemies.Remove(collision.gameObject);
+        }
+    }
 }

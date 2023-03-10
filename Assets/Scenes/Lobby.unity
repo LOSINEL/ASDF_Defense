@@ -10269,6 +10269,7 @@ GameObject:
   - component: {fileID: 1874423812}
   - component: {fileID: 1874423811}
   - component: {fileID: 1874423810}
+  - component: {fileID: 1874423813}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10342,6 +10343,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874423813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874423809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd8f4d888d480048a76d6ffdb270b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1877234285
 GameObject:
   m_ObjectHideFlags: 0
@@ -12401,58 +12414,6 @@ PrefabInstance:
     - target: {fileID: 6248880624057658784, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[0].a
-      value: 0.7490196
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[0].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[1].a
-      value: 0.7490196
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[1].g
-      value: 0.7490196
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[2].a
-      value: 0.7490196
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[2].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[2].g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[2].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[3].a
-      value: 0.7490196
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[3].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[4].a
-      value: 0.7490196
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[4].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
-      propertyPath: portraitBackgroundColors.Array.data[4].r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6248880624057658791, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: m_Name

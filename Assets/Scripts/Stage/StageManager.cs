@@ -8,10 +8,18 @@ public class StageManager : MonoBehaviour
 
     [SerializeField] GameObject clearWindow;
     [SerializeField] GameObject defeatWindow;
+    [SerializeField] float gameTime = 0f;
+
+    public float GameTime { get { return gameTime; } }
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+        gameTime += Time.deltaTime;
     }
 
     public void ActivateClearWindow(bool _ally)

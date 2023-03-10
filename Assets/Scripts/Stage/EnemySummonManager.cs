@@ -10,8 +10,11 @@ public class EnemySummonManager : MonoBehaviour
     [SerializeField] float summonTime;
     [SerializeField] int minSummonNum;
     [SerializeField] int maxSummonNum;
+    [SerializeField] int summonAddTime;
     [SerializeField] SummonGroup[] summonGroups = new SummonGroup[9];
     [SerializeField] int[] summonNums = new int[3];
+    [SerializeField] int[] summonSettingNums = new int[3];
+    [SerializeField] int summonNumTot = 0;
     [SerializeField] Transform[] enemyGroups = new Transform[5];
     Transform tr;
     int summonLevel;
@@ -36,6 +39,11 @@ public class EnemySummonManager : MonoBehaviour
         summonEnemy = StartCoroutine(PlaySummonEnemy());
     }
 
+    private void OnDisable()
+    {
+        StopSummon();
+    }
+
     IEnumerator PlaySummonEnemy()
     {
         int summonRand;
@@ -43,7 +51,7 @@ public class EnemySummonManager : MonoBehaviour
         yield return waitTime;
         while (true)
         {
-            summonRand = Random.Range(minSummonNum, maxSummonNum + 1);
+            summonRand = Random.Range(minSummonNum, maxSummonNum + 1 + (int)StageManager.instance.GameTime / summonAddTime);
             for (int i = 0; i < summonRand; i++)
             {
                 SummonEnemy();
@@ -54,12 +62,18 @@ public class EnemySummonManager : MonoBehaviour
 
     void SummonEnemy()
     {
-        int groupRand;
-        int elementRand;
         GameObject tmpObj;
-        groupRand = Random.Range(0, groupNum);
-        elementRand = Random.Range(0, summonNum);
-        tmpObj = enemyGroups[groupRand].GetChild(elementRand).GetChild(summonNums[elementRand] - 1).gameObject;
+        int groupRand = Random.Range(0, groupNum);
+        int summonRand = 0;
+        int elementRand = Random.Range(1, summonNumTot + 1);
+        for (int i = summonNum - 1; i >= 0; i--)
+        {
+            if (elementRand <= summonNums[i])
+            {
+                summonRand = i;
+            }
+        }
+        tmpObj = enemyGroups[groupRand].GetChild(summonRand).GetChild(summonSettingNums[summonRand] - 1).gameObject;
         tmpObj.SetActive(true);
         tmpObj.transform.SetAsFirstSibling();
     }
@@ -75,7 +89,7 @@ public class EnemySummonManager : MonoBehaviour
         {
             for (int j = 0; j < summonNum; j++)
             {
-                for (int k = 0; k < summonNums[j]; k++)
+                for (int k = 0; k < summonSettingNums[j]; k++)
                 {
                     Instantiate(summonGroups[summonLevel].SummonElements[i].Enemies[j], enemyGroups[i].GetChild(j));
                 }

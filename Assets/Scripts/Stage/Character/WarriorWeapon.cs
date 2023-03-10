@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WarriorWeapon : Weapon
+public class WarriorWeapon : AreaAttack
 {
-    BoxCollider2D weaponCollider;
-
     private void Start()
     {
-        weaponCollider = GetComponent<BoxCollider2D>();
         damage = GetComponentInParent<Warrior>().Damage;
     }
 

@@ -105,15 +105,16 @@ public class PlayerCharacter : Hp
         GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f);
         if (isSuper && damage > 0)
         {
-            moveSpeed *= 1.4f;
-            attackSpeed *= 1.4f;
-            damage *= 1.4f;
-            nowHp = maxHp *= 1.4f;
+            moveSpeed *= 1.5f;
+            attackSpeed *= 1.5f;
+            attackCooltime = 1f / attackSpeed;
+            damage *= 1.5f;
+            nowHp = maxHp *= 1.5f;
         }
         else if (isSuper)
         {
-            moveSpeed *= 1.6f;
-            nowHp = maxHp *= 2.5f;
+            moveSpeed *= 1.75f;
+            nowHp = maxHp *= 2.8f;
         }
     }
 }

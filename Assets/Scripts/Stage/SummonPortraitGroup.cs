@@ -20,14 +20,6 @@ public class SummonPortraitGroup : MonoBehaviour
         tr = GetComponent<Transform>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            SummonPortrait((Enums.CHAR_TYPE)Random.Range(0, 12));
-        }
-    }
-
     public void SummonPortrait(Enums.CHAR_TYPE _charType)
     {
         if (superSummonButton.SuperSummonOn)

@@ -71,3 +71,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d104c7535ba5ac42a07119a148682d9, type: 2}
   - {fileID: 11400000, guid: bc1a71059e4611c44850e8f520a0971d, type: 2}
   - {fileID: 11400000, guid: f2a245880babd694481709d3b6c5b014, type: 2}
+  portraitBackgroundColors:
+  - {r: 1, g: 0, b: 0, a: 0.7490196}
+  - {r: 0, g: 0.7490196, b: 0, a: 0.7490196}
+  - {r: 1, g: 0, b: 1, a: 0.7490196}
+  - {r: 0, g: 0, b: 1, a: 0.7490196}
+  - {r: 1, g: 1, b: 0, a: 0.7490196}
