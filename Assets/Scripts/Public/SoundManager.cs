@@ -9,11 +9,11 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioSource bgmPlayer;
     [SerializeField] AudioSource sfxPlayer;
 
-    [SerializeField] AudioClip[] bgm;
-    [SerializeField] AudioClip[] sfx;
+    [SerializeField] AudioClip[] bgm = new AudioClip[(int)BGM.ENUM_SIZE];
+    [SerializeField] AudioClip[] sfx = new AudioClip[(int)SFX.ENUM_SIZE];
 
-    public enum BGM { MAIN_MENU, LOBBY,  ENUM_SIZE }
-    public enum SFX { BUTTON_CLICK, ENUM_SIZE }
+    public enum BGM { MAIN_MENU, LOBBY, STAGE1, STAGE2, STAGE3, BOSS1, BOSS2, BOSS3, ENUM_SIZE }
+    public enum SFX { BUTTON_CLICK, WARRIOR_ATTACK, ARCHER_ATTACK, ARROW_ATTACK, ASSASSIN_ATTACK, MAGICIAN_ATTACK1, MAGICIAN_ATTACK2, MAGICIAN_ATTACK3, EMAGICIAN_ATTACK, ENUM_SIZE }
 
     private void Awake()
     {
