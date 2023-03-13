@@ -7,6 +7,7 @@ public class Archer : PlayerCharacter
     [SerializeField] float cooltimeCheck = 0f;
     [SerializeField] bool canAttack = true;
     [SerializeField] int archerNum;
+    float _attackCooltime;
     
     private void Update()
     {
@@ -21,7 +22,7 @@ public class Archer : PlayerCharacter
 
     void CheckAttackCooltime()
     {
-        if (cooltimeCheck >= attackCooltime)
+        if (cooltimeCheck >= _attackCooltime)
         {
             cooltimeCheck = 0f;
             canAttack = true;
@@ -43,5 +44,6 @@ public class Archer : PlayerCharacter
         _arrow.SetActive(true);
         _arrow.GetComponent<Arrow>().SetPosition(tr.position);
         _arrow.GetComponent<Arrow>().SetDamage(Damage);
+        SoundManager.instance.PlaySFX(SoundManager.SFX.ARCHER_ATTACK);
     }
 }

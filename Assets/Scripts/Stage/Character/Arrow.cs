@@ -26,6 +26,7 @@ public class Arrow : SingleAttack
         if (Enemies.Count > 0)
         {
             Enemies[0].GetComponent<Hp>().SubHp(damage);
+            SoundManager.instance.PlaySFX(SoundManager.SFX.ARROW_ATTACK);
             gameObject.SetActive(false);
         }
         if (time >= 1f)

@@ -21,6 +21,13 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     private void Start()

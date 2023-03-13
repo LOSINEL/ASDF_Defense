@@ -7,6 +7,7 @@ public class SpeedUpButton : MonoBehaviour
 {
     public void SelectSpeedUpButton()
     {
+        SoundManager.instance.PlaySFX(SoundManager.SFX.BUTTON_CLICK);
         if (GetComponent<Toggle>().isOn)
         {
             Time.timeScale = 2f;

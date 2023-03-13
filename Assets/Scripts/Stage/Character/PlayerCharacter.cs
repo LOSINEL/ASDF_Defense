@@ -23,10 +23,6 @@ public class PlayerCharacter : Hp
         tr = transform;
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-    }
-
-    private void Start()
-    {
         StartCoroutine(CheckEnemyList());
     }
 

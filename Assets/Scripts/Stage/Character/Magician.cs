@@ -7,6 +7,7 @@ public class Magician : PlayerCharacter
     [SerializeField] float cooltimeCheck = 0f;
     [SerializeField] bool canAttack = true;
     [SerializeField] BoxCollider2D weaponCollider;
+    [SerializeField] int magicianNum;
 
     private void Update()
     {
@@ -39,5 +40,6 @@ public class Magician : PlayerCharacter
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
+        SoundManager.instance.PlaySFX(SoundManager.SFX.MAGICIAN_ATTACK1 + magicianNum);
     }
 }

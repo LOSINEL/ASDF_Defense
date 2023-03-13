@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class OptionCanvas : MonoBehaviour
 {
+    public static OptionCanvas instance;
+
     [SerializeField] GameObject optionGrayWindow;
     [SerializeField] GameObject bgmVolumeBarGroup;
     [SerializeField] GameObject sfxVolumeBarGroup;
@@ -15,8 +17,18 @@ public class OptionCanvas : MonoBehaviour
 
     private void Awake()
     {
-        Application.targetFrameRate = 60;
-        DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     public void SelectOptionWindowButton()

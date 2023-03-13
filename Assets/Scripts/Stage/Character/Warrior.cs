@@ -40,5 +40,6 @@ public class Warrior : PlayerCharacter
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
+        SoundManager.instance.PlaySFX(SoundManager.SFX.WARRIOR_ATTACK);
     }
 }

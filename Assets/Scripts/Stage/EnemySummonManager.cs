@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySummonManager : MonoBehaviour
 {
@@ -80,7 +81,10 @@ public class EnemySummonManager : MonoBehaviour
 
     public void StopSummon()
     {
-        StopCoroutine(summonEnemy);
+        if (SceneManager.GetActiveScene().buildIndex == (int)Enums.SCENE_TYPE.STAGE)
+        {
+            StopCoroutine(summonEnemy);
+        }
     }
 
     void SetEnemy()

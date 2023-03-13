@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class StageManager : MonoBehaviour
 
     public void ActivateClearWindow(bool _ally)
     {
+        if (SceneManager.GetActiveScene().buildIndex != (int)Enums.SCENE_TYPE.STAGE)
+        {
+            return;
+        }
         if (!_ally)
         {
             clearWindow.SetActive(true);

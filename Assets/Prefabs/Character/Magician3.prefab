@@ -318,6 +318,7 @@ MonoBehaviour:
   cooltimeCheck: 0
   canAttack: 1
   weaponCollider: {fileID: 8812310964448131030}
+  magicianNum: 2
 --- !u!50 &-2581706379589429332
 Rigidbody2D:
   serializedVersion: 4
