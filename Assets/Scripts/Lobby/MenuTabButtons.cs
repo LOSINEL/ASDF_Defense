@@ -40,14 +40,14 @@ public class MenuTabButtons : MonoBehaviour
         _btn.interactable = false;
         while(true)
         {
-            if (rectTransform.anchoredPosition.x - menuTabMoveSpeed * Time.deltaTime < 0f)
+            if (rectTransform.anchoredPosition.x - menuTabMoveSpeed * Time.unscaledDeltaTime < 0f)
             {
                 basePos.x = 0f;
                 rectTransform.anchoredPosition = basePos;
                 _btn.interactable = true;
                 yield break;
             }
-            tr.Translate(new Vector2(menuTabMoveSpeed * Time.deltaTime * -1, 0f));
+            tr.Translate(new Vector2(menuTabMoveSpeed * Time.unscaledDeltaTime * -1, 0f));
             yield return null;
         }
     }
@@ -59,14 +59,14 @@ public class MenuTabButtons : MonoBehaviour
         _btn.interactable = false;
         while (true)
         {
-            if (rectTransform.anchoredPosition.x + menuTabMoveSpeed * Time.deltaTime > moveDistance)
+            if (rectTransform.anchoredPosition.x + menuTabMoveSpeed * Time.unscaledDeltaTime > moveDistance)
             {
                 basePos.x = moveDistance;
                 rectTransform.anchoredPosition = basePos;
                 _btn.interactable = true;
                 yield break;
             }
-            tr.Translate(new Vector2(menuTabMoveSpeed * Time.deltaTime, 0f));
+            tr.Translate(new Vector2(menuTabMoveSpeed * Time.unscaledDeltaTime, 0f));
             yield return null;
         }
     }

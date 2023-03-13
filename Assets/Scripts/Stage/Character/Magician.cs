@@ -35,7 +35,11 @@ public class Magician : PlayerCharacter
 
     IEnumerator Attack()
     {
+        _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
         animator.SetTrigger("Attack");
+        GameObject magicAttack = MagicianAttackPoolManager.instance.GetAttack(magicianNum);
+        magicAttack.SetActive(true);
+        magicAttack.GetComponent<MagicianAttackAnimation>().SetPosition(tr.position);
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);

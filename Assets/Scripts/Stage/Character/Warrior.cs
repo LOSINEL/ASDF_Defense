@@ -35,6 +35,7 @@ public class Warrior : PlayerCharacter
 
     IEnumerator Attack()
     {
+        _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
         animator.SetTrigger("Attack");
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;

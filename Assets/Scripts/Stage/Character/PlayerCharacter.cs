@@ -14,6 +14,9 @@ public class PlayerCharacter : Hp
     [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
+    protected float attackCooltimeRandomMin = 0.84f;
+    protected float attackCooltimeRandomMax = 1.16f;
+    protected float _attackCooltime;
 
     public float Damage { get { return damage; } }
     public List<GameObject> Enemies { get { return enemies; } }
@@ -23,6 +26,11 @@ public class PlayerCharacter : Hp
         tr = transform;
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
         StartCoroutine(CheckEnemyList());
     }
 

@@ -14,6 +14,7 @@ public class OptionCanvas : MonoBehaviour
     [SerializeField] TMP_Dropdown frameSelectDropdown;
     [SerializeField] float volumeBarScale;
     int[] fpsArr = { 60, 45, 30, 20, 12 };
+    float timeScale;
 
     private void Awake()
     {
@@ -34,6 +35,15 @@ public class OptionCanvas : MonoBehaviour
     public void SelectOptionWindowButton()
     {
         optionGrayWindow.SetActive(!optionGrayWindow.activeSelf);
+        if (optionGrayWindow.activeSelf)
+        {
+            timeScale = Time.timeScale;
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = timeScale;
+        }
     }
 
     public void SelectBgmVolumeUpButton()

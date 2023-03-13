@@ -81,10 +81,7 @@ public class EnemySummonManager : MonoBehaviour
 
     public void StopSummon()
     {
-        if (SceneManager.GetActiveScene().buildIndex == (int)Enums.SCENE_TYPE.STAGE)
-        {
-            StopCoroutine(summonEnemy);
-        }
+        StopCoroutine(summonEnemy);
     }
 
     void SetEnemy()

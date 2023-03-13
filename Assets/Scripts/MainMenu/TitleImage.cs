@@ -22,12 +22,12 @@ public class TitleImage : MonoBehaviour
         yield return waitForSeconds;
         while (true)
         {
-            if (tr.localPosition.y - moveSpeed * Time.deltaTime <= 0f)
+            if (tr.localPosition.y - moveSpeed * Time.unscaledDeltaTime <= 0f)
             {
                 tr.localPosition = new Vector2(0f, 0f);
                 yield break;
             }
-            tr.Translate(Vector2.down * moveSpeed * Time.deltaTime);
+            tr.Translate(Vector2.down * moveSpeed * Time.unscaledDeltaTime);
             yield return null;
         }
     }

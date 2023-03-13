@@ -545,6 +545,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93179694}
   m_CullTransparentMesh: 1
+--- !u!1 &95777068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95777069}
+  m_Layer: 0
+  m_Name: MagicianAttackGroup1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &95777069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95777068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 368823730}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109620436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,6 +2466,62 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &368823729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 368823730}
+  - component: {fileID: 368823731}
+  m_Layer: 0
+  m_Name: MagicianAttackPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &368823730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368823729}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 95777069}
+  - {fileID: 1164297648}
+  - {fileID: 553025345}
+  m_Father: {fileID: 1446148293}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368823731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368823729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850b7f021c5660b4c83e05bc32b65396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackNum: 50
+  magicianAttacks:
+  - {fileID: 2783066734732562597, guid: 1d9576a8136f2f14a8adae10fc13d2ca, type: 3}
+  - {fileID: 4807753185716100895, guid: dd49d71fdb8183941aa62124613a8f4a, type: 3}
+  - {fileID: 4003079724305627684, guid: 9cc2329080844fb4b87ae1ccebac878f, type: 3}
+  magicianAttackGroups:
+  - {fileID: 95777069}
+  - {fileID: 1164297648}
+  - {fileID: 553025345}
 --- !u!1 &369380744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,7 +3001,7 @@ Transform:
   - {fileID: 76020135}
   - {fileID: 484247013}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &520129346
 MonoBehaviour:
@@ -2928,7 +3015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2ce9d91481bb6429733b24d871c0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: 30
+  arrowNum: 40
   arrows:
   - {fileID: 8695057871521147020, guid: 705b987fe984c1b4a8fe0fe73e7df508, type: 3}
   - {fileID: 8695057871521147020, guid: eb31925f161858449a3c2cf8f7eb71cd, type: 3}
@@ -2941,6 +3028,37 @@ MonoBehaviour:
   - {fileID: 1878491}
   - {fileID: 76020134}
   - {fileID: 484247012}
+--- !u!1 &553025344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 553025345}
+  m_Layer: 0
+  m_Name: MagicianAttackGroup3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &553025345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553025344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 368823730}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &569620153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,7 +3097,7 @@ Transform:
   - {fileID: 1150750329}
   - {fileID: 1419079419}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &569620155
 MonoBehaviour:
@@ -5447,6 +5565,37 @@ Transform:
   m_Father: {fileID: 1665360633}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1094731942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1094731943}
+  m_Layer: 0
+  m_Name: EMagicianAttackGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1094731943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094731942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1865082324}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1150750328
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,7 +5657,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1155766234
 MonoBehaviour:
@@ -5606,6 +5755,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163426257}
   m_CullTransparentMesh: 1
+--- !u!1 &1164297647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164297648}
+  m_Layer: 0
+  m_Name: MagicianAttackGroup2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164297648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164297647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 368823730}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1173656120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5660,7 +5840,7 @@ PrefabInstance:
     - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: teamCharacters.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 5d104c7535ba5ac42a07119a148682d9, type: 2}
+      objectReference: {fileID: 11400000, guid: 964144958930abb41861aeb557b2047e, type: 2}
     - target: {fileID: 6248880624057658785, guid: 9f7fe4aec2ab88a44be04b0e45570766, type: 3}
       propertyPath: teamCharacters.Array.data[1]
       value: 
@@ -5947,7 +6127,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1299981065
 MonoBehaviour:
@@ -7272,6 +7452,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1865082324}
+  - {fileID: 368823730}
   - {fileID: 1299981064}
   - {fileID: 1665360633}
   - {fileID: 569620154}
@@ -8549,7 +8731,7 @@ Transform:
   - {fileID: 1076727418}
   - {fileID: 1684191078}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1665360634
 MonoBehaviour:
@@ -9374,7 +9556,7 @@ Transform:
   - {fileID: 756957899}
   - {fileID: 369380745}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1733104717
 MonoBehaviour:
@@ -9710,6 +9892,54 @@ Transform:
   m_Father: {fileID: 1220089278}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1865082323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1865082324}
+  - component: {fileID: 1865082325}
+  m_Layer: 0
+  m_Name: EMagicianAttackPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1865082324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865082323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1094731943}
+  m_Father: {fileID: 1446148293}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1865082325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865082323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1621a602d7c5daf4680b6fe565fcd185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackNum: 40
+  eMagicianAttack: {fileID: 3603619828296782484, guid: ce0879465afc44a4e84a90d3c8e0db91, type: 3}
+  eMagicianAttackGroup: {fileID: 1094731943}
 --- !u!1 &1868389937
 GameObject:
   m_ObjectHideFlags: 0

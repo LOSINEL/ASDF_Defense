@@ -7,8 +7,7 @@ public class Archer : PlayerCharacter
     [SerializeField] float cooltimeCheck = 0f;
     [SerializeField] bool canAttack = true;
     [SerializeField] int archerNum;
-    float _attackCooltime;
-    
+
     private void Update()
     {
         if (isEnemyChecked && canAttack)
@@ -35,6 +34,7 @@ public class Archer : PlayerCharacter
 
     IEnumerator Attack()
     {
+        _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
         animator.SetTrigger("Attack");
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
