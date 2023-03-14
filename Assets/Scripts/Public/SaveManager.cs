@@ -25,4 +25,12 @@ public class SaveManager : MonoBehaviour
     private void Start()
     {
     }
+
+    public void SaveData()
+    {
+    }
+
+    public void LoadData()
+    {
+    }
 }
