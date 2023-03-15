@@ -21,7 +21,7 @@ public class EMagician : EnemyCharacter
 
     void CheckAttackCooltime()
     {
-        if (cooltimeCheck >= attackCooltime)
+        if (cooltimeCheck >= _attackCooltime)
         {
             cooltimeCheck = 0f;
             canAttack = true;

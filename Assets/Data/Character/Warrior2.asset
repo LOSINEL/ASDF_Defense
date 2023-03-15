@@ -12,18 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
   m_Name: Warrior2
   m_EditorClassIdentifier: 
-  character: {fileID: 6832773513588087877, guid: d8580fbe97917174cb6536417402a890, type: 3}
   portraits:
   - {fileID: 1198052213, guid: edc3b51b592a7b44fac1f9c563d73ad8, type: 3}
   - {fileID: 1028676527, guid: edc3b51b592a7b44fac1f9c563d73ad8, type: 3}
   - {fileID: -1667590077, guid: edc3b51b592a7b44fac1f9c563d73ad8, type: 3}
   - {fileID: -459553871, guid: edc3b51b592a7b44fac1f9c563d73ad8, type: 3}
   - {fileID: 232041414, guid: edc3b51b592a7b44fac1f9c563d73ad8, type: 3}
-  damage: 40
-  maxHp: 560
-  moveSpeed: 144
-  attackSpeed: 0.9
+  damage: 0
+  maxHp: 0
+  moveSpeed: 0
+  attackSpeed: 0
   summonCost: 60
   summonCoolTime: 2.6
-  superSummonCost: 180
+  superSummonCost: 120
+  upgradeCost: 400
+  upgradePower: 0.04
   charType: 1
+  baseDamage: 40
+  baseMaxHp: 560
+  baseMoveSpeed: 144
+  baseAttackSpeed: 0.9
+  level: 0

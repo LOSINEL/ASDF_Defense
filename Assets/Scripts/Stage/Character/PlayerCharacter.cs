@@ -14,8 +14,8 @@ public class PlayerCharacter : Hp
     [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
-    protected float attackCooltimeRandomMin = 0.84f;
-    protected float attackCooltimeRandomMax = 1.16f;
+    protected float attackCooltimeRandomMin = 0.5f;
+    protected float attackCooltimeRandomMax = 2f;
     protected float _attackCooltime;
 
     public float Damage { get { return damage; } }

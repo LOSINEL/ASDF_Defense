@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AssassinWeapon : SingleAttack
 {
+    [SerializeField] int maxAttack;
+
     private void Start()
     {
         damage = GetComponentInParent<Assassin>().Damage;
@@ -13,7 +15,11 @@ public class AssassinWeapon : SingleAttack
     {
         if (Enemies.Count > 0)
         {
-            Enemies[0].GetComponent<Hp>().SubHp(damage);
+            for (int i = 0; i < Enemies.Count; i++)
+            {
+                if (i == maxAttack) break;
+                Enemies[i].GetComponent<Hp>().SubHp(damage);
+            }
             weaponCollider.enabled = false;
             Enemies.Clear();
         }

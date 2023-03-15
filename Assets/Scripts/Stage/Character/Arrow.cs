@@ -6,6 +6,7 @@ public class Arrow : SingleAttack
 {
     [SerializeField] float moveSpeed;
     [SerializeField] int arrowNum;
+    [SerializeField] int maxAttack;
     Transform tr;
     float time;
 
@@ -25,7 +26,11 @@ public class Arrow : SingleAttack
         tr.Translate(new Vector2(moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
         if (Enemies.Count > 0)
         {
-            Enemies[0].GetComponent<Hp>().SubHp(damage);
+            for (int i = 0; i < Enemies.Count; i++)
+            {
+                if (i == maxAttack) break;
+                Enemies[i].GetComponent<Hp>().SubHp(damage);
+            }
             SoundManager.instance.PlaySFX(SoundManager.SFX.ARROW_ATTACK);
             gameObject.SetActive(false);
         }

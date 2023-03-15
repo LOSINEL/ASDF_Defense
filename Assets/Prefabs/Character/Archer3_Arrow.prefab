@@ -101,6 +101,7 @@ MonoBehaviour:
   damage: 0
   moveSpeed: 1000
   arrowNum: 2
+  maxAttack: 4
 --- !u!61 &8995363148025400134
 BoxCollider2D:
   m_ObjectHideFlags: 0

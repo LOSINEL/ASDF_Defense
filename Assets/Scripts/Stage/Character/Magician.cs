@@ -22,7 +22,7 @@ public class Magician : PlayerCharacter
 
     void CheckAttackCooltime()
     {
-        if (cooltimeCheck >= attackCooltime)
+        if (cooltimeCheck >= _attackCooltime)
         {
             cooltimeCheck = 0f;
             canAttack = true;

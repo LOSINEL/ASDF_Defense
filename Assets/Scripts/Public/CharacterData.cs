@@ -14,7 +14,17 @@ public class CharacterData : ScriptableObject
     [SerializeField] float summonCoolTime;
     [SerializeField] float superSummonCost;
 
+    [SerializeField] int upgradeCost;
+    [SerializeField] float upgradePower;
+
     [SerializeField] Enums.CHAR_TYPE charType;
+
+    [SerializeField] float baseDamage;
+    [SerializeField] float baseMaxHp;
+    [SerializeField] float baseMoveSpeed;
+    [SerializeField] float baseAttackSpeed;
+
+    [SerializeField] int level = 0;
 
     public Sprite[] Portraits { get { return portraits; } }
     public float MoveSpeed { get { return moveSpeed; } }
@@ -24,6 +34,31 @@ public class CharacterData : ScriptableObject
     public float SummonCost { get { return summonCost; } }
     public float SummonCoolTime { get { return summonCoolTime; } }
     public float SuperSummonCost { get { return superSummonCost; } }
+    public int UpgradeCost { get { return upgradeCost; } }
+    public float UpgradePower { get { return upgradePower; } }
 
     public Enums.CHAR_TYPE CharType { get { return charType; } }
+
+    public float BaseDamage { get { return baseDamage; } }
+    public float BaseMaxHp { get { return baseMaxHp; } }
+    public float BaseMoveSpeed { get { return baseMoveSpeed; } }
+    public float BaseAttackSpeed { get { return baseAttackSpeed; } }
+
+    public void InitStat()
+    {
+        level = 0;
+        damage = baseDamage;
+        maxHp = baseMaxHp;
+        moveSpeed = baseMoveSpeed;
+        attackSpeed = baseAttackSpeed;
+    }
+
+    public void Upgrade()
+    {
+        level++;
+        damage = baseDamage * (upgradePower * level + 1);
+        maxHp = baseMaxHp * (upgradePower * level + 1);
+        moveSpeed = baseMoveSpeed * (upgradePower * level + 1);
+        attackSpeed = baseAttackSpeed * (upgradePower * level + 1);
+    }
 }

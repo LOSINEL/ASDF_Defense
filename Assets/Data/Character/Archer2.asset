@@ -12,18 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
   m_Name: Archer2
   m_EditorClassIdentifier: 
-  character: {fileID: 2048057528291006727, guid: 7584e9a1d042929499a702281d3eed5c, type: 3}
   portraits:
   - {fileID: 679531390, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
   - {fileID: -1367609573, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
   - {fileID: -841253079, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
   - {fileID: -2077223725, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
   - {fileID: 732472358, guid: cf9298f4db4cc4d48876110c56339441, type: 3}
-  damage: 64
-  maxHp: 320
-  moveSpeed: 360
-  attackSpeed: 0.9
+  damage: 0
+  maxHp: 0
+  moveSpeed: 0
+  attackSpeed: 0
   summonCost: 70
   summonCoolTime: 2.3
-  superSummonCost: 210
+  superSummonCost: 140
+  upgradeCost: 400
+  upgradePower: 0.04
   charType: 4
+  baseDamage: 64
+  baseMaxHp: 320
+  baseMoveSpeed: 360
+  baseAttackSpeed: 0.9
+  level: 0

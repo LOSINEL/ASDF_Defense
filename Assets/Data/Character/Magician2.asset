@@ -12,18 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7696a957348194db1da39324b81dc4, type: 3}
   m_Name: Magician2
   m_EditorClassIdentifier: 
-  character: {fileID: 3270378974831109734, guid: a42e10dba7e3af74695215d3726160f7, type: 3}
   portraits:
   - {fileID: -406755588, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
   - {fileID: -16597320, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
   - {fileID: 1224001919, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
   - {fileID: -193616013, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
   - {fileID: 2097252063, guid: 4419452f350122549a43e2a19d5dc88f, type: 3}
-  damage: 194
-  maxHp: 340
-  moveSpeed: 180
-  attackSpeed: 0.65
+  damage: 0
+  maxHp: 0
+  moveSpeed: 0
+  attackSpeed: 0
   summonCost: 240
   summonCoolTime: 4.8
-  superSummonCost: 720
+  superSummonCost: 480
+  upgradeCost: 400
+  upgradePower: 0.04
   charType: 10
+  baseDamage: 194
+  baseMaxHp: 340
+  baseMoveSpeed: 180
+  baseAttackSpeed: 0.65
+  level: 0
