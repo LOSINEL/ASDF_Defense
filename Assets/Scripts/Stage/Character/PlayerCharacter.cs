@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerCharacter : Hp
 {
+    const float superNum = 1.4f;
+
     [SerializeField] CharacterData characterData;
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
@@ -14,8 +16,8 @@ public class PlayerCharacter : Hp
     [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
-    protected float attackCooltimeRandomMin = 0.5f;
-    protected float attackCooltimeRandomMax = 2f;
+    protected float attackCooltimeRandomMin = 0.8f;
+    protected float attackCooltimeRandomMax = 1.25f;
     protected float _attackCooltime;
 
     public float Damage { get { return damage; } }
@@ -109,11 +111,11 @@ public class PlayerCharacter : Hp
         GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f);
         if (isSuper && damage > 0)
         {
-            moveSpeed *= 1.5f;
-            attackSpeed *= 1.5f;
+            moveSpeed *= superNum;
+            attackSpeed *= superNum;
             attackCooltime = 1f / attackSpeed;
-            damage *= 1.5f;
-            nowHp = maxHp *= 1.5f;
+            damage *= superNum;
+            nowHp = maxHp *= superNum;
         }
         else if (isSuper)
         {

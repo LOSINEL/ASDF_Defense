@@ -4253,7 +4253,6 @@ GameObject:
   - component: {fileID: 549053148}
   - component: {fileID: 549053150}
   - component: {fileID: 549053149}
-  - component: {fileID: 549053151}
   m_Layer: 5
   m_Name: UpgradeBackground
   m_TagString: Untagged
@@ -4323,27 +4322,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549053147}
   m_CullTransparentMesh: 1
---- !u!114 &549053151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549053147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e542d7bd9d09414fa4b683e13dbbf33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterInfoWindow: {fileID: 916618096}
-  characterData: {fileID: 0}
-  characterPortraitImage: {fileID: 469940834}
-  damageText: {fileID: 528912478}
-  maxHpText: {fileID: 1111221463}
-  moveSpeedText: {fileID: 580702905}
-  attackSpeedText: {fileID: 2072575237}
-  upgradeGoldText: {fileID: 551754920}
-  upgradeLevelMax: 50
 --- !u!1 &551754918
 GameObject:
   m_ObjectHideFlags: 0
@@ -14057,6 +14035,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58864bdf150db5d4499be12c500e6a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1720195441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720195442}
+  - component: {fileID: 1720195443}
+  m_Layer: 0
+  m_Name: UpgradeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1720195442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720195441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1720195443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720195441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e542d7bd9d09414fa4b683e13dbbf33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterInfoWindow: {fileID: 916618096}
+  characterData: {fileID: 0}
+  characterPortraitImage: {fileID: 469940834}
+  damageText: {fileID: 528912478}
+  maxHpText: {fileID: 1111221463}
+  moveSpeedText: {fileID: 580702905}
+  attackSpeedText: {fileID: 2072575237}
+  upgradeGoldText: {fileID: 551754920}
+  upgradeLevelMax: 20
 --- !u!1 &1736563202
 GameObject:
   m_ObjectHideFlags: 0

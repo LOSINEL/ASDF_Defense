@@ -63,10 +63,10 @@ public class UpgradeManager : MonoBehaviour
     {
         if (characterInfoWindow.activeSelf)
         {
-            damageText.text = $"데미지 : {characterData.Damage}(+{(characterData.BaseDamage * characterData.UpgradePower):#.#})";
-            maxHpText.text = $"Hp : {characterData.MaxHp:#}(+{(characterData.BaseMaxHp * characterData.UpgradePower):#.#})";
-            moveSpeedText.text = $"이동속도 : {characterData.MoveSpeed:#}(+{(characterData.BaseMoveSpeed * characterData.UpgradePower):#.#})";
-            attackSpeedText.text = $"공격속도 : {characterData.AttackSpeed}(+{(characterData.BaseAttackSpeed * characterData.UpgradePower):#.#})/s";
+            damageText.text = $"데미지 : {characterData.Damage:F0}(+{(characterData.BaseDamage * characterData.UpgradePower):F1})";
+            maxHpText.text = $"Hp : {characterData.MaxHp:F0}(+{(characterData.BaseMaxHp * characterData.UpgradePower):F1})";
+            moveSpeedText.text = $"이동속도 : {characterData.MoveSpeed:F0}(+{(characterData.BaseMoveSpeed * characterData.UpgradePower):F2})";
+            attackSpeedText.text = $"공격속도 : {characterData.AttackSpeed:F2}(+{(characterData.BaseAttackSpeed * characterData.UpgradePower):F3})/s";
             upgradeGoldText.text = $"{characterData.UpgradeCost} Gold";
         }
     }

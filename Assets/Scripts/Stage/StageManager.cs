@@ -34,14 +34,14 @@ public class StageManager : MonoBehaviour
             if (allyHome.GetHp() <= 0f)
             {
                 GameEnd();
-                GameManager.instance.GameClear();
-                ActivateClearWindow();
+                GameManager.instance.GameDefeat();
+                ActivateDefeatWindow();
             }
             else if (enemyHome.GetHp() <= 0f)
             {
                 GameEnd();
-                GameManager.instance.GameDefeat();
-                ActivateDefeatWindow();
+                GameManager.instance.GameClear();
+                ActivateClearWindow();
             }
             yield return null;
         }
