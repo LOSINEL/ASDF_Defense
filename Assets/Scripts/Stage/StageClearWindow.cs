@@ -10,7 +10,6 @@ public class StageClearWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.instance.GameClear();
         titleText.text = $"STAGE{GameManager.instance.NowStage} CLEAR!";
         goldText.text = $"{GameManager.instance.GetClearGold()} Gold";
     }

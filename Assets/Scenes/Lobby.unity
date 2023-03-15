@@ -4343,6 +4343,7 @@ MonoBehaviour:
   moveSpeedText: {fileID: 580702905}
   attackSpeedText: {fileID: 2072575237}
   upgradeGoldText: {fileID: 551754920}
+  upgradeLevelMax: 50
 --- !u!1 &551754918
 GameObject:
   m_ObjectHideFlags: 0
@@ -18111,10 +18112,6 @@ PrefabInstance:
     - target: {fileID: 1049218736671335617, guid: f0bcc419f7c603b40894014c98b0b92e, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1049218736671335630, guid: f0bcc419f7c603b40894014c98b0b92e, type: 3}
-      propertyPath: gold
-      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 1049218736671335631, guid: f0bcc419f7c603b40894014c98b0b92e, type: 3}
       propertyPath: m_RootOrder

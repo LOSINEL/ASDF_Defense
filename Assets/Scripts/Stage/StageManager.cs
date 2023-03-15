@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -9,7 +8,10 @@ public class StageManager : MonoBehaviour
 
     [SerializeField] GameObject clearWindow;
     [SerializeField] GameObject defeatWindow;
+    [SerializeField] Home allyHome;
+    [SerializeField] Home enemyHome;
     [SerializeField] float gameTime = 0f;
+    bool gameEnd = false;
 
     public float GameTime { get { return gameTime; } }
 
@@ -18,20 +20,46 @@ public class StageManager : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
+    private void Start()
     {
-        gameTime += Time.deltaTime;
+        StartCoroutine(GameContinuing());
     }
 
-    public void ActivateClearWindow(bool _ally)
+    IEnumerator GameContinuing()
     {
-        if (!_ally)
+        while (true)
         {
-            clearWindow.SetActive(true);
+            if (gameEnd) yield break;
+            gameTime += Time.deltaTime;
+            if (allyHome.GetHp() <= 0f)
+            {
+                GameEnd();
+                GameManager.instance.GameClear();
+                ActivateClearWindow();
+            }
+            else if (enemyHome.GetHp() <= 0f)
+            {
+                GameEnd();
+                GameManager.instance.GameDefeat();
+                ActivateDefeatWindow();
+            }
+            yield return null;
         }
-        else
-        {
-            defeatWindow.SetActive(true);
-        }
+    }
+
+    void GameEnd()
+    {
+        gameEnd = true;
+        EnemySummonManager.instance.StopSummon();
+    }
+
+    void ActivateClearWindow()
+    {
+        clearWindow.SetActive(true);
+    }
+
+    void ActivateDefeatWindow()
+    {
+        defeatWindow.SetActive(true);
     }
 }

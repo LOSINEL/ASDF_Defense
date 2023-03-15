@@ -18,6 +18,8 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] Text attackSpeedText;
     [SerializeField] Text upgradeGoldText;
 
+    [SerializeField] int upgradeLevelMax;
+
     private void Awake()
     {
         instance = this;
@@ -51,13 +53,19 @@ public class UpgradeManager : MonoBehaviour
         characterData.Upgrade();
     }
 
+    public bool MaxLevel()
+    {
+        if (characterData.Level >= upgradeLevelMax) return true;
+        else return false;
+    }
+
     void RefreshWindow()
     {
         if (characterInfoWindow.activeSelf)
         {
-            damageText.text = $"데미지 : {characterData.Damage:#}(+{(characterData.BaseDamage * characterData.UpgradePower):#.#})";
+            damageText.text = $"데미지 : {characterData.Damage}(+{(characterData.BaseDamage * characterData.UpgradePower):#.#})";
             maxHpText.text = $"Hp : {characterData.MaxHp:#}(+{(characterData.BaseMaxHp * characterData.UpgradePower):#.#})";
-            moveSpeedText.text = $"이동속도 : {characterData.MoveSpeed}(+{(characterData.BaseMoveSpeed * characterData.UpgradePower):#.#})";
+            moveSpeedText.text = $"이동속도 : {characterData.MoveSpeed:#}(+{(characterData.BaseMoveSpeed * characterData.UpgradePower):#.#})";
             attackSpeedText.text = $"공격속도 : {characterData.AttackSpeed}(+{(characterData.BaseAttackSpeed * characterData.UpgradePower):#.#})/s";
             upgradeGoldText.text = $"{characterData.UpgradeCost} Gold";
         }

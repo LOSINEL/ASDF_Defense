@@ -10,7 +10,6 @@ public class StageDefeatWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.instance.GameDefeat();
         titleText.text = $"STAGE{GameManager.instance.NowStage} DEFEAT";
         goldText.text = $"{GameManager.instance.GetDefeatGold()} Gold";
     }

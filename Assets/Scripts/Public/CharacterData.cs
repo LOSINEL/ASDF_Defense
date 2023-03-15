@@ -44,6 +44,8 @@ public class CharacterData : ScriptableObject
     public float BaseMoveSpeed { get { return baseMoveSpeed; } }
     public float BaseAttackSpeed { get { return baseAttackSpeed; } }
 
+    public int Level { get { return level; } }
+
     public void InitStat()
     {
         level = 0;

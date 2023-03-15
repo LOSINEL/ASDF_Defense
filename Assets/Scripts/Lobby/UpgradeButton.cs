@@ -12,6 +12,7 @@ public class UpgradeButton : MonoBehaviour
 
     void SelectUpgradeCharacterButton()
     {
+        if (UpgradeManager.instance.MaxLevel()) return;
         if (UpgradeManager.instance.GetUpgradable())
         {
             UpgradeManager.instance.UpgradeCharacter();

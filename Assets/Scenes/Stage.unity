@@ -6143,6 +6143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clearWindow: {fileID: 1432403599}
   defeatWindow: {fileID: 719725530}
+  allyHome: {fileID: 366984257}
+  enemyHome: {fileID: 131352290}
   gameTime: 0
 --- !u!1 &1310652732
 GameObject:

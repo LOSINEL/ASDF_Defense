@@ -8,6 +8,8 @@ public class SerializableDictionary<TKey, TValue>
     [SerializeField] List<TKey> keys = new();
     [SerializeField] List<TValue> values = new();
 
+    public int Count { get { return values.Count; } }
+
     public TValue GetValue(TKey _key)
     {
         return values[keys.IndexOf(_key)];

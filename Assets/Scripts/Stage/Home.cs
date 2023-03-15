@@ -23,9 +23,7 @@ public class Home : Hp
 
     private void OnDisable()
     {
-        if (!isAlly) EnemySummonManager.instance.StopSummon();
         StopCoroutine(RefreshHpBar());
-        StageManager.instance.ActivateClearWindow(isAlly);
     }
 
     IEnumerator RefreshHpBar()

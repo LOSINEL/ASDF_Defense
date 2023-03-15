@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
     {
         nowStage = 1;
         maxStage = 1;
-        for (int i = 0; i < 15; i++)
+        int num = TeamManager.instance.CharacterDatas.Count;
+        for (int i = 0; i < num; i++)
         {
             TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).InitStat();
         }
