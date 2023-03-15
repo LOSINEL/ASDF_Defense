@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCharacter : Hp
 {
-    const float superNum = 1.4f;
+    const float superNum = 1.5f;
 
     [SerializeField] CharacterData characterData;
     [SerializeField] float moveSpeed;
@@ -119,8 +119,8 @@ public class PlayerCharacter : Hp
         }
         else if (isSuper)
         {
-            moveSpeed *= 1.75f;
-            nowHp = maxHp *= 2.8f;
+            moveSpeed *= 1.7f;
+            nowHp = maxHp *= 3f;
         }
     }
 }
