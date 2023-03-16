@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyCharacter : Hp
 {
+    const float moveTime = 0.033f;
+    const float checkTime = 0.066f;
+
     [SerializeField] EnemyData enemyData;
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
@@ -14,8 +17,8 @@ public class EnemyCharacter : Hp
     [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
-    protected float attackCooltimeRandomMin = 0.84f;
-    protected float attackCooltimeRandomMax = 1.16f;
+    protected float attackCooltimeRandomMin = 0.8f;
+    protected float attackCooltimeRandomMax = 1.25f;
     protected float _attackCooltime;
 
     public float Damage { get { return damage; } }
@@ -31,6 +34,7 @@ public class EnemyCharacter : Hp
     private void Start()
     {
         _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
+        StartCoroutine(CharacterMove());
         StartCoroutine(CheckEnemyList());
     }
 
@@ -57,8 +61,23 @@ public class EnemyCharacter : Hp
         }
     }
 
+    IEnumerator CharacterMove()
+    {
+        WaitForSeconds _moveTime = new WaitForSeconds(moveTime);
+        while (true)
+        {
+            CheckEnemy();
+            if (!isEnemyChecked)
+            {
+                Move();
+            }
+            yield return _moveTime;
+        }
+    }
+
     IEnumerator CheckEnemyList()
     {
+        WaitForSeconds _checkTime = new WaitForSeconds(checkTime);
         while (true)
         {
             for (int i = enemies.Count - 1; i >= 0; i--)
@@ -68,7 +87,7 @@ public class EnemyCharacter : Hp
                     enemies.Remove(enemies[i]);
                 }
             }
-            yield return null;
+            yield return _checkTime;
         }
     }
 
@@ -104,6 +123,6 @@ public class EnemyCharacter : Hp
 
     void Move()
     {
-        tr.Translate(moveSpeed * Time.fixedDeltaTime, 0f, 0f);
+        tr.Translate(moveSpeed * moveTime, 0f, 0f);
     }
 }

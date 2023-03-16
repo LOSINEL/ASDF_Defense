@@ -41,5 +41,6 @@ public class Assassin : PlayerCharacter
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
         SoundManager.instance.PlaySFX(SoundManager.SFX.ASSASSIN_ATTACK);
+        yield break;
     }
 }

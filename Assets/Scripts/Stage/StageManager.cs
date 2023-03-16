@@ -50,6 +50,8 @@ public class StageManager : MonoBehaviour
     void GameEnd()
     {
         gameEnd = true;
+        allyHome.gameObject.SetActive(false);
+        enemyHome.gameObject.SetActive(false);
         EnemySummonManager.instance.StopSummon();
     }
 

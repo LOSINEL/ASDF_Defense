@@ -127,3 +127,4 @@ MonoBehaviour:
   damage: 0
   moveSpeed: 650
   arrowNum: 0
+  waitTime: 0.05

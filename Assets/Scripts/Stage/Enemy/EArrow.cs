@@ -6,6 +6,7 @@ public class EArrow : SingleAttack
 {
     [SerializeField] float moveSpeed;
     [SerializeField] int arrowNum;
+    [SerializeField] float waitTime;
     Transform tr;
     float time;
 
@@ -18,22 +19,30 @@ public class EArrow : SingleAttack
     private void OnEnable()
     {
         InitArrow();
+        StartCoroutine(PlayArrow());
     }
 
-    private void FixedUpdate()
+    IEnumerator PlayArrow()
     {
-        tr.Translate(new Vector2(-moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
-        if (Enemies.Count > 0)
+        WaitForSeconds _waitTime = new WaitForSeconds(waitTime);
+        while (true)
         {
-            Enemies[0].GetComponent<Hp>().SubHp(damage);
-            SoundManager.instance.PlaySFX(SoundManager.SFX.ARROW_ATTACK);
-            gameObject.SetActive(false);
+            tr.Translate(new Vector2(-moveSpeed * waitTime, 0f), Space.World);
+            if (Enemies.Count > 0)
+            {
+                Enemies[0].GetComponent<Hp>().SubHp(damage);
+                SoundManager.instance.PlaySFX(SoundManager.SFX.ARROW_ATTACK);
+                gameObject.SetActive(false);
+                yield break;
+            }
+            if (time >= 1f)
+            {
+                gameObject.SetActive(false);
+                yield break;
+            }
+            time += waitTime;
+            yield return _waitTime;
         }
-        if (time >= 1f)
-        {
-            gameObject.SetActive(false);
-        }
-        time += Time.deltaTime;
     }
 
     public void InitArrow()

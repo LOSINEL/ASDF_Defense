@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerCharacter : Hp
 {
     const float superNum = 1.5f;
+    const float moveTime = 0.033f;
+    const float checkTime = 0.066f;
 
     [SerializeField] CharacterData characterData;
     [SerializeField] float moveSpeed;
@@ -33,6 +35,7 @@ public class PlayerCharacter : Hp
     private void Start()
     {
         _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
+        StartCoroutine(CharacterMove());
         StartCoroutine(CheckEnemyList());
     }
 
@@ -47,17 +50,23 @@ public class PlayerCharacter : Hp
         enemies.Clear();
     }
 
-    private void FixedUpdate()
+    IEnumerator CharacterMove()
     {
-        CheckEnemy();
-        if (!isEnemyChecked)
+        WaitForSeconds _moveTime = new WaitForSeconds(moveTime);
+        while (true)
         {
-            Move();
+            CheckEnemy();
+            if (!isEnemyChecked)
+            {
+                Move();
+            }
+            yield return _moveTime;
         }
     }
 
     IEnumerator CheckEnemyList()
     {
+        WaitForSeconds _checkTime = new WaitForSeconds(checkTime);
         while (true)
         {
             for (int i = enemies.Count - 1; i >= 0; i--)
@@ -67,7 +76,7 @@ public class PlayerCharacter : Hp
                     enemies.Remove(enemies[i]);
                 }
             }
-            yield return null;
+            yield return _checkTime;
         }
     }
 
@@ -83,9 +92,9 @@ public class PlayerCharacter : Hp
         }
     }
 
-    protected void Move()
+    void Move()
     {
-        tr.Translate(moveSpeed * Time.fixedDeltaTime, 0f, 0f);
+        tr.Translate(moveSpeed * moveTime, 0f, 0f);
     }
 
     void InitStat()

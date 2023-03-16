@@ -7,6 +7,7 @@ public class Arrow : SingleAttack
     [SerializeField] float moveSpeed;
     [SerializeField] int arrowNum;
     [SerializeField] int maxAttack;
+    [SerializeField] float waitTime;
     Transform tr;
     float time;
 
@@ -19,26 +20,34 @@ public class Arrow : SingleAttack
     private void OnEnable()
     {
         InitArrow();
+        StartCoroutine(PlayArrow());
     }
 
-    private void FixedUpdate()
+    IEnumerator PlayArrow()
     {
-        tr.Translate(new Vector2(moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
-        if (Enemies.Count > 0)
+        WaitForSeconds _waitTime = new WaitForSeconds(waitTime);
+        while (true)
         {
-            for (int i = 0; i < Enemies.Count; i++)
+            tr.Translate(new Vector2(moveSpeed * waitTime, 0f), Space.World);
+            if (Enemies.Count > 0)
             {
-                if (i == maxAttack) break;
-                Enemies[i].GetComponent<Hp>().SubHp(damage);
+                for (int i = 0; i < Enemies.Count; i++)
+                {
+                    if (i == maxAttack) break;
+                    Enemies[i].GetComponent<Hp>().SubHp(damage);
+                }
+                SoundManager.instance.PlaySFX(SoundManager.SFX.ARROW_ATTACK);
+                gameObject.SetActive(false);
+                yield break;
             }
-            SoundManager.instance.PlaySFX(SoundManager.SFX.ARROW_ATTACK);
-            gameObject.SetActive(false);
+            if (time >= 1f)
+            {
+                gameObject.SetActive(false);
+                yield break;
+            }
+            time += waitTime;
+            yield return _waitTime;
         }
-        if (time >= 1f)
-        {
-            gameObject.SetActive(false);
-        }
-        time += Time.deltaTime;
     }
 
     public void InitArrow()

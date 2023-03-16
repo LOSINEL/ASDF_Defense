@@ -44,5 +44,6 @@ public class EMagician : EnemyCharacter
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
+        yield break;
     }
 }

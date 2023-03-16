@@ -41,5 +41,6 @@ public class EWarrior : EnemyCharacter
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
         SoundManager.instance.PlaySFX(SoundManager.SFX.WARRIOR_ATTACK);
+        yield break;
     }
 }

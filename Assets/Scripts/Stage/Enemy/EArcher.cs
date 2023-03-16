@@ -45,5 +45,6 @@ public class EArcher : EnemyCharacter
         _arrow.GetComponent<EArrow>().SetPosition(tr.position);
         _arrow.GetComponent<EArrow>().SetDamage(Damage);
         SoundManager.instance.PlaySFX(SoundManager.SFX.ARCHER_ATTACK);
+        yield break;
     }
 }

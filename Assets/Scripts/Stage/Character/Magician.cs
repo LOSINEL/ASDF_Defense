@@ -45,5 +45,6 @@ public class Magician : PlayerCharacter
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
         SoundManager.instance.PlaySFX(SoundManager.SFX.MAGICIAN_ATTACK1 + magicianNum);
+        yield break;
     }
 }
