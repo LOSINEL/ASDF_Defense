@@ -17,11 +17,18 @@ public class EnemySummonManager : MonoBehaviour
     [SerializeField] int[] summonSettingNums = new int[3];
     [SerializeField] int summonNumTot = 0;
     [SerializeField] Transform[] enemyGroups = new Transform[5];
+    [SerializeField] GameObject[] bossArr;
+    GameObject boss;
+    bool bossSummoned = false;
     Transform tr;
+    int bossNum;
     int summonLevel;
     int groupNum;
     int summonNum;
     Coroutine summonEnemy;
+
+    public bool BossAlive { get { if (boss.GetComponent<Hp>().GetHp() > 0) return true; else return false; } }
+    public bool BossSummoned { get { return bossSummoned; } }
 
     private void Awake()
     {
@@ -30,6 +37,11 @@ public class EnemySummonManager : MonoBehaviour
 
     private void Start()
     {
+        bossNum = bossArr.Length;
+        if (GameManager.instance.NowStage % 3 == 0)
+        {
+            boss = bossArr[GameManager.instance.NowStage / bossNum - 1];
+        }
         groupNum = enemyGroups.Length;
         summonNum = summonNums.Length;
         tr = transform;
@@ -58,6 +70,15 @@ public class EnemySummonManager : MonoBehaviour
                 SummonEnemy();
             }
             yield return waitTime;
+        }
+    }
+
+    public void SummonBoss()
+    {
+        if (boss != null)
+        {
+            Instantiate(boss, GetRandomPosition(), Quaternion.identity);
+            bossSummoned = true;
         }
     }
 

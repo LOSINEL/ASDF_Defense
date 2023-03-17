@@ -33,17 +33,57 @@ public class StageManager : MonoBehaviour
             gameTime += Time.deltaTime;
             if (allyHome.GetHp() <= 0f)
             {
-                GameEnd();
-                GameManager.instance.GameDefeat();
-                ActivateDefeatWindow();
+                StageDefeat();
             }
-            else if (enemyHome.GetHp() <= 0f)
+            else if (enemyHome.GetHp() <= 0f && !EnemySummonManager.instance.BossSummoned)
             {
-                GameEnd();
-                GameManager.instance.GameClear();
-                ActivateClearWindow();
+                if (BossStage())
+                {
+                    EnemySummonManager.instance.SummonBoss();
+                    StartCoroutine(BossCheck());
+                    yield break;
+                }
+                StageClear();
             }
             yield return null;
+        }
+    }
+
+    IEnumerator BossCheck()
+    {
+        while (true)
+        {
+            if (!EnemySummonManager.instance.BossAlive)
+            {
+                StageClear();
+            }
+            yield return null;
+        }
+    }
+
+    public void StageClear()
+    {
+        GameEnd();
+        GameManager.instance.GameClear();
+        ActivateClearWindow();
+    }
+
+    public void StageDefeat()
+    {
+        GameEnd();
+        GameManager.instance.GameDefeat();
+        ActivateDefeatWindow();
+    }
+
+    bool BossStage()
+    {
+        if (GameManager.instance.NowStage % 3 == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
