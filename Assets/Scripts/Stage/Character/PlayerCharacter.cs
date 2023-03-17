@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerCharacter : Hp
 {
-    const float superNum = 1.5f;
     const float moveTime = 0.033f;
     const float checkTime = 0.066f;
 
@@ -120,16 +119,16 @@ public class PlayerCharacter : Hp
         GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f);
         if (isSuper && damage > 0)
         {
-            moveSpeed *= superNum;
-            attackSpeed *= superNum;
+            moveSpeed *= 1.25f;
+            attackSpeed *= 1.25f;
             attackCooltime = 1f / attackSpeed;
-            damage *= superNum;
-            nowHp = maxHp *= superNum;
+            damage *= 1.5f;
+            nowHp = maxHp *= 1.5f;
         }
         else if (isSuper)
         {
-            moveSpeed *= 1.7f;
-            nowHp = maxHp *= 3f;
+            moveSpeed *= 1.4f;
+            nowHp = maxHp *= 2.5f;
         }
     }
 }

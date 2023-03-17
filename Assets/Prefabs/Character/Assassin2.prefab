@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  maxAttack: 1
+  maxAttack: 2
 --- !u!1 &2409832179464933312
 GameObject:
   m_ObjectHideFlags: 0

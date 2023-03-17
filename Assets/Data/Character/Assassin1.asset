@@ -18,18 +18,18 @@ MonoBehaviour:
   - {fileID: -913426740, guid: 6b5c043056ed67741b467dbc06c19665, type: 3}
   - {fileID: -891365123, guid: 6b5c043056ed67741b467dbc06c19665, type: 3}
   - {fileID: 1822633155, guid: 6b5c043056ed67741b467dbc06c19665, type: 3}
-  damage: 40
+  damage: 46
   maxHp: 80
   moveSpeed: 240
-  attackSpeed: 1.6
+  attackSpeed: 1.5
   summonCost: 20
   summonCoolTime: 1.4
   superSummonCost: 50
-  upgradeCost: 50
+  upgradeCost: 70
   upgradePower: 0.02
   charType: 6
-  baseDamage: 40
+  baseDamage: 46
   baseMaxHp: 80
   baseMoveSpeed: 240
-  baseAttackSpeed: 1.6
+  baseAttackSpeed: 1.5
   level: 0
