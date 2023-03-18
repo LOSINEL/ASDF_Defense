@@ -9167,6 +9167,10 @@ MonoBehaviour:
   - {fileID: 32011769}
   - {fileID: 1076727418}
   - {fileID: 1684191078}
+  bossArr:
+  - {fileID: 2446739622195562636, guid: 35365c252f7cdc641b5000942df50d06, type: 3}
+  - {fileID: 5063405437784689664, guid: 1ed43ec979c73644584294995786fcc9, type: 3}
+  - {fileID: 2263085982431923671, guid: 8d40aa02d25b2ab44826d529b41e344f, type: 3}
 --- !u!1 &1668918582
 GameObject:
   m_ObjectHideFlags: 0
