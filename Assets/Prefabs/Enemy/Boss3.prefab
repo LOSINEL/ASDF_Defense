@@ -170,13 +170,14 @@ GameObject:
   - component: {fileID: 2263085982431923664}
   - component: {fileID: 2263085982431923665}
   - component: {fileID: 2263085982431923670}
+  - component: {fileID: -2396087088505878872}
   m_Layer: 0
   m_Name: Boss3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2263085982431923693
 Transform:
   m_ObjectHideFlags: 0
@@ -330,7 +331,7 @@ Animator:
   m_GameObject: {fileID: 2263085982431923671}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6efbeea508eedbe49ae13964cad9c866, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9388eab04dcbeba4a80f611e3e320db2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -340,6 +341,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2396087088505878872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263085982431923671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936530af470b1264896e0bd9abbb6e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossBgms: 06000000070000000800000009000000
 --- !u!1 &2263085982543218518
 GameObject:
   m_ObjectHideFlags: 0

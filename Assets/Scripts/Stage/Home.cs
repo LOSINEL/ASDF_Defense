@@ -9,7 +9,6 @@ public class Home : Hp
     [SerializeField] Image hpBar;
     [SerializeField] TMP_Text hpBarText;
     [SerializeField] float hpBarRefreshTime;
-    [SerializeField] bool isAlly;
     WaitForSeconds waitTime;
 
     private void Start()

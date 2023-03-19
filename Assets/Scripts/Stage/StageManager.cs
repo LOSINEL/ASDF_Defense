@@ -22,6 +22,7 @@ public class StageManager : MonoBehaviour
 
     private void Start()
     {
+        GameManager.instance.InitStageGold();
         StartCoroutine(GameContinuing());
     }
 
@@ -35,27 +36,26 @@ public class StageManager : MonoBehaviour
             {
                 StageDefeat();
             }
-            else if (enemyHome.GetHp() <= 0f && !EnemySummonManager.instance.BossSummoned)
+            else if (enemyHome.GetHp() <= 0f)
             {
                 if (BossStage())
                 {
-                    EnemySummonManager.instance.SummonBoss();
-                    StartCoroutine(BossCheck());
-                    yield break;
+                    if (EnemySummonManager.instance.BossSummoned)
+                    {
+                        if (!EnemySummonManager.instance.BossAlive)
+                        {
+                            StageClear();
+                        }
+                    }
+                    else
+                    {
+                        EnemySummonManager.instance.SummonBoss();
+                    }
                 }
-                StageClear();
-            }
-            yield return null;
-        }
-    }
-
-    IEnumerator BossCheck()
-    {
-        while (true)
-        {
-            if (!EnemySummonManager.instance.BossAlive)
-            {
-                StageClear();
+                else
+                {
+                    StageClear();
+                }
             }
             yield return null;
         }

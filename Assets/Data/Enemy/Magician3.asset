@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f116a7b9f583e488edfa1a9b871693, type: 3}
   m_Name: Magician3
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
   damage: 158
   maxHp: 387
   moveSpeed: 156
   attackSpeed: 0.54
-  recoverManaNum: 193
-  gold: 7
+  recoverManaNum: 139
+  gold: 34

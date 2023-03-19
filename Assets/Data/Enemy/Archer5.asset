@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f116a7b9f583e488edfa1a9b871693, type: 3}
   m_Name: Archer5
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1833289406168176559, guid: 317714283871938468158ebcf5c71274, type: 3}
   damage: 133
   maxHp: 1120
   moveSpeed: 380
   attackSpeed: 0.95
-  recoverManaNum: 193
-  gold: 14
+  recoverManaNum: 243
+  gold: 60

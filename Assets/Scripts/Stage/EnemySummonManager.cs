@@ -18,7 +18,8 @@ public class EnemySummonManager : MonoBehaviour
     [SerializeField] int summonNumTot = 0;
     [SerializeField] Transform[] enemyGroups = new Transform[5];
     [SerializeField] GameObject[] bossArr;
-    GameObject boss;
+    [SerializeField] GameObject boss;
+    GameObject stageBoss;
     bool bossSummoned = false;
     Transform tr;
     int bossNum;
@@ -40,7 +41,7 @@ public class EnemySummonManager : MonoBehaviour
         bossNum = bossArr.Length;
         if (GameManager.instance.NowStage % 3 == 0)
         {
-            boss = bossArr[GameManager.instance.NowStage / bossNum - 1];
+            stageBoss = bossArr[GameManager.instance.NowStage / bossNum - 1];
         }
         groupNum = enemyGroups.Length;
         summonNum = summonNums.Length;
@@ -75,9 +76,9 @@ public class EnemySummonManager : MonoBehaviour
 
     public void SummonBoss()
     {
-        if (boss != null)
+        if (stageBoss != null)
         {
-            Instantiate(boss, GetRandomPosition(), Quaternion.identity);
+            boss = Instantiate(stageBoss, GetRandomPosition(), Quaternion.identity);
             bossSummoned = true;
         }
     }

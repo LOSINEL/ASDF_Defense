@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int gold;
     [SerializeField] int maxStage;
     [SerializeField] int nowStage;
+    [SerializeField] int stageGold = 0;
 
     public int Gold { get { return gold; } }
     public int MaxStage { get { return maxStage; } }
@@ -32,8 +33,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        nowStage = 1;
-        maxStage = 1;
         int num = TeamManager.instance.CharacterDatas.Count;
         for (int i = 0; i < num; i++)
         {
@@ -49,7 +48,13 @@ public class GameManager : MonoBehaviour
     public void GameClear()
     {
         if (nowStage >= maxStage) maxStage = nowStage + 1;
-        AddGold(GetClearGold());
+        AddGold(GetClearGold() + stageGold);
+        InitStageGold();
+    }
+
+    public void AddStageGold(int _gold)
+    {
+        stageGold += _gold;
     }
 
     public void AddGold(int _gold)
@@ -74,6 +79,12 @@ public class GameManager : MonoBehaviour
 
     public void GameDefeat()
     {
-        AddGold(GetDefeatGold());
+        AddGold(GetDefeatGold()+stageGold);
+        InitStageGold();
+    }
+
+    public void InitStageGold()
+    {
+        stageGold = 0;
     }
 }
