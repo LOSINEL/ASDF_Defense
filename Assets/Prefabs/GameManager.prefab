@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8621b2df08264489592eb775277d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 1000000
-  maxStage: 9
+  gold: 0
+  maxStage: 1
   nowStage: 1
+  stageGold: 0
