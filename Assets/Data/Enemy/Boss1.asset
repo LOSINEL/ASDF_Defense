@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Boss1
   m_EditorClassIdentifier: 
   damage: 294
-  maxHp: 25000
-  moveSpeed: 150
+  maxHp: 30000
+  moveSpeed: 50
   attackSpeed: 0.9
   recoverManaNum: 0
   gold: 3000

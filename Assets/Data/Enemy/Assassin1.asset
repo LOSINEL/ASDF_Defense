@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 34
   maxHp: 101
-  moveSpeed: 240
+  moveSpeed: 120
   attackSpeed: 1.2
   recoverManaNum: 9
   gold: 4

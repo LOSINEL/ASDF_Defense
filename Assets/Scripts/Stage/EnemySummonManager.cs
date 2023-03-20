@@ -28,7 +28,7 @@ public class EnemySummonManager : MonoBehaviour
     int summonNum;
     Coroutine summonEnemy;
 
-    public bool BossAlive { get { if (boss.GetComponent<Hp>().GetHp() > 0) return true; else return false; } }
+    public bool BossAlive { get { if (boss.GetComponent<Hp>().GetNowHp() > 0) return true; else return false; } }
     public bool BossSummoned { get { return bossSummoned; } }
 
     private void Awake()
@@ -61,8 +61,7 @@ public class EnemySummonManager : MonoBehaviour
     IEnumerator PlaySummonEnemy()
     {
         int summonRand;
-        WaitForSeconds waitTime = new WaitForSeconds(summonTime);
-        yield return waitTime;
+        yield return new WaitForSeconds(summonTime);
         while (true)
         {
             summonRand = Random.Range(minSummonNum, maxSummonNum + 1 + (int)StageManager.instance.GameTime / summonAddTime);
@@ -70,7 +69,7 @@ public class EnemySummonManager : MonoBehaviour
             {
                 SummonEnemy();
             }
-            yield return waitTime;
+            yield return new WaitForSeconds(Random.Range(summonTime * 0.8f, summonTime * 1.25f));
         }
     }
 

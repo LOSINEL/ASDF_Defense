@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 609248038, guid: 5d43962d503aa034eb69aa61be775675, type: 3}
   damage: 160
   maxHp: 2240
-  moveSpeed: 168
+  moveSpeed: 84
   attackSpeed: 1
   summonCost: 400
   summonCoolTime: 6.4
@@ -30,6 +30,6 @@ MonoBehaviour:
   charType: 2
   baseDamage: 160
   baseMaxHp: 2240
-  baseMoveSpeed: 168
+  baseMoveSpeed: 105
   baseAttackSpeed: 1
   level: 0

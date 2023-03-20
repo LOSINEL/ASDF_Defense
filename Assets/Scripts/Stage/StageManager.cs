@@ -32,11 +32,11 @@ public class StageManager : MonoBehaviour
         {
             if (gameEnd) yield break;
             gameTime += Time.deltaTime;
-            if (allyHome.GetHp() <= 0f)
+            if (allyHome.GetNowHp() <= 0f)
             {
                 StageDefeat();
             }
-            else if (enemyHome.GetHp() <= 0f)
+            else if (enemyHome.GetNowHp() <= 0f)
             {
                 if (BossStage())
                 {

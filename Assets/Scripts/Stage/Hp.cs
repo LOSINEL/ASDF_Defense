@@ -26,8 +26,13 @@ public class Hp : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public float GetHp()
+    public float GetNowHp()
     {
         return nowHp;
+    }
+
+    public float GetMaxHp()
+    {
+        return maxHp;
     }
 }
