@@ -78,6 +78,7 @@ public class EnemySummonManager : MonoBehaviour
     {
         if (stageBoss != null)
         {
+            BossAlert.instance.PlayBossAlert();
             boss = Instantiate(stageBoss, GetRandomPosition(), Quaternion.identity);
             bossSummoned = true;
         }

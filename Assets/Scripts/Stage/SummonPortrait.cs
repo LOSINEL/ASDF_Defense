@@ -64,7 +64,7 @@ public class SummonPortrait : MonoBehaviour
                 Destroy(this.gameObject);
                 yield break;
             }
-            color.a -= Time.deltaTime * 3f;
+            color.a -= Time.deltaTime * 2f;
             image.color = color;
             yield return null;
         }
