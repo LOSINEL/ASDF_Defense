@@ -25,8 +25,8 @@ MonoBehaviour:
   summonCost: 1000
   summonCoolTime: 10
   superSummonCost: 2500
-  upgradeCost: 400
-  upgradePower: 0.02
+  upgradeCost: 1250
+  upgradePower: 0.06
   charType: 11
   baseDamage: 733
   baseMaxHp: 800

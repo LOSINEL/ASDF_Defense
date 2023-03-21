@@ -13919,7 +13919,7 @@ MonoBehaviour:
   moveSpeedText: {fileID: 580702905}
   attackSpeedText: {fileID: 2072575237}
   upgradeGoldText: {fileID: 551754920}
-  upgradeLevelMax: 50
+  upgradeLevelMax: 20
 --- !u!1 &1736563202
 GameObject:
   m_ObjectHideFlags: 0

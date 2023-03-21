@@ -55,6 +55,6 @@ public class ManaManager : MonoBehaviour
     {
         maxManaUpgradeNum = 15f + manaLevel;
         manaRecoveryUpgradeNum = 1.0f + manaLevel * 0.1f;
-        upgradeGold = (manaLevel + 1) * 200;
+        upgradeGold = (manaLevel + 1) * 100;
     }
 }

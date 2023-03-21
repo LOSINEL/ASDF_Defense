@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f116a7b9f583e488edfa1a9b871693, type: 3}
   m_Name: Boss3
   m_EditorClassIdentifier: 
-  damage: 773
-  maxHp: 250000
+  damage: 643
+  maxHp: 170000
   moveSpeed: 50
   attackSpeed: 1.1
   recoverManaNum: 0
-  gold: 30000
+  gold: 60000
