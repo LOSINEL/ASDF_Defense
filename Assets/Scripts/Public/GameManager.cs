@@ -69,12 +69,12 @@ public class GameManager : MonoBehaviour
 
     public int GetClearGold()
     {
-        return (nowStage * nowStage + 4) * 100;
+        return (nowStage * nowStage + 10) * 200;
     }
 
     public int GetDefeatGold()
     {
-        return (nowStage * nowStage + 4) * 20;
+        return (nowStage * nowStage + 10) * 40;
     }
 
     public void GameDefeat()

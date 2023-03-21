@@ -2939,7 +2939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2ce9d91481bb6429733b24d871c0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: 30
+  arrowNum: 20
   arrows:
   - {fileID: 8695057871521147020, guid: 705b987fe984c1b4a8fe0fe73e7df508, type: 3}
   - {fileID: 8695057871521147020, guid: eb31925f161858449a3c2cf8f7eb71cd, type: 3}
@@ -8851,10 +8851,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageLevel: 0
-  summonTime: 3.4
+  summonTime: 4
   minSummonNum: 1
-  maxSummonNum: 6
-  summonAddTime: 18
+  maxSummonNum: 5
+  summonAddTime: 21
   summonGroups:
   - summonElements:
     - enemies:
@@ -9059,7 +9059,7 @@ MonoBehaviour:
   - {fileID: 5063405437784689664, guid: 1ed43ec979c73644584294995786fcc9, type: 3}
   - {fileID: 2263085982431923671, guid: 8d40aa02d25b2ab44826d529b41e344f, type: 3}
   boss: {fileID: 0}
-  summonLimit: 50
+  summonLimit: 40
   summonedNum: 0
 --- !u!1 &1668918582
 GameObject:
@@ -9682,7 +9682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55907513d9c89d745ba1ca6e897bfb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: 50
+  arrowNum: 30
   arrows:
   - {fileID: 3518270113422312571, guid: c7f746ce37a68e646bc49fb5387c30db, type: 3}
   - {fileID: 540270789515710607, guid: b302fe5412ddb6f4ba5ab13f3ca887a0, type: 3}
