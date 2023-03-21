@@ -8851,10 +8851,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageLevel: 0
-  summonTime: 3.2
+  summonTime: 3.4
   minSummonNum: 1
-  maxSummonNum: 2
-  summonAddTime: 16
+  maxSummonNum: 6
+  summonAddTime: 18
   summonGroups:
   - summonElements:
     - enemies:
@@ -9046,7 +9046,7 @@ MonoBehaviour:
       - {fileID: 7300432555934155838, guid: 162fabd922fce9d4aa6cc43fe286aa76, type: 3}
       - {fileID: 7300432555934155838, guid: 162fabd922fce9d4aa6cc43fe286aa76, type: 3}
   summonNums: 4b0000005f00000064000000
-  summonSettingNums: 320000001e00000014000000
+  summonSettingNums: 190000000f0000000a000000
   summonNumTot: 100
   enemyGroups:
   - {fileID: 2033904237}
@@ -9059,6 +9059,8 @@ MonoBehaviour:
   - {fileID: 5063405437784689664, guid: 1ed43ec979c73644584294995786fcc9, type: 3}
   - {fileID: 2263085982431923671, guid: 8d40aa02d25b2ab44826d529b41e344f, type: 3}
   boss: {fileID: 0}
+  summonLimit: 50
+  summonedNum: 0
 --- !u!1 &1668918582
 GameObject:
   m_ObjectHideFlags: 0

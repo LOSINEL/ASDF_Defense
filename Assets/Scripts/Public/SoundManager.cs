@@ -30,6 +30,7 @@ public class SoundManager : MonoBehaviour
             }
         }
         bgmPlayer = gameObject.AddComponent<AudioSource>();
+        bgmPlayer.loop = true;
         for (int i = 0; i < (int)SFX.ENUM_SIZE; i++)
         {
             sfxPlayers[i] = gameObject.AddComponent<AudioSource>();

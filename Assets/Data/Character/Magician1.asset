@@ -30,6 +30,6 @@ MonoBehaviour:
   charType: 9
   baseDamage: 42
   baseMaxHp: 60
-  baseMoveSpeed: 75
+  baseMoveSpeed: 90
   baseAttackSpeed: 0.6
   level: 0

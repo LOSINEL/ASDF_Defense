@@ -6,12 +6,19 @@ using UnityEngine.UI;
 public class CharacterPortrait : MonoBehaviour
 {
     Image image;
+    int num = 2;
+
     private void Start()
     {
         image = GetComponent<Image>();
+        GetComponent<Button>().onClick.AddListener(SetCharacterPortrait);
     }
-    public void SetCharacterPortrait(Enums.CHAR_TYPE _charType)
+    void SetCharacterPortrait()
     {
-        image.sprite = TeamManager.instance.CharacterDatas.GetValue(_charType).Portraits[(int)Enums.PORTRAIT_TYPE.NORMAL];
+        int tmp = -1;
+        do { tmp = Random.Range(0, 15); } while (tmp == num);
+        num = tmp;
+        image.sprite = TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)tmp).Portraits[(int)Enums.PORTRAIT_TYPE.NORMAL];
+        image.SetNativeSize();
     }
 }

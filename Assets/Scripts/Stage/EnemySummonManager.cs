@@ -19,6 +19,8 @@ public class EnemySummonManager : MonoBehaviour
     [SerializeField] Transform[] enemyGroups = new Transform[5];
     [SerializeField] GameObject[] bossArr;
     [SerializeField] GameObject boss;
+    [SerializeField] int summonLimit;
+    [SerializeField] int summonedNum;
     GameObject stageBoss;
     bool bossSummoned = false;
     Transform tr;
@@ -64,7 +66,8 @@ public class EnemySummonManager : MonoBehaviour
         yield return new WaitForSeconds(summonTime);
         while (true)
         {
-            summonRand = Random.Range(minSummonNum, maxSummonNum + 1 + (int)StageManager.instance.GameTime / summonAddTime);
+            summonRand = Random.Range(minSummonNum, minSummonNum + 2 + (int)StageManager.instance.GameTime / summonAddTime);
+            if (summonRand > maxSummonNum) summonRand = maxSummonNum;
             for (int i = 0; i < summonRand; i++)
             {
                 SummonEnemy();
@@ -85,6 +88,8 @@ public class EnemySummonManager : MonoBehaviour
 
     void SummonEnemy()
     {
+        if (summonedNum >= summonLimit) return;
+        summonedNum++;
         GameObject tmpObj;
         int groupRand = Random.Range(0, groupNum);
         int summonRand = 0;
@@ -99,6 +104,11 @@ public class EnemySummonManager : MonoBehaviour
         tmpObj = enemyGroups[groupRand].GetChild(summonRand).GetChild(summonSettingNums[summonRand] - 1).gameObject;
         tmpObj.SetActive(true);
         tmpObj.transform.SetAsFirstSibling();
+    }
+
+    public void SubLimit()
+    {
+        summonedNum--;
     }
 
     public void StopSummon()

@@ -50,6 +50,7 @@ public class EnemyCharacter : Hp
         int gold = Random.Range(0, enemyData.Gold + 1);
         GameManager.instance.AddStageGold(gold);
         StageManaManager.instance.AddMana(recoverManaNum);
+        EnemySummonManager.instance.SubLimit();
     }
 
     private void FixedUpdate()
