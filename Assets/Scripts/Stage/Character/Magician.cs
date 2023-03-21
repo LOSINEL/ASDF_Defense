@@ -39,12 +39,15 @@ public class Magician : PlayerCharacter
         animator.SetTrigger("Attack");
         GameObject magicAttack = MagicianAttackPoolManager.instance.GetAttack(magicianNum);
         magicAttack.SetActive(true);
+        magicAttack.transform.SetAsFirstSibling();
         magicAttack.GetComponent<MagicianAttackAnimation>().SetPosition(tr.position);
         yield return null;
         float waitTime = animator.GetCurrentAnimatorStateInfo(0).length / 2f;
         yield return new WaitForSeconds(waitTime);
         weaponCollider.enabled = true;
         SoundManager.instance.PlaySFX(SoundManager.SFX.MAGICIAN_ATTACK1 + magicianNum);
+        yield return new WaitForSeconds(0.05f);
+        weaponCollider.enabled = false;
         yield break;
     }
 }
