@@ -34,14 +34,20 @@ public class EnemyCharacter : Hp
     private void Start()
     {
         _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
-        StartCoroutine(CharacterMove());
-        StartCoroutine(CheckEnemyList());
+        tr.position = EnemySummonManager.instance.GetRandomPosition();
+        InitStat();
     }
 
     private void OnEnable()
     {
-        tr.position = EnemySummonManager.instance.GetRandomPosition();
+        try
+        {
+            tr.position = EnemySummonManager.instance.GetRandomPosition();
+        }
+        catch { }
         InitStat();
+        StartCoroutine(CharacterMove());
+        StartCoroutine(CheckEnemyList());
     }
 
     private void OnDisable()
@@ -51,6 +57,7 @@ public class EnemyCharacter : Hp
         GameManager.instance.AddStageGold(gold);
         StageManaManager.instance.AddMana(recoverManaNum);
         EnemySummonManager.instance.SubLimit();
+        StopAllCoroutines();
     }
 
     private void FixedUpdate()

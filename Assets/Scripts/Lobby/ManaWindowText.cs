@@ -28,7 +28,7 @@ public class ManaWindowText : MonoBehaviour
         maxManaText.text = $"MAX MANA {(int)ManaManager.instance.MaxMana}";
         recoverManaText.text = $"MANA RECOVER {ManaManager.instance.ManaRecovery}/s";
         maxManaUpgradeText.text = $"MAX MANA + {(int)ManaManager.instance.MaxManaUpgradeNum}";
-        recoverManaUpgradeText.text = $"MANA RECOVER + {ManaManager.instance.ManaRecoveryUpgradeNum:#.#}/s";
+        recoverManaUpgradeText.text = $"MANA RECOVER + {ManaManager.instance.ManaRecoveryUpgradeNum:F1}/s";
         upgradeGoldText.text = $"{ManaManager.instance.UpgradeGold} Gold";
     }
 }

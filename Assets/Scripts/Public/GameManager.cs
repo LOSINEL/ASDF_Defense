@@ -6,14 +6,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] int gold;
-    [SerializeField] int maxStage;
-    [SerializeField] int nowStage;
-    [SerializeField] int stageGold = 0;
+    [SerializeField] int _gold;
+    [SerializeField] int _maxStage;
+    [SerializeField] int _nowStage;
+    [SerializeField] int _stageGold = 0;
 
-    public int Gold { get { return gold; } }
-    public int MaxStage { get { return maxStage; } }
-    public int NowStage { get { return nowStage; } }
+    public int Gold { get { return _gold; } }
+    public int MaxStage { get { return _maxStage; } }
+    public int NowStage { get { return _nowStage; } }
 
     private void Awake()
     {
@@ -24,67 +24,109 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (instance != this)
-            {
-                Destroy(this.gameObject);
-            }
+            Destroy(this.gameObject);
         }
     }
 
     private void Start()
     {
-        int num = TeamManager.instance.CharacterDatas.Count;
-        for (int i = 0; i < num; i++)
-        {
-            TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).InitStat();
-        }
+        LoadAllData();
     }
 
-    public void SetNowStage(int _num)
+    public void SetNowStage(int num)
     {
-        nowStage = _num;
+        _nowStage = num;
     }
 
     public void GameClear()
     {
-        if (nowStage >= maxStage) maxStage = nowStage + 1;
-        AddGold(GetClearGold() + stageGold);
+        if (_nowStage >= _maxStage) _maxStage = _nowStage + 1;
+        AddGold(GetClearGold() + _stageGold);
         InitStageGold();
     }
 
-    public void AddStageGold(int _gold)
+    public void AddStageGold(int gold)
     {
-        stageGold += _gold;
+        _stageGold += gold;
     }
 
-    public void AddGold(int _gold)
+    public void AddGold(int gold)
     {
-        gold += _gold;
+        this._gold += gold;
     }
 
-    public void SubGold(int _gold)
+    public void SubGold(int gold)
     {
-        gold -= _gold;
+        this._gold -= gold;
     }
 
     public int GetClearGold()
     {
-        return (nowStage * nowStage + 5) * 300;
+        return (_nowStage * _nowStage + 5) * 300;
     }
 
     public int GetDefeatGold()
     {
-        return (nowStage * nowStage + 5) * 60;
+        return (_nowStage * _nowStage + 5) * 60;
     }
 
     public void GameDefeat()
     {
-        AddGold(GetDefeatGold()+stageGold);
+        AddGold(GetDefeatGold()+_stageGold);
         InitStageGold();
     }
 
     public void InitStageGold()
     {
-        stageGold = 0;
+        _stageGold = 0;
+    }
+
+    void SaveAllData()
+    {
+        int characterDataCount = TeamManager.instance.CharacterDatas.Count;
+        string key;
+        for (int i = 0; i < characterDataCount; i++)
+        {
+            key = ((Enums.CHAR_TYPE)i).ToString();
+            SaveManager.instance.SetData(key, TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).Level);
+        }
+        SaveManager.instance.SetData(Strings.gold, _gold);
+        SaveManager.instance.SetData(Strings.maxStage, _maxStage);
+        SaveManager.instance.SaveData();
+    }
+
+    void LoadAllData()
+    {
+        int characterDataCount = TeamManager.instance.CharacterDatas.Count;
+        int tmp;
+        string key;
+        for (int i = 0; i < characterDataCount; i++)
+        {
+            tmp = 0;
+            key = ((Enums.CHAR_TYPE)i).ToString();
+            if (SaveManager.instance.CheckHasKey($"{((Enums.CHAR_TYPE)i).ToString()}"))
+            {
+                tmp = SaveManager.instance.LoadDataInt(key);
+            }
+            TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).InitStat(tmp);
+        }
+        if (SaveManager.instance.CheckHasKey(Strings.gold))
+        {
+            _gold = SaveManager.instance.LoadDataInt(Strings.gold);
+        }
+        if (SaveManager.instance.CheckHasKey(Strings.maxStage))
+        {
+            _maxStage = SaveManager.instance.LoadDataInt(Strings.maxStage);
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveAllData();
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        SaveAllData();
     }
 }

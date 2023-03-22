@@ -46,13 +46,10 @@ public class CharacterData : ScriptableObject
 
     public int Level { get { return level; } }
 
-    public void InitStat()
+    public void InitStat(int _level)
     {
-        level = 0;
-        damage = baseDamage;
-        maxHp = baseMaxHp;
-        moveSpeed = baseMoveSpeed;
-        attackSpeed = baseAttackSpeed;
+        level = _level;
+        SetStat();
     }
 
     public void Upgrade()
@@ -62,5 +59,13 @@ public class CharacterData : ScriptableObject
         maxHp = baseMaxHp * (upgradePower * level + 1);
         moveSpeed = baseMoveSpeed * (upgradePower * level + 1);
         attackSpeed = baseAttackSpeed * (upgradePower * level + 1);
+    }
+
+    void SetStat()
+    {
+        damage = baseDamage * (1 + level * upgradePower);
+        maxHp = baseMaxHp * (1 + level * upgradePower);
+        moveSpeed = baseMoveSpeed * (1 + level * upgradePower);
+        attackSpeed = baseAttackSpeed * (1 + level * upgradePower);
     }
 }

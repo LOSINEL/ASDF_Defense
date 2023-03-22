@@ -24,10 +24,7 @@ public class SoundManager : MonoBehaviour
         }
         else
         {
-            if (instance != this)
-            {
-                Destroy(this.gameObject);
-            }
+            Destroy(this.gameObject);
         }
         bgmPlayer = gameObject.AddComponent<AudioSource>();
         bgmPlayer.loop = true;
@@ -68,11 +65,13 @@ public class SoundManager : MonoBehaviour
 
     public void SetBgmVolume(float _volume)
     {
+        SaveManager.instance.SetData(Strings.bgmVolume, _volume);
         bgmPlayer.volume = _volume;
     }
 
     public void SetSfxVolume(float _volume)
     {
+        SaveManager.instance.SetData(Strings.sfxVolume, _volume);
         for (int i = 0; i < (int)SFX.ENUM_SIZE; i++)
         {
             sfxPlayers[i].volume = _volume;

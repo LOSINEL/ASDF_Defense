@@ -30,6 +30,17 @@ public class TeamManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        for (int i = 0; i < teamSize; i++)
+        {
+            if (SaveManager.instance.CheckHasKey($"Team{i.ToString()}"))
+            {
+                teamCharacters[i] = CharacterDatas.GetValue((Enums.CHAR_TYPE)SaveManager.instance.LoadDataInt($"Team{i.ToString()}"));
+            }
+        }
+    }
+
     public void SelectCastleCharacter(int _charType)
     {
         selectedCastleCharacter = _charType;
@@ -38,8 +49,7 @@ public class TeamManager : MonoBehaviour
     public void ChangeCharacter(int _index)
     {
         Enums.CHAR_TYPE charType = (Enums.CHAR_TYPE)selectedCastleCharacter;
-        if (selectedCastleCharacter == -1) return;
         teamCharacters[_index] = charactersDatas.GetValue(charType);
-        selectedCastleCharacter = -1;
+        SaveManager.instance.SetData($"Team{_index.ToString()}", (int)charType);
     }
 }

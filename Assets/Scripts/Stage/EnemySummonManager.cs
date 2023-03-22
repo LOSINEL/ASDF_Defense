@@ -132,7 +132,7 @@ public class EnemySummonManager : MonoBehaviour
 
     public Vector3 GetRandomPosition()
     {
-        Vector3 tmpPos = new Vector3(0f, Random.Range(-40f, 40f), 0f);
+        Vector3 tmpPos = new (0f, Random.Range(-40f, 40f), 0f);
         return tr.position + tmpPos;
     }
 

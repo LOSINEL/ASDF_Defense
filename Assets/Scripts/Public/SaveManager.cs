@@ -15,22 +15,49 @@ public class SaveManager : MonoBehaviour
         }
         else
         {
-            if (instance != this)
-            {
-                Destroy(this.gameObject);
-            }
+            Destroy(this.gameObject);
         }
     }
 
-    private void Start()
+    public void SetData(string key, int value)
     {
+        PlayerPrefs.SetInt(key, value);
+    }
+
+    public void SetData(string key, float value)
+    {
+        PlayerPrefs.SetFloat(key, value);
     }
 
     public void SaveData()
     {
+        PlayerPrefs.Save();
     }
 
-    public void LoadData()
+    public int LoadDataInt(string key)
     {
+        return PlayerPrefs.GetInt(key);
+    }
+
+    public float LoadDataFloat(string key)
+    {
+        return PlayerPrefs.GetFloat(key);
+    }
+
+    public void DeleteAllData()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
+    public bool CheckHasKey(string key)
+    {
+        if (PlayerPrefs.HasKey(key))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

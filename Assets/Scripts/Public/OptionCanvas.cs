@@ -32,6 +32,38 @@ public class OptionCanvas : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (SaveManager.instance.CheckHasKey(Strings.bgmVolumeBarNum))
+        {
+            ActivateBgmVolumeBar(SaveManager.instance.LoadDataInt(Strings.bgmVolumeBarNum));
+        }
+        if (SaveManager.instance.CheckHasKey(Strings.sfxVolumeBarNum))
+        {
+            ActivateSfxVolumeBar(SaveManager.instance.LoadDataInt(Strings.sfxVolumeBarNum));
+        }
+    }
+
+    void ActivateBgmVolumeBar(int num)
+    {
+        int count = bgmVolumeBarGroup.transform.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            if (i >= num) bgmVolumeBarGroup.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        SoundManager.instance.SetBgmVolume(num * volumeBarScale);
+    }
+
+    void ActivateSfxVolumeBar(int num)
+    {
+        int count = sfxVolumeBarGroup.transform.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            if (i >= num) sfxVolumeBarGroup.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        SoundManager.instance.SetSfxVolume(num * volumeBarScale);
+    }
+
     public void SelectOptionWindowButton()
     {
         optionGrayWindow.SetActive(!optionGrayWindow.activeSelf);
@@ -52,6 +84,7 @@ public class OptionCanvas : MonoBehaviour
         if (bgmVolume == bgmVolumeBarGroup.transform.childCount) return;
         bgmVolumeBarGroup.transform.GetChild(bgmVolume).gameObject.SetActive(true);
         SoundManager.instance.SetBgmVolume(volumeBarScale * (bgmVolume + 1));
+        SaveManager.instance.SetData(Strings.bgmVolumeBarNum, CheckBgmVolumeBarNum());
     }
 
     public void SelectBgmVolumeDownButton()
@@ -60,6 +93,7 @@ public class OptionCanvas : MonoBehaviour
         if (bgmVolume == 0) return;
         bgmVolumeBarGroup.transform.GetChild(bgmVolume - 1).gameObject.SetActive(false);
         SoundManager.instance.SetBgmVolume(volumeBarScale * (bgmVolume - 1));
+        SaveManager.instance.SetData(Strings.bgmVolumeBarNum, CheckBgmVolumeBarNum());
     }
 
     public void SelectSfxVolumeUpButton()
@@ -68,6 +102,7 @@ public class OptionCanvas : MonoBehaviour
         if (sfxVolume == sfxVolumeBarGroup.transform.childCount) return;
         sfxVolumeBarGroup.transform.GetChild(sfxVolume).gameObject.SetActive(true);
         SoundManager.instance.SetSfxVolume(volumeBarScale * (sfxVolume + 1));
+        SaveManager.instance.SetData(Strings.sfxVolumeBarNum, CheckSfxVolumeBarNum());
     }
 
     public void SelectSfxVolumeDownButton()
@@ -76,6 +111,7 @@ public class OptionCanvas : MonoBehaviour
         if (sfxVolume == 0) return;
         sfxVolumeBarGroup.transform.GetChild(sfxVolume - 1).gameObject.SetActive(false);
         SoundManager.instance.SetSfxVolume(volumeBarScale * (sfxVolume - 1));
+        SaveManager.instance.SetData(Strings.sfxVolumeBarNum, CheckSfxVolumeBarNum());
     }
 
     int CheckBgmVolumeBarNum()

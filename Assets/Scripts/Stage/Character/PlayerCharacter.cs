@@ -34,24 +34,31 @@ public class PlayerCharacter : Hp
     private void Start()
     {
         _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
-        StartCoroutine(CharacterMove());
-        StartCoroutine(CheckEnemyList());
+        tr.position = SummonManager.instance.GetRandomPosition();
+        InitStat();
     }
 
     private void OnEnable()
     {
-        tr.position = SummonManager.instance.GetRandomPosition();
+        try
+        {
+            tr.position = SummonManager.instance.GetRandomPosition();
+        }
+        catch { }
         InitStat();
+        StartCoroutine(CharacterMove());
+        StartCoroutine(CheckEnemyList());
     }
 
     private void OnDisable()
     {
         enemies.Clear();
+        StopAllCoroutines();
     }
 
     IEnumerator CharacterMove()
     {
-        WaitForSeconds _moveTime = new WaitForSeconds(moveTime);
+        WaitForSeconds _moveTime = new(moveTime);
         while (true)
         {
             CheckEnemy();
@@ -65,7 +72,7 @@ public class PlayerCharacter : Hp
 
     IEnumerator CheckEnemyList()
     {
-        WaitForSeconds _checkTime = new WaitForSeconds(checkTime);
+        WaitForSeconds _checkTime = new (checkTime);
         while (true)
         {
             for (int i = enemies.Count - 1; i >= 0; i--)
