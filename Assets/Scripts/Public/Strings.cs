@@ -4,13 +4,10 @@ using UnityEngine;
 
 public static class Strings
 {
-    public static readonly string bgmVolume = "BgmVolume";
-    public static readonly string sfxVolume = "SfxVolume";
-    public static readonly string bgmVolumeBarNum = "BgmVolumeBarNum";
-    public static readonly string sfxVolumeBarNum = "SfxVolumeBarNum";
+    public static readonly string jsonPath = Application.persistentDataPath + "/Data.json";
 
-    public static readonly string gold = "Gold";
-    public static readonly string maxStage = "MaxStage";
-
-    public static readonly string manaLevel = "ManaLevel";
+    public const string bgmVolume = "BgmVolume";
+    public const string sfxVolume = "SfxVolume";
+    public const string bgmVolumeBarNum = "BgmVolumeBarNum";
+    public const string sfxVolumeBarNum = "SfxVolumeBarNum";
 }

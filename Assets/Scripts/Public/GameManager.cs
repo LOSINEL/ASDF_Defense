@@ -30,7 +30,19 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        SaveManager.instance.JsonCreate();
         LoadAllData();
+        StartCoroutine(AutoSave());
+    }
+
+    IEnumerator AutoSave()
+    {
+        WaitForSecondsRealtime waitTime = new(3f);
+        while (true)
+        {
+            yield return waitTime;
+            SaveAllData();
+        }
     }
 
     public void SetNowStage(int num)
@@ -83,41 +95,18 @@ public class GameManager : MonoBehaviour
 
     void SaveAllData()
     {
-        int characterDataCount = TeamManager.instance.CharacterDatas.Count;
-        string key;
-        for (int i = 0; i < characterDataCount; i++)
-        {
-            key = ((Enums.CHAR_TYPE)i).ToString();
-            SaveManager.instance.SetData(key, TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).Level);
-        }
-        SaveManager.instance.SetData(Strings.gold, _gold);
-        SaveManager.instance.SetData(Strings.maxStage, _maxStage);
         SaveManager.instance.SaveData();
     }
 
     void LoadAllData()
     {
-        int characterDataCount = TeamManager.instance.CharacterDatas.Count;
-        int tmp;
-        string key;
-        for (int i = 0; i < characterDataCount; i++)
+        if (!SaveManager.instance.JsonDataExist()) return;
+        for (int i = 0; i < Nums.characterNum; i++)
         {
-            tmp = 0;
-            key = ((Enums.CHAR_TYPE)i).ToString();
-            if (SaveManager.instance.CheckHasKey($"{((Enums.CHAR_TYPE)i).ToString()}"))
-            {
-                tmp = SaveManager.instance.LoadDataInt(key);
-            }
-            TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).InitStat(tmp);
+            TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).InitStat(SaveManager.instance.JsonLoad().characterLevelList[i]);
         }
-        if (SaveManager.instance.CheckHasKey(Strings.gold))
-        {
-            _gold = SaveManager.instance.LoadDataInt(Strings.gold);
-        }
-        if (SaveManager.instance.CheckHasKey(Strings.maxStage))
-        {
-            _maxStage = SaveManager.instance.LoadDataInt(Strings.maxStage);
-        }
+        _gold = SaveManager.instance.JsonLoad().gold;
+        _maxStage = SaveManager.instance.JsonLoad().maxStage;
     }
 
     private void OnApplicationQuit()

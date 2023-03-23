@@ -35,9 +35,9 @@ public class ManaManager : MonoBehaviour
 
     private void Start()
     {
-        if (SaveManager.instance.CheckHasKey(Strings.manaLevel))
+        if (SaveManager.instance.JsonDataExist())
         {
-            manaLevel = SaveManager.instance.LoadDataInt(Strings.manaLevel);
+            manaLevel = SaveManager.instance.JsonLoad().manaLevel;
             maxMana = 100 + manaLevel * 15 + ((manaLevel - 1) * (manaLevel - 1) + manaLevel) / 2;
             manaRecovery = 15 + manaLevel + ((manaLevel * manaLevel) + manaLevel) * 0.05f;
         }
@@ -54,7 +54,6 @@ public class ManaManager : MonoBehaviour
             manaRecovery += manaRecoveryUpgradeNum;
             RefreshUpgradeNum();
             ManaWindowText.instance.RefreshTexts();
-            SaveManager.instance.SetData(Strings.manaLevel, manaLevel);
         }
     }
 

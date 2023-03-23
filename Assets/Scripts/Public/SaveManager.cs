@@ -1,13 +1,15 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager instance;
 
-    const string jsonPath = "Assets/Data.json";
+    [SerializeField] Data data = new();
 
     private void Awake()
     {
@@ -22,32 +24,59 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    void JsonSave() // gold, maxStage, 캐릭터 레벨 저장
+    private void Start()
     {
-        Debug.Log("HI1");
-        Data data = new();
-        if (!File.Exists(jsonPath))
+        if (JsonDataExist())
         {
-            File.Create(jsonPath);
+            string str = File.ReadAllText(Strings.jsonPath, Encoding.UTF8);
+            data = JsonUtility.FromJson<Data>(str);
         }
-        Debug.Log("HI2");
-        for (int i = 0; i < TeamManager.instance.CharacterDatas.Count; i++)
-        {
-            data.characterLevelList.Add(TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).Level);
-        }
-        Debug.Log("HI3");
-        data.gold = GameManager.instance.Gold;
-        data.maxStage = GameManager.instance.MaxStage;
-        Debug.Log("HI4");
-        File.WriteAllText(jsonPath, JsonUtility.ToJson(data), System.Text.Encoding.UTF8);
-        Debug.Log("HI5");
     }
 
-    class Data
+    public void JsonCreate()
     {
-        public List<int> characterLevelList = new();
-        public int gold;
-        public int maxStage;
+        if (!JsonDataExist())
+        {
+            FileStream fileStream = new FileStream(Strings.jsonPath, FileMode.Create);
+            for (int i = 0; i < Nums.characterNum; i++)
+            {
+                data.characterLevelList.Add(0);
+            }
+            data.gold = 0;
+            data.maxStage = 1;
+            data.manaLevel = 0;
+            fileStream.Close();
+        }
+    }
+
+    void JsonSave() // gold, maxStage, manaLevel, 캐릭터 레벨 저장
+    {
+        if (!JsonDataExist()) return;
+        for (int i = 0; i < Nums.characterNum; i++)
+        {
+            data.characterLevelList[i] = (TeamManager.instance.CharacterDatas.GetValue((Enums.CHAR_TYPE)i).Level);
+        }
+        data.gold = GameManager.instance.Gold;
+        data.maxStage = GameManager.instance.MaxStage;
+        data.manaLevel = ManaManager.instance.ManaLevel;
+        File.WriteAllText(Strings.jsonPath, JsonUtility.ToJson(data), Encoding.UTF8);
+    }
+
+    public Data JsonLoad()
+    {
+        return data;
+    }
+
+    public bool JsonDataExist()
+    {
+        if (File.Exists(Strings.jsonPath))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void SetData(string key, int value)
@@ -79,6 +108,8 @@ public class SaveManager : MonoBehaviour
     public void DeleteAllData()
     {
         PlayerPrefs.DeleteAll();
+        File.Delete(Strings.jsonPath);
+        data.InitData();
     }
 
     public bool CheckHasKey(string key)
@@ -91,5 +122,25 @@ public class SaveManager : MonoBehaviour
         {
             return false;
         }
+    }
+}
+
+[System.Serializable]
+public class Data
+{
+    public List<int> characterLevelList = new();
+    public int gold;
+    public int maxStage;
+    public int manaLevel;
+
+    public void InitData()
+    {
+        for (int i = characterLevelList.Count - 1; i >= 0; i--)
+        {
+            characterLevelList.RemoveAt(i);
+        }
+        gold = 0;
+        maxStage = 1;
+        manaLevel = 0;
     }
 }
