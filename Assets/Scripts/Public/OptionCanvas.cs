@@ -12,7 +12,6 @@ public class OptionCanvas : MonoBehaviour
     [SerializeField] GameObject bgmVolumeBarGroup;
     [SerializeField] GameObject sfxVolumeBarGroup;
     [SerializeField] TMP_Dropdown frameSelectDropdown;
-    [SerializeField] float volumeBarScale;
     int[] fpsArr = { 60, 45, 30, 24 };
     float timeScale;
 
@@ -51,7 +50,7 @@ public class OptionCanvas : MonoBehaviour
         {
             if (i >= num) bgmVolumeBarGroup.transform.GetChild(i).gameObject.SetActive(false);
         }
-        SoundManager.instance.SetBgmVolume(num * volumeBarScale);
+        SoundManager.instance.SetBgmVolume(num * Nums.volumeBarScale);
     }
 
     void ActivateSfxVolumeBar(int num)
@@ -61,7 +60,7 @@ public class OptionCanvas : MonoBehaviour
         {
             if (i >= num) sfxVolumeBarGroup.transform.GetChild(i).gameObject.SetActive(false);
         }
-        SoundManager.instance.SetSfxVolume(num * volumeBarScale);
+        SoundManager.instance.SetSfxVolume(num * Nums.volumeBarScale);
     }
 
     public void SelectOptionWindowButton()
@@ -78,13 +77,18 @@ public class OptionCanvas : MonoBehaviour
         }
     }
 
+    public void SetSound()
+    {
+        SaveManager.instance.SetData(Strings.bgmVolumeBarNum, CheckBgmVolumeBarNum());
+        SaveManager.instance.SetData(Strings.sfxVolumeBarNum, CheckSfxVolumeBarNum());
+    }
+
     public void SelectBgmVolumeUpButton()
     {
         int bgmVolume = CheckBgmVolumeBarNum();
         if (bgmVolume == bgmVolumeBarGroup.transform.childCount) return;
         bgmVolumeBarGroup.transform.GetChild(bgmVolume).gameObject.SetActive(true);
-        SoundManager.instance.SetBgmVolume(volumeBarScale * (bgmVolume + 1));
-        SaveManager.instance.SetData(Strings.bgmVolumeBarNum, CheckBgmVolumeBarNum());
+        SoundManager.instance.SetBgmVolume(Nums.volumeBarScale * (bgmVolume + 1));
     }
 
     public void SelectBgmVolumeDownButton()
@@ -92,8 +96,7 @@ public class OptionCanvas : MonoBehaviour
         int bgmVolume = CheckBgmVolumeBarNum();
         if (bgmVolume == 0) return;
         bgmVolumeBarGroup.transform.GetChild(bgmVolume - 1).gameObject.SetActive(false);
-        SoundManager.instance.SetBgmVolume(volumeBarScale * (bgmVolume - 1));
-        SaveManager.instance.SetData(Strings.bgmVolumeBarNum, CheckBgmVolumeBarNum());
+        SoundManager.instance.SetBgmVolume(Nums.volumeBarScale * (bgmVolume - 1));
     }
 
     public void SelectSfxVolumeUpButton()
@@ -101,8 +104,7 @@ public class OptionCanvas : MonoBehaviour
         int sfxVolume = CheckSfxVolumeBarNum();
         if (sfxVolume == sfxVolumeBarGroup.transform.childCount) return;
         sfxVolumeBarGroup.transform.GetChild(sfxVolume).gameObject.SetActive(true);
-        SoundManager.instance.SetSfxVolume(volumeBarScale * (sfxVolume + 1));
-        SaveManager.instance.SetData(Strings.sfxVolumeBarNum, CheckSfxVolumeBarNum());
+        SoundManager.instance.SetSfxVolume(Nums.volumeBarScale * (sfxVolume + 1));
     }
 
     public void SelectSfxVolumeDownButton()
@@ -110,16 +112,15 @@ public class OptionCanvas : MonoBehaviour
         int sfxVolume = CheckSfxVolumeBarNum();
         if (sfxVolume == 0) return;
         sfxVolumeBarGroup.transform.GetChild(sfxVolume - 1).gameObject.SetActive(false);
-        SoundManager.instance.SetSfxVolume(volumeBarScale * (sfxVolume - 1));
-        SaveManager.instance.SetData(Strings.sfxVolumeBarNum, CheckSfxVolumeBarNum());
+        SoundManager.instance.SetSfxVolume(Nums.volumeBarScale * (sfxVolume - 1));
     }
 
-    int CheckBgmVolumeBarNum()
+    public int CheckBgmVolumeBarNum()
     {
         return bgmVolumeBarGroup.GetComponentsInChildren<Image>().Length;
     }
 
-    int CheckSfxVolumeBarNum()
+    public int CheckSfxVolumeBarNum()
     {
         return sfxVolumeBarGroup.GetComponentsInChildren<Image>().Length;
     }
@@ -127,5 +128,11 @@ public class OptionCanvas : MonoBehaviour
     public void ChangeGameFps()
     {
         Application.targetFrameRate = fpsArr[frameSelectDropdown.value];
+    }
+
+    private void OnApplicationQuit()
+    {
+        SetSound();
+        PlayerPrefs.Save();
     }
 }

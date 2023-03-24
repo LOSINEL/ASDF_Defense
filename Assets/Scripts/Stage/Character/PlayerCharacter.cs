@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCharacter : Hp
 {
-    const float moveTime = 0.04f;
+    const float moveTime = 0.033f;
     const float checkTime = 0.1f;
 
     [SerializeField] CharacterData characterData;

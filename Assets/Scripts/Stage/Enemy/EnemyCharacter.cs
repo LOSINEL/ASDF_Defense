@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyCharacter : Hp
 {
-    const float moveTime = 0.05f;
+    const float moveTime = 0.04f;
     const float checkTime = 0.1f;
 
     [SerializeField] EnemyData enemyData;

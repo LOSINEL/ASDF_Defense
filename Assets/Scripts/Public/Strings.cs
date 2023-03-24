@@ -6,8 +6,6 @@ public static class Strings
 {
     public static readonly string jsonPath = Application.persistentDataPath + "/Data.json";
 
-    public const string bgmVolume = "BgmVolume";
-    public const string sfxVolume = "SfxVolume";
     public const string bgmVolumeBarNum = "BgmVolumeBarNum";
     public const string sfxVolumeBarNum = "SfxVolumeBarNum";
 }

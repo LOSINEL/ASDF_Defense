@@ -6,10 +6,10 @@ using UnityEngine;
 public class CharacterData : ScriptableObject
 {
     [SerializeField] Sprite[] portraits;
-    [SerializeField] float damage;
-    [SerializeField] float maxHp;
-    [SerializeField] float moveSpeed;
-    [SerializeField] float attackSpeed;
+    float damage;
+    float maxHp;
+    float moveSpeed;
+    float attackSpeed;
     [SerializeField] float summonCost;
     [SerializeField] float summonCoolTime;
     [SerializeField] float superSummonCost;

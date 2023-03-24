@@ -92,6 +92,7 @@ public class SaveManager : MonoBehaviour
     public void SaveData()
     {
         JsonSave();
+        OptionCanvas.instance.SetSound();
         PlayerPrefs.Save();
     }
 

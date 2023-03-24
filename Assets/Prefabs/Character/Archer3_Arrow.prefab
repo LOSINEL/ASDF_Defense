@@ -102,7 +102,7 @@ MonoBehaviour:
   moveSpeed: 1000
   arrowNum: 2
   maxAttack: 4
-  waitTime: 0.05
+  waitTime: 0.033
 --- !u!61 &8995363148025400134
 BoxCollider2D:
   m_ObjectHideFlags: 0
