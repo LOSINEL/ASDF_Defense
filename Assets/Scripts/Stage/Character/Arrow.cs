@@ -50,8 +50,9 @@ public class Arrow : SingleAttack
         }
     }
 
-    public void InitArrow()
+    private void InitArrow()
     {
+        tr.SetAsFirstSibling();
         time = 0f;
     }
 

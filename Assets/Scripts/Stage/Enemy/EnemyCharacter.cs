@@ -40,11 +40,7 @@ public class EnemyCharacter : Hp
 
     private void OnEnable()
     {
-        try
-        {
-            tr.position = EnemySummonManager.instance.GetRandomPosition();
-        }
-        catch { }
+        tr.position = EnemySummonManager.instance.GetRandomPosition();
         InitStat();
         StartCoroutine(CharacterMove());
         StartCoroutine(CheckEnemyList());

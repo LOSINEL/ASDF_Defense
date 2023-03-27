@@ -136,10 +136,7 @@ public class Data
 
     public void InitData()
     {
-        for (int i = characterLevelList.Count - 1; i >= 0; i--)
-        {
-            characterLevelList.RemoveAt(i);
-        }
+        characterLevelList.Clear();
         gold = 0;
         maxStage = 1;
         manaLevel = 0;

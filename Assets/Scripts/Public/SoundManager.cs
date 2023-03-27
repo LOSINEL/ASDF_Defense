@@ -43,24 +43,9 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBGM(BGM _bgm)
     {
-        StopBGM();
+        bgmPlayer.Stop();
         bgmPlayer.clip = bgm[(int)_bgm];
         bgmPlayer.Play();
-    }
-
-    public void StopBGM()
-    {
-        bgmPlayer.Stop();
-    }
-
-    public void PauseBGM()
-    {
-        bgmPlayer.Pause();
-    }
-
-    public void ResumeBGM()
-    {
-        bgmPlayer.UnPause();
     }
 
     public void SetBgmVolume(float _volume)

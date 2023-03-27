@@ -40,11 +40,7 @@ public class PlayerCharacter : Hp
 
     private void OnEnable()
     {
-        try
-        {
-            tr.position = SummonManager.instance.GetRandomPosition();
-        }
-        catch { }
+        tr.position = SummonManager.instance.GetRandomPosition();
         InitStat();
         StartCoroutine(CharacterMove());
         StartCoroutine(CheckEnemyList());
@@ -86,7 +82,7 @@ public class PlayerCharacter : Hp
         }
     }
 
-    public void CheckEnemy()
+    void CheckEnemy()
     {
         if (enemies.Count > 0)
         {

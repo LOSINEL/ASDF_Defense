@@ -12,7 +12,7 @@ public class OptionCanvas : MonoBehaviour
     [SerializeField] GameObject bgmVolumeBarGroup;
     [SerializeField] GameObject sfxVolumeBarGroup;
     [SerializeField] TMP_Dropdown frameSelectDropdown;
-    int[] fpsArr = { 60, 45, 30, 24 };
+    int[] fpsArr = { 60, 45, 30, 20 };
     float timeScale;
 
     private void Awake()
