@@ -8,9 +8,6 @@ public class StageManaManager : MonoBehaviour
 {
     public static StageManaManager instance;
 
-    const float baseMaxMana = 100f;
-    const float baseManaRecovery = 5f;
-
     [SerializeField] TMP_Text manaText;
     [SerializeField] TMP_Text needManaText;
     [SerializeField] int manaLevel;
@@ -38,25 +35,39 @@ public class StageManaManager : MonoBehaviour
     {
         manaLevel = 1;
         nowMana = 0f;
-        maxMana = baseMaxMana + ManaManager.instance.MaxMana;
-        manaRecovery = baseManaRecovery + ManaManager.instance.ManaRecovery;
+        maxMana = ManaManager.instance.MaxMana;
+        manaRecovery = ManaManager.instance.ManaRecovery;
         RefreshNeedManaText();
     }
 
-    public void UpgradeMana() // 마나스톤 버튼
+    public void UpgradeMana()
     {
-        if (nowMana < maxMana * 0.5f) return;
-        nowMana -= maxMana * 0.5f;
-        manaLevel++;
-        manaRecovery += manaLevel + 2;
-        maxMana *= 1.5f;
-        RefreshNeedManaText();
+        if (nowMana >= maxMana * 0.5f)
+        {
+            nowMana -= maxMana * 0.5f;
+            manaLevel++;
+            manaRecovery += manaLevel + 2;
+            maxMana *= 1.5f;
+            RefreshNeedManaText();
+        }
     }
 
     public void UseMana(float _mana)
     {
         nowMana -= _mana;
         RefreshManaText();
+    }
+
+    public bool CheckEnoughMana(float _mana)
+    {
+        if (nowMana >= _mana)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void AddMana(float _mana)
@@ -95,6 +106,6 @@ public class StageManaManager : MonoBehaviour
 
     void RefreshNeedManaText()
     {
-        needManaText.text = $"MANA {(int)(maxMana / 2f)}";
+        needManaText.text = $"MANA {(int)(maxMana * 0.5f)}";
     }
 }

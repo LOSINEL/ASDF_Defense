@@ -16,6 +16,6 @@ public class UpgradeSelectButton : MonoBehaviour
     void SelectUpgradeCharacterButton()
     {
         UpgradeManager.instance.ActivateCharacterInfoWindow();
-        UpgradeManager.instance.SetCharacter(charType);
+        UpgradeManager.instance.SelectCharacter(charType);
     }
 }

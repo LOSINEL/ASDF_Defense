@@ -48,8 +48,7 @@ public class TeamManager : MonoBehaviour
 
     public void ChangeCharacter(int _index)
     {
-        Enums.CHAR_TYPE charType = (Enums.CHAR_TYPE)selectedCastleCharacter;
-        teamCharacters[_index] = charactersDatas.GetValue(charType);
-        SaveManager.instance.SetData($"Team{_index.ToString()}", (int)charType);
+        teamCharacters[_index] = charactersDatas.GetValue((Enums.CHAR_TYPE)selectedCastleCharacter);
+        SaveManager.instance.SetData($"Team{_index.ToString()}", selectedCastleCharacter);
     }
 }

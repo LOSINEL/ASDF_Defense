@@ -48,7 +48,7 @@ public class SummonButton : MonoBehaviour
 
     public void SummonCharacter()
     {
-        if (canSummon && StageManaManager.instance.NowMana >= summonCost)
+        if (canSummon && StageManaManager.instance.CheckEnoughMana(summonCost))
         {
             StageManaManager.instance.UseMana(summonCost);
             GameObject tmpObj = SummonManager.instance.GetCharacter(slotNum);

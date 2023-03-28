@@ -16,10 +16,6 @@ public class ManaWindowText : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
-
-    private void Start()
-    {
         RefreshTexts();
     }
 

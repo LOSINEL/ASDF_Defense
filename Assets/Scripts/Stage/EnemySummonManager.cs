@@ -19,10 +19,10 @@ public class EnemySummonManager : MonoBehaviour
     [SerializeField] Transform[] enemyGroups = new Transform[5];
     [SerializeField] GameObject[] bossArr;
     [SerializeField] GameObject boss;
-    [SerializeField] int summonLimit;
+    [SerializeField] int summonLimitNum;
     [SerializeField] int summonedNum;
     GameObject stageBoss;
-    bool bossSummoned = false;
+    bool isBossSummoned = false;
     Transform tr;
     int bossNum;
     int summonLevel;
@@ -31,7 +31,7 @@ public class EnemySummonManager : MonoBehaviour
     Coroutine summonEnemy;
 
     public bool BossAlive { get { if (boss.GetComponent<Hp>().GetNowHp() > 0) return true; else return false; } }
-    public bool BossSummoned { get { return bossSummoned; } }
+    public bool BossSummoned { get { return isBossSummoned; } }
 
     private void Awake()
     {
@@ -50,7 +50,6 @@ public class EnemySummonManager : MonoBehaviour
         tr = transform;
         stageLevel = GameManager.instance.NowStage;
         summonLevel = stageLevel - 1;
-        if (summonLevel < 0) summonLevel = 0;
         SetEnemy();
         summonEnemy = StartCoroutine(PlaySummonEnemy());
     }
@@ -82,13 +81,13 @@ public class EnemySummonManager : MonoBehaviour
         {
             BossAlert.instance.PlayBossAlert();
             boss = Instantiate(stageBoss, GetRandomPosition(), Quaternion.identity);
-            bossSummoned = true;
+            isBossSummoned = true;
         }
     }
 
     void SummonEnemy()
     {
-        if (summonedNum >= summonLimit) return;
+        if (summonedNum >= summonLimitNum) return;
         summonedNum++;
         GameObject tmpObj;
         int groupRand = Random.Range(0, groupNum);

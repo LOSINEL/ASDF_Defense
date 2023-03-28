@@ -6,9 +6,9 @@ public class ManaManager : MonoBehaviour
 {
     public static ManaManager instance;
 
-    [SerializeField] int manaLevel = 0;
-    [SerializeField] float maxMana = 0f;
-    [SerializeField] float manaRecovery = 0f;
+    [SerializeField] int manaLevel;
+    [SerializeField] float maxMana;
+    [SerializeField] float manaRecovery;
     [SerializeField] float maxManaUpgradeNum;
     [SerializeField] float manaRecoveryUpgradeNum;
     [SerializeField] int upgradeGold;

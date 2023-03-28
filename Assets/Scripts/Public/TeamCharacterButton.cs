@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TeamCharacterButton : MonoBehaviour
 {
-    int charType;
+    int slotNum;
     Image backImage;
     Image buttonImage;
 
@@ -14,20 +14,20 @@ public class TeamCharacterButton : MonoBehaviour
     {
         backImage = GetComponentsInChildren<Image>()[1];
         buttonImage = GetComponent<Image>();
-        charType = transform.GetSiblingIndex();
+        slotNum = transform.GetSiblingIndex();
         GetComponent<Button>().onClick.AddListener(ChangeTeamCharacter);
         SetImage();
     }
 
     void ChangeTeamCharacter()
     {
-        TeamManager.instance.ChangeCharacter(charType);
+        TeamManager.instance.ChangeCharacter(slotNum);
         SetImage();
     }
 
     void SetImage()
     {
-        backImage.sprite = TeamManager.instance.TeamCharacters[charType].Portraits[(int)Enums.PORTRAIT_TYPE.BUTTON];
-        buttonImage.color = TeamManager.instance.PortraitBackgroundColors[(int)(TeamManager.instance.TeamCharacters[charType].CharType) / 3];
+        backImage.sprite = TeamManager.instance.TeamCharacters[slotNum].Portraits[(int)Enums.PORTRAIT_TYPE.BUTTON];
+        buttonImage.color = TeamManager.instance.PortraitBackgroundColors[(int)(TeamManager.instance.TeamCharacters[slotNum].CharType) / Nums.characterGradeNum];
     }
 }

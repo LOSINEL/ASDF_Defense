@@ -9,7 +9,7 @@ public class UpgradeManager : MonoBehaviour
 
     [SerializeField] GameObject characterInfoWindow;
 
-    [SerializeField] CharacterData characterData;
+    [SerializeField] CharacterData selectedCharacterData;
 
     [SerializeField] Image characterPortraitImage;
     [SerializeField] Text damageText;
@@ -30,32 +30,29 @@ public class UpgradeManager : MonoBehaviour
         InitWindow();
     }
 
-    private void Update()
+    public void SelectCharacter(Enums.CHAR_TYPE charType)
     {
+        selectedCharacterData = TeamManager.instance.CharacterDatas.GetValue(charType);
+        characterPortraitImage.sprite = selectedCharacterData.Portraits[(int)Enums.PORTRAIT_TYPE.MINI];
         RefreshWindow();
     }
 
-    public void SetCharacter(Enums.CHAR_TYPE charType)
+    public bool CheckUpgradable()
     {
-        characterData = TeamManager.instance.CharacterDatas.GetValue(charType);
-        characterPortraitImage.sprite = characterData.Portraits[(int)Enums.PORTRAIT_TYPE.MINI];
-    }
-
-    public bool GetUpgradable()
-    {
-        if (GameManager.instance.Gold >= characterData.UpgradeCost) return true;
+        if (GameManager.instance.Gold >= selectedCharacterData.UpgradeCost) return true;
         else return false;
     }
 
     public void UpgradeCharacter()
     {
-        GameManager.instance.SubGold(characterData.UpgradeCost);
-        characterData.Upgrade();
+        GameManager.instance.SubGold(selectedCharacterData.UpgradeCost);
+        selectedCharacterData.Upgrade();
+        RefreshWindow();
     }
 
-    public bool MaxLevel()
+    public bool CheckMaxLevel()
     {
-        if (characterData.Level >= upgradeLevelMax) return true;
+        if (selectedCharacterData.Level >= upgradeLevelMax) return true;
         else return false;
     }
 
@@ -63,11 +60,11 @@ public class UpgradeManager : MonoBehaviour
     {
         if (characterInfoWindow.activeSelf)
         {
-            damageText.text = $"데미지 : {characterData.Damage:F0}(+{(characterData.BaseDamage * characterData.UpgradePower):F1})";
-            maxHpText.text = $"Hp : {characterData.MaxHp:F0}(+{(characterData.BaseMaxHp * characterData.UpgradePower):F1})";
-            moveSpeedText.text = $"이동속도 : {characterData.MoveSpeed:F0}(+{(characterData.BaseMoveSpeed * characterData.UpgradePower):F2})";
-            attackSpeedText.text = $"공격속도 : {characterData.AttackSpeed:F2}(+{(characterData.BaseAttackSpeed * characterData.UpgradePower):F3})/s";
-            upgradeGoldText.text = $"{characterData.UpgradeCost} Gold";
+            damageText.text = $"데미지 : {selectedCharacterData.Damage:F0}(+{(selectedCharacterData.BaseDamage * selectedCharacterData.UpgradePower):F1})";
+            maxHpText.text = $"Hp : {selectedCharacterData.MaxHp:F0}(+{(selectedCharacterData.BaseMaxHp * selectedCharacterData.UpgradePower):F1})";
+            moveSpeedText.text = $"이동속도 : {selectedCharacterData.MoveSpeed:F0}(+{(selectedCharacterData.BaseMoveSpeed * selectedCharacterData.UpgradePower):F2})";
+            attackSpeedText.text = $"공격속도 : {selectedCharacterData.AttackSpeed:F2}(+{(selectedCharacterData.BaseAttackSpeed * selectedCharacterData.UpgradePower):F3})/s";
+            upgradeGoldText.text = $"{selectedCharacterData.UpgradeCost} Gold";
         }
     }
 
