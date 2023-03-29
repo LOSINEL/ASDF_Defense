@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : SingleAttack
+public class Arrow : SingleAttack, IFixedUpdate
 {
     [SerializeField] float moveSpeed;
     [SerializeField] int arrowNum;
     [SerializeField] int maxAttack;
-    [SerializeField] float waitTime;
     Transform tr;
     float time;
+    IFixedUpdate iFixedUpdate;
 
     private void Awake()
     {
+        iFixedUpdate = GetComponent<IFixedUpdate>();
         tr = transform;
         tr.rotation = Quaternion.Euler(new Vector3(0f, 0f, 90f));
     }
@@ -20,34 +21,32 @@ public class Arrow : SingleAttack
     private void OnEnable()
     {
         InitArrow();
-        StartCoroutine(PlayArrow());
+        FixedUpdateManager.instance.FixedUpdateList.Add(iFixedUpdate);
     }
 
-    IEnumerator PlayArrow()
+    private void OnDisable()
     {
-        WaitForSeconds _waitTime = new WaitForSeconds(waitTime);
-        while (true)
+        FixedUpdateManager.instance.FixedUpdateList.Remove(iFixedUpdate);
+    }
+
+    public void ManagedFixedUpdate()
+    {
+        tr.Translate(new Vector2(moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
+        if (Enemies.Count > 0)
         {
-            tr.Translate(new Vector2(moveSpeed * waitTime, 0f), Space.World);
-            if (Enemies.Count > 0)
+            for (int i = 0; i < Enemies.Count; i++)
             {
-                for (int i = 0; i < Enemies.Count; i++)
-                {
-                    if (i == maxAttack) break;
-                    Enemies[i].GetComponent<Hp>().SubHp(damage);
-                }
-                SoundManager.instance.PlaySFX(SoundManager.SFX.ARROW_ATTACK);
-                gameObject.SetActive(false);
-                yield break;
+                if (i == maxAttack) break;
+                Enemies[i].GetComponent<Hp>().SubHp(damage);
             }
-            if (time >= 1f)
-            {
-                gameObject.SetActive(false);
-                yield break;
-            }
-            time += waitTime;
-            yield return _waitTime;
+            SoundManager.instance.PlaySFX(SoundManager.SFX.ARROW_ATTACK);
+            gameObject.SetActive(false);
         }
+        if (time >= 1f)
+        {
+            gameObject.SetActive(false);
+        }
+        time += Time.fixedDeltaTime;
     }
 
     private void InitArrow()

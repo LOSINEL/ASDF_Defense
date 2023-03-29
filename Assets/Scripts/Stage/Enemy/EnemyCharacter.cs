@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCharacter : Hp
+public class EnemyCharacter : Hp, IFixedUpdate
 {
-    const float moveTime = 0.04f;
     const float checkTime = 0.1f;
 
     [SerializeField] EnemyData enemyData;
@@ -17,16 +16,22 @@ public class EnemyCharacter : Hp
     [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
+    protected Rigidbody2D rigid;
     protected float attackCooltimeRandomMin = 0.8f;
     protected float attackCooltimeRandomMax = 1.25f;
     protected float _attackCooltime;
+    IFixedUpdate iFixedUpdate;
+    float fixedDeltaTime;
 
     public float Damage { get { return damage; } }
     public List<GameObject> Enemies { get { return enemies; } }
 
     private void Awake()
     {
+        fixedDeltaTime = Time.fixedDeltaTime;
+        iFixedUpdate = GetComponent<IFixedUpdate>();
         tr = transform;
+        rigid = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
     }
@@ -40,14 +45,15 @@ public class EnemyCharacter : Hp
 
     private void OnEnable()
     {
+        FixedUpdateManager.instance.FixedUpdateList.Add(iFixedUpdate);
         tr.position = EnemySummonManager.instance.GetRandomPosition();
         InitStat();
-        StartCoroutine(CharacterMove());
         StartCoroutine(CheckEnemyList());
     }
 
     private void OnDisable()
     {
+        FixedUpdateManager.instance.FixedUpdateList.Remove(iFixedUpdate);
         enemies.Clear();
         int gold = Random.Range(0, enemyData.Gold + 1);
         GameManager.instance.AddStageGold(gold);
@@ -56,26 +62,12 @@ public class EnemyCharacter : Hp
         StopAllCoroutines();
     }
 
-    private void FixedUpdate()
+    public void ManagedFixedUpdate()
     {
         CheckEnemy();
         if (!isEnemyChecked)
         {
             Move();
-        }
-    }
-
-    IEnumerator CharacterMove()
-    {
-        WaitForSeconds _moveTime = new WaitForSeconds(moveTime);
-        while (true)
-        {
-            CheckEnemy();
-            if (!isEnemyChecked)
-            {
-                Move();
-            }
-            yield return _moveTime;
         }
     }
 
@@ -109,7 +101,7 @@ public class EnemyCharacter : Hp
 
     void InitStat()
     {
-        moveSpeed = enemyData.MoveSpeed;
+        moveSpeed = enemyData.MoveSpeed * fixedDeltaTime;
         attackSpeed = enemyData.AttackSpeed;
         if (attackSpeed > 0f)
         {
@@ -127,6 +119,6 @@ public class EnemyCharacter : Hp
 
     void Move()
     {
-        tr.Translate(moveSpeed * moveTime, 0f, 0f);
+        rigid.MovePosition(rigid.position + new Vector2(moveSpeed, 0f));
     }
 }

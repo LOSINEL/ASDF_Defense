@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharacter : Hp
+public class PlayerCharacter : Hp, IFixedUpdate
 {
-    const float moveTime = 0.033f;
     const float checkTime = 0.1f;
 
     [SerializeField] CharacterData characterData;
@@ -17,16 +16,22 @@ public class PlayerCharacter : Hp
     [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
+    protected Rigidbody2D rigid;
     protected float attackCooltimeRandomMin = 0.8f;
     protected float attackCooltimeRandomMax = 1.25f;
     protected float _attackCooltime;
+    IFixedUpdate iFixedUpdate;
+    float fixedDeltaTime;
 
     public float Damage { get { return damage; } }
     public List<GameObject> Enemies { get { return enemies; } }
 
     private void Awake()
     {
+        fixedDeltaTime = Time.fixedDeltaTime;
+        iFixedUpdate = GetComponent<IFixedUpdate>();
         tr = transform;
+        rigid = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
     }
@@ -40,29 +45,25 @@ public class PlayerCharacter : Hp
 
     private void OnEnable()
     {
+        FixedUpdateManager.instance.FixedUpdateList.Add(iFixedUpdate);
         tr.position = SummonManager.instance.GetRandomPosition();
         InitStat();
-        StartCoroutine(CharacterMove());
         StartCoroutine(CheckEnemyList());
     }
 
     private void OnDisable()
     {
+        FixedUpdateManager.instance.FixedUpdateList.Remove(iFixedUpdate);
         enemies.Clear();
         StopAllCoroutines();
     }
 
-    IEnumerator CharacterMove()
+    public void ManagedFixedUpdate()
     {
-        WaitForSeconds _moveTime = new(moveTime);
-        while (true)
+        CheckEnemy();
+        if (!isEnemyChecked)
         {
-            CheckEnemy();
-            if (!isEnemyChecked)
-            {
-                Move();
-            }
-            yield return _moveTime;
+            Move();
         }
     }
 
@@ -96,12 +97,12 @@ public class PlayerCharacter : Hp
 
     void Move()
     {
-        tr.Translate(moveSpeed * moveTime, 0f, 0f);
+        rigid.MovePosition(rigid.position + new Vector2(moveSpeed, 0f));
     }
 
     void InitStat()
     {
-        moveSpeed = characterData.MoveSpeed;
+        moveSpeed = characterData.MoveSpeed * fixedDeltaTime;
         attackSpeed = characterData.AttackSpeed;
         if (attackSpeed > 0f)
         {

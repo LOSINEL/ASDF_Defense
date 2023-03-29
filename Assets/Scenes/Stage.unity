@@ -787,7 +787,7 @@ Transform:
   m_Children:
   - {fileID: 1370262646}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &131352289
 BoxCollider2D:
@@ -798,7 +798,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 131352286}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -846,7 +846,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1608,7 +1608,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4355212989596315508, guid: c7f687cd22984c74b99b1334a56fccd7, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4355212989596315508, guid: c7f687cd22984c74b99b1334a56fccd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2337,7 +2337,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 366984253}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2385,7 +2385,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2423,7 +2423,7 @@ Transform:
   - {fileID: 1164297648}
   - {fileID: 553025345}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &368823731
 MonoBehaviour:
@@ -2925,7 +2925,7 @@ Transform:
   - {fileID: 76020135}
   - {fileID: 484247013}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &520129346
 MonoBehaviour:
@@ -3021,7 +3021,7 @@ Transform:
   - {fileID: 1150750329}
   - {fileID: 1419079419}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &569620155
 MonoBehaviour:
@@ -5753,7 +5753,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1155766234
 MonoBehaviour:
@@ -6191,7 +6191,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1299981065
 MonoBehaviour:
@@ -7501,6 +7501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1698720471}
   - {fileID: 1865082324}
   - {fileID: 368823730}
   - {fileID: 1299981064}
@@ -8893,7 +8894,7 @@ Transform:
   - {fileID: 1076727418}
   - {fileID: 1684191078}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1665360634
 MonoBehaviour:
@@ -8908,7 +8909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageLevel: 0
-  summonTime: 4
+  summonTime: 0.1
   minSummonNum: 1
   maxSummonNum: 5
   summonAddTime: 21
@@ -9116,7 +9117,7 @@ MonoBehaviour:
   - {fileID: 5063405437784689664, guid: 1ed43ec979c73644584294995786fcc9, type: 3}
   - {fileID: 2263085982431923671, guid: 8d40aa02d25b2ab44826d529b41e344f, type: 3}
   boss: {fileID: 0}
-  summonLimit: 40
+  summonLimitNum: 100
   summonedNum: 0
 --- !u!1 &1668918582
 GameObject:
@@ -9452,6 +9453,50 @@ Transform:
   m_Father: {fileID: 1665360633}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1698720470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1698720471}
+  - component: {fileID: 1698720472}
+  m_Layer: 0
+  m_Name: FixedUpdateManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1698720471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698720470}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1446148293}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1698720472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698720470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064b6f0b0dae8f445a5daae5b5f63b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1704508635
 GameObject:
   m_ObjectHideFlags: 0
@@ -9725,7 +9770,7 @@ Transform:
   - {fileID: 756957899}
   - {fileID: 369380745}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1733104717
 MonoBehaviour:
@@ -9739,7 +9784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55907513d9c89d745ba1ca6e897bfb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: 70
+  arrowNum: 100
   arrows:
   - {fileID: 3518270113422312571, guid: c7f746ce37a68e646bc49fb5387c30db, type: 3}
   - {fileID: 540270789515710607, guid: b302fe5412ddb6f4ba5ab13f3ca887a0, type: 3}
@@ -10063,7 +10108,7 @@ Transform:
   m_Children:
   - {fileID: 1094731943}
   m_Father: {fileID: 1446148293}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1865082325
 MonoBehaviour:
