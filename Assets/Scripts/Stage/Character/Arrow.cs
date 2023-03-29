@@ -8,12 +8,16 @@ public class Arrow : SingleAttack, IFixedUpdate
     [SerializeField] int arrowNum;
     [SerializeField] int maxAttack;
     Transform tr;
+    Rigidbody2D rigid;
     float time;
     IFixedUpdate iFixedUpdate;
+    float fixedDeltaTime;
 
     private void Awake()
     {
+        fixedDeltaTime = Time.fixedDeltaTime;
         iFixedUpdate = GetComponent<IFixedUpdate>();
+        rigid = GetComponent<Rigidbody2D>();
         tr = transform;
         tr.rotation = Quaternion.Euler(new Vector3(0f, 0f, 90f));
     }
@@ -31,7 +35,7 @@ public class Arrow : SingleAttack, IFixedUpdate
 
     public void ManagedFixedUpdate()
     {
-        tr.Translate(new Vector2(moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
+        rigid.MovePosition(rigid.position + new Vector2(moveSpeed * fixedDeltaTime, 0f));
         if (Enemies.Count > 0)
         {
             for (int i = 0; i < Enemies.Count; i++)
@@ -46,7 +50,7 @@ public class Arrow : SingleAttack, IFixedUpdate
         {
             gameObject.SetActive(false);
         }
-        time += Time.fixedDeltaTime;
+        time += fixedDeltaTime * TimeManager.instance.TimeScale;
     }
 
     private void InitArrow()

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7841216297226089246}
   - component: {fileID: 7841216297226089244}
   - component: {fileID: -1255508782537883264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EWarrior4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7841216298828828584}
   - component: {fileID: 7841216298828828587}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 7841216299032274186}
   - component: {fileID: 7841216299032274188}
   - component: {fileID: 7841216299032274189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 7841216299239582180}
   - component: {fileID: 7841216299239582183}
   - component: {fileID: 1072560560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

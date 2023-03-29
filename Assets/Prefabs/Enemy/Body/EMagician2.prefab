@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6359000852888099150}
   - component: {fileID: 6359000852888099151}
   - component: {fileID: 1805298179580806067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EMagician2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 6359000854009650918}
   - component: {fileID: 6359000854009650913}
   - component: {fileID: 1363632852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 6359000854129740285}
   - component: {fileID: 6359000854129740287}
   - component: {fileID: 6359000854129740284}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6359000854398395484}
   - component: {fileID: 6359000854398395487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

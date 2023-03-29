@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172204149575925681}
   - component: {fileID: 1172204149575925646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1172204149776266620}
   - component: {fileID: 1172204149776266623}
   - component: {fileID: 4236589357615797171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EDefender3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 1172204150723973876}
   - component: {fileID: 1172204150723973874}
   - component: {fileID: 1172204150723973877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

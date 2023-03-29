@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8045232648996286034}
   - component: {fileID: 5676904066398079387}
   - component: {fileID: 1287237036}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8812310963604896885}
   - component: {fileID: 8812310963604896886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 460166578728290220}
   - component: {fileID: 3813683017317745125}
   - component: {fileID: 5846860200013730168}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Magician3
   m_TagString: Character
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 8812310964448131030}
   - component: {fileID: 6371796933786697646}
   - component: {fileID: 1862059743484410975}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003079724204392740}
   - component: {fileID: 4003079724204392743}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Attack3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4003079724305627705}
   - component: {fileID: 5541256512049293108}
   - component: {fileID: 1204199314186608686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Magician3_Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003079724588919156}
   - component: {fileID: 4003079724588919159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Attack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003079724715205259}
   - component: {fileID: 4003079724715205258}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Attack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003079724820372029}
   - component: {fileID: 4003079724820372028}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Attack4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

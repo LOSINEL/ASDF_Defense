@@ -10,11 +10,11 @@ public class SpeedUpButton : MonoBehaviour
         SoundManager.instance.PlaySFX(SoundManager.SFX.BUTTON_CLICK);
         if (GetComponent<Toggle>().isOn)
         {
-            Time.timeScale = 2f;
+            TimeManager.instance.SetDoubleSpeed();
         }
         else
         {
-            Time.timeScale = 1f;
+            TimeManager.instance.SetNormalSpeed();
         }
     }
 }

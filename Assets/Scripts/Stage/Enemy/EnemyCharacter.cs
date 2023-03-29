@@ -119,6 +119,6 @@ public class EnemyCharacter : Hp, IFixedUpdate
 
     void Move()
     {
-        rigid.MovePosition(rigid.position + new Vector2(moveSpeed, 0f));
+        rigid.MovePosition(rigid.position + new Vector2(moveSpeed * TimeManager.instance.TimeScale, 0f));
     }
 }

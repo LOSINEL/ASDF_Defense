@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5363632924403517622}
   - component: {fileID: 5363632924403517617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5363632924703515759}
   - component: {fileID: 5363632924703515758}
   - component: {fileID: 1636038915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 5363632925131573681}
   - component: {fileID: 5363632925131573683}
   - component: {fileID: 5363632925131573680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 5363632925309682480}
   - component: {fileID: 5363632925309682486}
   - component: {fileID: -5079337279167394993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EWarrior5
   m_TagString: Enemy
   m_Icon: {fileID: 0}

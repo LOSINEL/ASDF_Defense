@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3049028800985175805}
   - component: {fileID: 3049028800985175806}
   - component: {fileID: -4126017472408972072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EArcher1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 3049028801253380972}
   - component: {fileID: 3049028801253380973}
   - component: {fileID: 3862734658956310323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3049028801772037112}
   - component: {fileID: 3049028801772037113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

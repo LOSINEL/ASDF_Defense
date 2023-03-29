@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2453632492499270808}
   - component: {fileID: 2453632492499270809}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2453632492563907209}
   - component: {fileID: 2453632492563907210}
   - component: {fileID: 871915372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2453632492929482599}
   - component: {fileID: 2453632492929482593}
   - component: {fileID: 2453632492929482592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 2453632493434990358}
   - component: {fileID: 2453632493434990357}
   - component: {fileID: -4469072659452643882}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EAssassin5
   m_TagString: Enemy
   m_Icon: {fileID: 0}

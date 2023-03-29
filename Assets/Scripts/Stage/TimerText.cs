@@ -18,18 +18,17 @@ public class TimerText : MonoBehaviour
 
     IEnumerator PlayTimer()
     {
-        int startTime = (int)Time.time;
-        int time;
+        float time = 0f;
         while (true)
         {
-            time = (int)Time.time - startTime;
+            time += refreshTime * TimeManager.instance.TimeScale;
             if (time % 60 < 10)
             {
-                timeText.text = $"{time / 60}:0{time % 60}";
+                timeText.text = $"{time / 60:f0}:0{time % 60:f0}";
             }
             else
             {
-                timeText.text = $"{time / 60}:{time % 60}";
+                timeText.text = $"{time / 60:f0}:{time % 60:f0}";
             }
             yield return waitRefreshTime;
         }

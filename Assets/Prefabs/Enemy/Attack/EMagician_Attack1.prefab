@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3603619827920657538}
   - component: {fileID: 3603619827920657537}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3603619828070816866}
   - component: {fileID: 3603619828070816865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3603619828177115907}
   - component: {fileID: 3603619828177115906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 3603619828296782475}
   - component: {fileID: 3603619828296782472}
   - component: {fileID: 2949295283823009537}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EMagician_Attack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3603619828547721957}
   - component: {fileID: 3603619828547721956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

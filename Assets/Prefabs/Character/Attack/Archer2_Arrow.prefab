@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9027305665168930904}
   - component: {fileID: 7390956695154534437}
   - component: {fileID: 8439953273656825414}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Archer2_Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

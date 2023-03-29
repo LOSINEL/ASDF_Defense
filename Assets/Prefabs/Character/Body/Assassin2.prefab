@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2409832178550306957}
   - component: {fileID: 8070758636877108836}
   - component: {fileID: 527364227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2409832178654289997}
   - component: {fileID: 2409832178654289998}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 2409832179253001238}
   - component: {fileID: 3999912664715431684}
   - component: {fileID: 8720747875412424907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 4486417778393104488}
   - component: {fileID: 129667947929437973}
   - component: {fileID: -8354914746557407323}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Assassin2
   m_TagString: Character
   m_Icon: {fileID: 0}

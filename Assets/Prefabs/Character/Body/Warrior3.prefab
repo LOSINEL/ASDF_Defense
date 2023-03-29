@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6043666331822207156}
   - component: {fileID: 8138425852995476042}
   - component: {fileID: 5193616523321627377}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6043666332791555683}
   - component: {fileID: 6043666332791555682}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 6043666333183868136}
   - component: {fileID: 6043666333183868139}
   - component: {fileID: -635186165632251515}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Warrior3
   m_TagString: Character
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 4409837846913827398}
   - component: {fileID: 7018088812627882274}
   - component: {fileID: 1926631104}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

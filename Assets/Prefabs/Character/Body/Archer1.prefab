@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 801694709126587926}
   - component: {fileID: 1779075954795276228}
   - component: {fileID: 2127539797}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 7335730186794227896}
   - component: {fileID: -294683618496412646}
   - component: {fileID: -5520626805488406127}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Archer1
   m_TagString: Character
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7335730187173421619}
   - component: {fileID: 7335730187173421618}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

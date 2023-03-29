@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9092406410946156452}
   - component: {fileID: 9092406410946156455}
   - component: {fileID: -2273454055930642812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EAssassin2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 9092406411040223654}
   - component: {fileID: 9092406411040223655}
   - component: {fileID: 486492835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 9092406411067549211}
   - component: {fileID: 9092406411067549209}
   - component: {fileID: 9092406411067549208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9092406412812290920}
   - component: {fileID: 9092406412812290921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -21,7 +21,7 @@ public class PlayerCharacter : Hp, IFixedUpdate
     protected float attackCooltimeRandomMax = 1.25f;
     protected float _attackCooltime;
     IFixedUpdate iFixedUpdate;
-    float fixedDeltaTime;
+    protected float fixedDeltaTime;
 
     public float Damage { get { return damage; } }
     public List<GameObject> Enemies { get { return enemies; } }
@@ -97,7 +97,7 @@ public class PlayerCharacter : Hp, IFixedUpdate
 
     void Move()
     {
-        rigid.MovePosition(rigid.position + new Vector2(moveSpeed, 0f));
+        rigid.MovePosition(rigid.position + new Vector2(moveSpeed * TimeManager.instance.TimeScale, 0f));
     }
 
     void InitStat()

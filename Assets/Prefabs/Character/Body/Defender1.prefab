@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3690878338854559386}
   - component: {fileID: 6524088239220012094}
   - component: {fileID: 3398426757879806652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Defender1
   m_TagString: Character
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 2393747996601224688}
   - component: {fileID: 8078575725512689848}
   - component: {fileID: 1291593698}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2393747997150281140}
   - component: {fileID: 2393747997150281143}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
