@@ -2497,7 +2497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850b7f021c5660b4c83e05bc32b65396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackNum: 50
+  attackNum: 80
   magicianAttacks:
   - {fileID: 2783066734732562597, guid: 1d9576a8136f2f14a8adae10fc13d2ca, type: 3}
   - {fileID: 4807753185716100895, guid: dd49d71fdb8183941aa62124613a8f4a, type: 3}
@@ -2999,7 +2999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2ce9d91481bb6429733b24d871c0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: 35
+  arrowNum: 60
   arrows:
   - {fileID: 8695057871521147020, guid: 705b987fe984c1b4a8fe0fe73e7df508, type: 3}
   - {fileID: 8695057871521147020, guid: eb31925f161858449a3c2cf8f7eb71cd, type: 3}
@@ -5609,7 +5609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46be948e3fae8724bb885dca25a52679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refreshTime: 0.5
+  refreshTime: 0.1
 --- !u!1 &1059838583
 GameObject:
   m_ObjectHideFlags: 0
@@ -9181,7 +9181,7 @@ MonoBehaviour:
       - {fileID: 7300432555934155838, guid: 162fabd922fce9d4aa6cc43fe286aa76, type: 3}
       - {fileID: 7300432555934155838, guid: 162fabd922fce9d4aa6cc43fe286aa76, type: 3}
   summonNums: 4b0000005f00000064000000
-  summonSettingNums: 190000000f0000000a000000
+  summonSettingNums: 23000000140000000c000000
   summonNumTot: 100
   enemyGroups:
   - {fileID: 2033904237}
@@ -9194,7 +9194,7 @@ MonoBehaviour:
   - {fileID: 5063405437784689664, guid: 1ed43ec979c73644584294995786fcc9, type: 3}
   - {fileID: 2263085982431923671, guid: 8d40aa02d25b2ab44826d529b41e344f, type: 3}
   boss: {fileID: 0}
-  summonLimitNum: 80
+  summonLimitNum: 100
   summonedNum: 0
 --- !u!1 &1668918582
 GameObject:
@@ -9861,7 +9861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55907513d9c89d745ba1ca6e897bfb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: 100
+  arrowNum: 150
   arrows:
   - {fileID: 3518270113422312571, guid: c7f746ce37a68e646bc49fb5387c30db, type: 3}
   - {fileID: 540270789515710607, guid: b302fe5412ddb6f4ba5ab13f3ca887a0, type: 3}
@@ -10199,7 +10199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1621a602d7c5daf4680b6fe565fcd185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackNum: 40
+  attackNum: 50
   eMagicianAttack: {fileID: 3603619828296782484, guid: ce0879465afc44a4e84a90d3c8e0db91, type: 3}
   eMagicianAttackGroup: {fileID: 1094731943}
 --- !u!1 &1870874683

@@ -11,6 +11,7 @@ public class SummonManager : MonoBehaviour
     [SerializeField] Transform[] characterGroups = new Transform[8];
     Transform tr;
     int groupNum;
+    int[] randomYposArr = { -40, 0, 40 };
 
     public GameObject[] Characters { get { return characters; } }
 
@@ -40,7 +41,8 @@ public class SummonManager : MonoBehaviour
 
     public Vector3 GetRandomPosition()
     {
-        Vector3 tmpPos = new (0f, Random.Range(-40f, 40f), 0f);
+        int rand = randomYposArr[Random.Range(0, randomYposArr.Length)];
+        Vector3 tmpPos = new(0f, rand, 0f);
         return tr.position + tmpPos;
     }
 

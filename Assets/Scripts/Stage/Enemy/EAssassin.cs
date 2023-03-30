@@ -28,7 +28,7 @@ public class EAssassin : EnemyCharacter
         }
         else
         {
-            cooltimeCheck += Time.deltaTime;
+            cooltimeCheck += Time.deltaTime * TimeManager.instance.TimeScale;
         }
     }
 

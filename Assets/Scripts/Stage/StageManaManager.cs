@@ -86,13 +86,13 @@ public class StageManaManager : MonoBehaviour
     {
         while (true)
         {
-            if (nowMana + manaRecovery * manaRecoveryTime > maxMana)
+            if (nowMana + manaRecovery * manaRecoveryTime * TimeManager.instance.TimeScale > maxMana)
             {
                 nowMana = maxMana;
             }
             else
             {
-                nowMana += manaRecovery * manaRecoveryTime;
+                nowMana += manaRecovery * manaRecoveryTime * TimeManager.instance.TimeScale;
             }
             RefreshManaText();
             yield return recoveryTime;

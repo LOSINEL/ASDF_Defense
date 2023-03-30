@@ -7,13 +7,17 @@ public class EArrow : SingleAttack, IFixedUpdate
     [SerializeField] float moveSpeed;
     [SerializeField] int arrowNum;
     Transform tr;
+    Rigidbody2D rigid;
     float time;
     IFixedUpdate iFixedUpdate;
+    float fixedDeltaTime;
 
     private void Awake()
     {
+        fixedDeltaTime = Time.fixedDeltaTime;
         iFixedUpdate = GetComponent<IFixedUpdate>();
         tr = transform;
+        rigid = GetComponent<Rigidbody2D>();
         tr.rotation = Quaternion.Euler(new Vector3(0f, 0f, -90f));
     }
 
@@ -25,12 +29,13 @@ public class EArrow : SingleAttack, IFixedUpdate
 
     private void OnDisable()
     {
+        Enemies.Clear();
         FixedUpdateManager.instance.FixedUpdateList.Remove(iFixedUpdate);
     }
 
     public void ManagedFixedUpdate()
     {
-        tr.Translate(new Vector2(-moveSpeed * Time.fixedDeltaTime, 0f), Space.World);
+        rigid.MovePosition(rigid.position -= new Vector2(moveSpeed * fixedDeltaTime * TimeManager.instance.TimeScale, 0f));
         if (Enemies.Count > 0)
         {
             Enemies[0].GetComponent<Hp>().SubHp(damage);
@@ -41,7 +46,7 @@ public class EArrow : SingleAttack, IFixedUpdate
         {
             gameObject.SetActive(false);
         }
-        time += Time.fixedDeltaTime;
+        time += Time.fixedDeltaTime * TimeManager.instance.TimeScale;
     }
 
     public void InitArrow()

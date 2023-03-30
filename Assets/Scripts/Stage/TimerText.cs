@@ -22,14 +22,7 @@ public class TimerText : MonoBehaviour
         while (true)
         {
             time += refreshTime * TimeManager.instance.TimeScale;
-            if (time % 60 < 10)
-            {
-                timeText.text = $"{time / 60:f0}:0{time % 60:f0}";
-            }
-            else
-            {
-                timeText.text = $"{time / 60:f0}:{time % 60:f0}";
-            }
+            timeText.text = $"{time / 60:f0}:{time % 60:f0}";
             yield return waitRefreshTime;
         }
     }

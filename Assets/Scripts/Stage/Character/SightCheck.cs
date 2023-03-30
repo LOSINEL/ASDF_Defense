@@ -23,7 +23,7 @@ public class SightCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag(enemyTag))
+        if (collision.CompareTag(enemyTag))
         {
             playerCharacter.Enemies.Remove(collision.gameObject);
         }

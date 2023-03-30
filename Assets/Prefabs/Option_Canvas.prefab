@@ -4654,7 +4654,6 @@ MonoBehaviour:
   bgmVolumeBarGroup: {fileID: 520265165814479251}
   sfxVolumeBarGroup: {fileID: 520265164446684062}
   frameSelectDropdown: {fileID: 520265165225535295}
-  volumeBarScale: 0.1
 --- !u!1 &520265165999813419
 GameObject:
   m_ObjectHideFlags: 0

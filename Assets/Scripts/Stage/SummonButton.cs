@@ -73,7 +73,7 @@ public class SummonButton : MonoBehaviour
                 canSummon = true;
                 yield break;
             }
-            coolTime -= Time.deltaTime;
+            coolTime -= Time.deltaTime * TimeManager.instance.TimeScale;
             coolTimeImage.fillAmount = coolTime / summonCooltime;
             yield return null;
         }

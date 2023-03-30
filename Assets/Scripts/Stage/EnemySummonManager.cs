@@ -29,6 +29,7 @@ public class EnemySummonManager : MonoBehaviour
     int groupNum;
     int summonNum;
     Coroutine summonEnemy;
+    int[] randomYposArr = { -40, 0, 40 };
 
     public bool BossAlive { get { if (boss.GetComponent<Hp>().GetNowHp() > 0) return true; else return false; } }
     public bool BossSummoned { get { return isBossSummoned; } }
@@ -62,16 +63,23 @@ public class EnemySummonManager : MonoBehaviour
     IEnumerator PlaySummonEnemy()
     {
         int summonRand;
-        yield return new WaitForSeconds(summonTime);
+        float _summonTime = Random.Range(summonTime * 0.8f, summonTime * 1.25f);
+        float _time = 0f;
         while (true)
         {
-            summonRand = Random.Range(minSummonNum, minSummonNum + 2 + (int)StageManager.instance.GameTime / summonAddTime);
-            if (summonRand > maxSummonNum) summonRand = maxSummonNum;
-            for (int i = 0; i < summonRand; i++)
+            yield return null;
+            if (_time >= _summonTime)
             {
-                SummonEnemy();
+                summonRand = Random.Range(minSummonNum, minSummonNum + 2 + (int)StageManager.instance.GameTime / summonAddTime);
+                if (summonRand > maxSummonNum) summonRand = maxSummonNum;
+                for (int i = 0; i < summonRand; i++)
+                {
+                    SummonEnemy();
+                }
+                _time = 0f;
+                _summonTime = Random.Range(summonTime * 0.8f, summonTime * 1.25f);
             }
-            yield return new WaitForSeconds(Random.Range(summonTime * 0.8f, summonTime * 1.25f));
+            _time += TimeManager.instance.TimeScale * Time.deltaTime;
         }
     }
 
@@ -131,7 +139,8 @@ public class EnemySummonManager : MonoBehaviour
 
     public Vector3 GetRandomPosition()
     {
-        Vector3 tmpPos = new (0f, Random.Range(-40f, 40f), 0f);
+        int rand = randomYposArr[Random.Range(0, randomYposArr.Length)];
+        Vector3 tmpPos = new(0f, rand, 0f);
         return tr.position + tmpPos;
     }
 

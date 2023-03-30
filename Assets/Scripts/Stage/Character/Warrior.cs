@@ -29,7 +29,7 @@ public class Warrior : PlayerCharacter
         }
         else
         {
-            cooltimeCheck += Time.deltaTime;
+            cooltimeCheck += Time.deltaTime * TimeManager.instance.TimeScale;
         }
     }
 

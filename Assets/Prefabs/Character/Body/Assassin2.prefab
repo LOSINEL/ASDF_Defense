@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2409832178550306956}
   - component: {fileID: 2409832178550306957}
   - component: {fileID: 8070758636877108836}
-  - component: {fileID: 527364227}
   m_Layer: 3
   m_Name: SightRange
   m_TagString: Untagged
@@ -72,27 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f3ca07468dac4429e03ee5fde7a006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &527364227
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2409832178550306955}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &2409832178654289996
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +166,6 @@ GameObject:
   - component: {fileID: 2409832179253001237}
   - component: {fileID: 2409832179253001238}
   - component: {fileID: 3999912664715431684}
-  - component: {fileID: 8720747875412424907}
   m_Layer: 3
   m_Name: AttackRange
   m_TagString: Untagged
@@ -251,27 +228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   maxAttack: 2
---- !u!50 &8720747875412424907
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2409832179253001236}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &2409832179464933312
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +241,7 @@ GameObject:
   - component: {fileID: 4486417778393104488}
   - component: {fileID: 129667947929437973}
   - component: {fileID: -8354914746557407323}
+  - component: {fileID: 1482927770}
   m_Layer: 3
   m_Name: Assassin2
   m_TagString: Character
@@ -434,3 +391,24 @@ MonoBehaviour:
   cooltimeCheck: 0
   canAttack: 1
   weaponCollider: {fileID: 2409832179253001238}
+--- !u!50 &1482927770
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2409832179464933312}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

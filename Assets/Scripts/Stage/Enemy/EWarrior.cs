@@ -28,7 +28,7 @@ public class EWarrior : EnemyCharacter
         }
         else
         {
-            cooltimeCheck += Time.deltaTime;
+            cooltimeCheck += Time.deltaTime * TimeManager.instance.TimeScale;
         }
     }
 

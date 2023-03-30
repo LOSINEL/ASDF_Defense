@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 3536336171130701503}
   - component: {fileID: 6279315728005886880}
   - component: {fileID: -7565455313038447420}
+  - component: {fileID: 1113289767}
   m_Layer: 3
   m_Name: Archer3
   m_TagString: Character
@@ -245,6 +246,27 @@ MonoBehaviour:
   cooltimeCheck: 0
   canAttack: 1
   archerNum: 2
+--- !u!50 &1113289767
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538597846264908112}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7538597846602816085
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +278,6 @@ GameObject:
   - component: {fileID: 7538597846602816086}
   - component: {fileID: 7538597846602816087}
   - component: {fileID: 5757845642672721060}
-  - component: {fileID: 37709966}
   m_Layer: 3
   m_Name: SightRange
   m_TagString: Untagged
@@ -317,24 +338,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f3ca07468dac4429e03ee5fde7a006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &37709966
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7538597846602816085}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

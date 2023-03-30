@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3270378974320009657}
   - component: {fileID: 3270378974320009658}
   - component: {fileID: 5686320078366509654}
-  - component: {fileID: 6427824242836661533}
   m_Layer: 3
   m_Name: AttackRange
   m_TagString: Untagged
@@ -73,27 +72,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
---- !u!50 &6427824242836661533
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3270378974320009656}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &3270378974831109734
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +85,7 @@ GameObject:
   - component: {fileID: 5020760367739188520}
   - component: {fileID: 2272355294329554934}
   - component: {fileID: 1062050094643498433}
+  - component: {fileID: 594531165}
   m_Layer: 3
   m_Name: Magician2
   m_TagString: Character
@@ -257,6 +236,27 @@ MonoBehaviour:
   canAttack: 1
   weaponCollider: {fileID: 3270378974320009658}
   magicianNum: 1
+--- !u!50 &594531165
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270378974831109734}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3270378975046068760
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +352,6 @@ GameObject:
   - component: {fileID: 3637909493882027054}
   - component: {fileID: 4075561951742769214}
   - component: {fileID: 8786308699908855006}
-  - component: {fileID: 249096575}
   m_Layer: 3
   m_Name: SightRange
   m_TagString: Untagged
@@ -413,24 +412,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f3ca07468dac4429e03ee5fde7a006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &249096575
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8640544491317149127}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 6ff43a43d64808b4ba92e1bd174f21b3, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

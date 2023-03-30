@@ -30,12 +30,13 @@ public class Arrow : SingleAttack, IFixedUpdate
 
     private void OnDisable()
     {
+        Enemies.Clear();
         FixedUpdateManager.instance.FixedUpdateList.Remove(iFixedUpdate);
     }
 
     public void ManagedFixedUpdate()
     {
-        rigid.MovePosition(rigid.position + new Vector2(moveSpeed * fixedDeltaTime, 0f));
+        rigid.MovePosition(rigid.position + new Vector2(moveSpeed * fixedDeltaTime * TimeManager.instance.TimeScale, 0f));
         if (Enemies.Count > 0)
         {
             for (int i = 0; i < Enemies.Count; i++)
