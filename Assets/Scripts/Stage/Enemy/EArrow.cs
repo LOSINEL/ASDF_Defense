@@ -49,6 +49,12 @@ public class EArrow : SingleAttack, IFixedUpdate
         time += Time.fixedDeltaTime * TimeManager.instance.TimeScale;
     }
 
+    public void SetSortNum(int _sortNum)
+    {
+        GetComponent<SpriteRenderer>().sortingOrder = _sortNum;
+    }
+
+
     public void InitArrow()
     {
         time = 0f;

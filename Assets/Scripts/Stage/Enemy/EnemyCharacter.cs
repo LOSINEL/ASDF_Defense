@@ -1,27 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class EnemyCharacter : Hp, IFixedUpdate
 {
     const float checkTime = 0.1f;
 
     [SerializeField] EnemyData enemyData;
+    [SerializeField] List<GameObject> enemies = new();
     [SerializeField] float moveSpeed;
     [SerializeField] float attackSpeed;
-    [SerializeField] protected float attackCooltime;
     [SerializeField] float damage;
     [SerializeField] float recoverManaNum;
+    [SerializeField] protected float attackCooltime;
     [SerializeField] protected bool isEnemyChecked;
-    [SerializeField] List<GameObject> enemies = new();
     protected Animator animator;
     protected Transform tr;
     protected Rigidbody2D rigid;
     protected float attackCooltimeRandomMin = 0.8f;
     protected float attackCooltimeRandomMax = 1.25f;
     protected float _attackCooltime;
-    IFixedUpdate iFixedUpdate;
+    protected SortingGroup sortingGroup;
     float fixedDeltaTime;
+    IFixedUpdate iFixedUpdate;
 
     public float Damage { get { return damage; } }
     public List<GameObject> Enemies { get { return enemies; } }
@@ -34,12 +36,12 @@ public class EnemyCharacter : Hp, IFixedUpdate
         rigid = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        sortingGroup = GetComponent<SortingGroup>();
     }
 
     private void Start()
     {
         _attackCooltime = Random.Range(attackCooltime * attackCooltimeRandomMin, attackCooltime * attackCooltimeRandomMax);
-        tr.position = EnemySummonManager.instance.GetRandomPosition();
         InitStat();
     }
 
@@ -47,6 +49,7 @@ public class EnemyCharacter : Hp, IFixedUpdate
     {
         FixedUpdateManager.instance.FixedUpdateList.Add(iFixedUpdate);
         tr.position = EnemySummonManager.instance.GetRandomPosition();
+        sortingGroup.sortingOrder = EnemySummonManager.instance.SortNum;
         InitStat();
         StartCoroutine(CheckEnemyList());
     }

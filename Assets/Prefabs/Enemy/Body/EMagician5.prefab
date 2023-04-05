@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 7921148611764200395}
   - component: {fileID: 7921148611764200394}
   - component: {fileID: -1607416853169238417}
+  - component: {fileID: -3385533201163919914}
   m_Layer: 6
   m_Name: EMagician5
   m_TagString: Enemy
@@ -237,13 +238,13 @@ MonoBehaviour:
   nowHp: 0
   boxCollider: {fileID: 0}
   enemyData: {fileID: 11400000, guid: f9a172895bb9e604796b97eaa1313c52, type: 2}
+  enemies: []
   moveSpeed: 0
   attackSpeed: 0
-  attackCooltime: 0
   damage: 0
   recoverManaNum: 0
+  attackCooltime: 0
   isEnemyChecked: 0
-  enemies: []
   cooltimeCheck: 0
   canAttack: 1
   weaponCollider: {fileID: 7921148612608161865}
@@ -268,6 +269,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!210 &-3385533201163919914
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921148611764200389}
+  m_Enabled: 1
+  m_SortingLayerID: -229271567
+  m_SortingLayer: 1
+  m_SortingOrder: 0
 --- !u!1 &7921148612608161867
 GameObject:
   m_ObjectHideFlags: 0

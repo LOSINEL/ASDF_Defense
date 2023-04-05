@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 1500523147566685389}
   - component: {fileID: -108085226199660737}
   - component: {fileID: 1203818696}
+  - component: {fileID: 8667012873162244493}
   m_Layer: 3
   m_Name: Assassin3
   m_TagString: Character
@@ -381,13 +382,13 @@ MonoBehaviour:
   nowHp: 0
   boxCollider: {fileID: 0}
   characterData: {fileID: 11400000, guid: 7c35fbc9aefb938409ad3830524b0fb6, type: 2}
+  enemies: []
   moveSpeed: 0
   attackSpeed: 0
-  attackCooltime: 0
   damage: 0
-  isEnemyChecked: 0
+  attackCooltime: 0
   isSuper: 0
-  enemies: []
+  isEnemyChecked: 0
   cooltimeCheck: 0
   canAttack: 1
   weaponCollider: {fileID: 33423359565933051}
@@ -412,3 +413,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!210 &8667012873162244493
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33423359823383222}
+  m_Enabled: 1
+  m_SortingLayerID: 147961409
+  m_SortingLayer: 2
+  m_SortingOrder: 0

@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 2263085982431923670}
   - component: {fileID: -2396087088505878872}
   - component: {fileID: 7469750081617247273}
+  - component: {fileID: -3930986384244279596}
   m_Layer: 6
   m_Name: Boss3
   m_TagString: Enemy
@@ -291,13 +292,13 @@ MonoBehaviour:
   nowHp: 0
   boxCollider: {fileID: 0}
   enemyData: {fileID: 11400000, guid: 53ee5c2e75b0d4842b4f7551db292445, type: 2}
+  enemies: []
   moveSpeed: 0
   attackSpeed: 0
-  attackCooltime: 0
   damage: 0
   recoverManaNum: 0
+  attackCooltime: 0
   isEnemyChecked: 0
-  enemies: []
   cooltimeCheck: 0
   canAttack: 1
   weaponCollider: {fileID: 2263085980890425998}
@@ -355,6 +356,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!210 &-3930986384244279596
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263085982431923671}
+  m_Enabled: 1
+  m_SortingLayerID: -229271567
+  m_SortingLayer: 1
+  m_SortingOrder: 0
 --- !u!1 &2263085982543218518
 GameObject:
   m_ObjectHideFlags: 0

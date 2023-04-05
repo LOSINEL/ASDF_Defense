@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 3465172398385316597}
   - component: {fileID: 3465172398385316594}
   - component: {fileID: -4354689106802429462}
+  - component: {fileID: 8879625215169316001}
   m_Layer: 6
   m_Name: EArcher3
   m_TagString: Enemy
@@ -287,13 +288,13 @@ MonoBehaviour:
   nowHp: 0
   boxCollider: {fileID: 0}
   enemyData: {fileID: 11400000, guid: 5d5d33565d877214fb016036da72a0b9, type: 2}
+  enemies: []
   moveSpeed: 0
   attackSpeed: 0
-  attackCooltime: 0
   damage: 0
   recoverManaNum: 0
+  attackCooltime: 0
   isEnemyChecked: 0
-  enemies: []
   cooltimeCheck: 0
   canAttack: 1
   archerNum: 2
@@ -338,3 +339,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!210 &8879625215169316001
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3465172398385316595}
+  m_Enabled: 1
+  m_SortingLayerID: -229271567
+  m_SortingLayer: 1
+  m_SortingOrder: 0

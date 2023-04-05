@@ -7,32 +7,35 @@ public class EnemySummonManager : MonoBehaviour
 {
     public static EnemySummonManager instance;
 
-    [SerializeField] int stageLevel;
     [SerializeField] float summonTime;
+    [SerializeField] int stageLevel;
     [SerializeField] int minSummonNum;
     [SerializeField] int maxSummonNum;
     [SerializeField] int summonAddTime;
-    [SerializeField] SummonGroup[] summonGroups = new SummonGroup[9];
-    [SerializeField] int[] summonNums = new int[3];
-    [SerializeField] int[] summonSettingNums = new int[3];
     [SerializeField] int summonNumTot = 0;
-    [SerializeField] Transform[] enemyGroups = new Transform[5];
-    [SerializeField] GameObject[] bossArr;
-    [SerializeField] GameObject boss;
     [SerializeField] int summonLimitNum;
     [SerializeField] int summonedNum;
+    [SerializeField] int[] summonNums = new int[3];
+    [SerializeField] int[] summonSettingNums = new int[3];
+    [SerializeField] SummonGroup[] summonGroups = new SummonGroup[9];
+    [SerializeField] Transform[] enemyGroups = new Transform[5];
+    [SerializeField] GameObject boss;
+    [SerializeField] GameObject[] bossArr;
     GameObject stageBoss;
-    bool isBossSummoned = false;
     Transform tr;
+    bool isBossSummoned = false;
     int bossNum;
     int summonLevel;
     int groupNum;
     int summonNum;
-    Coroutine summonEnemy;
+    int sortNum;
     int[] randomYposArr = { -40, 0, 40 };
+    Coroutine summonEnemy;
 
     public bool BossAlive { get { if (boss.GetComponent<Hp>().GetNowHp() > 0) return true; else return false; } }
     public bool BossSummoned { get { return isBossSummoned; } }
+
+    public int SortNum { get { return Nums.enemySortNumBase - sortNum * 2; } }
 
     private void Awake()
     {
@@ -139,7 +142,8 @@ public class EnemySummonManager : MonoBehaviour
 
     public Vector3 GetRandomPosition()
     {
-        int rand = randomYposArr[Random.Range(0, randomYposArr.Length)];
+        sortNum = Random.Range(0, randomYposArr.Length);
+        int rand = randomYposArr[sortNum];
         Vector3 tmpPos = new(0f, rand, 0f);
         return tr.position + tmpPos;
     }

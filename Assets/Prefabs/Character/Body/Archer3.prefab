@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 6279315728005886880}
   - component: {fileID: -7565455313038447420}
   - component: {fileID: 1113289767}
+  - component: {fileID: -6454810576010323425}
   m_Layer: 3
   m_Name: Archer3
   m_TagString: Character
@@ -236,13 +237,13 @@ MonoBehaviour:
   nowHp: 0
   boxCollider: {fileID: 0}
   characterData: {fileID: 11400000, guid: d90928e46a557fd4e96039cbefa54f23, type: 2}
+  enemies: []
   moveSpeed: 0
   attackSpeed: 0
-  attackCooltime: 0
   damage: 0
-  isEnemyChecked: 0
+  attackCooltime: 0
   isSuper: 0
-  enemies: []
+  isEnemyChecked: 0
   cooltimeCheck: 0
   canAttack: 1
   archerNum: 2
@@ -267,6 +268,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!210 &-6454810576010323425
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538597846264908112}
+  m_Enabled: 1
+  m_SortingLayerID: 147961409
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &7538597846602816085
 GameObject:
   m_ObjectHideFlags: 0

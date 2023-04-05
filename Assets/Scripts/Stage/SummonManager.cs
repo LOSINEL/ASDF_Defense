@@ -11,9 +11,12 @@ public class SummonManager : MonoBehaviour
     [SerializeField] Transform[] characterGroups = new Transform[8];
     Transform tr;
     int groupNum;
+    int sortNum;
     int[] randomYposArr = { -40, 0, 40 };
 
     public GameObject[] Characters { get { return characters; } }
+
+    public int SortNum { get { return Nums.characterSortNumBase - sortNum * 2; } }
 
     private void Awake()
     {
@@ -41,7 +44,8 @@ public class SummonManager : MonoBehaviour
 
     public Vector3 GetRandomPosition()
     {
-        int rand = randomYposArr[Random.Range(0, randomYposArr.Length)];
+        sortNum = Random.Range(0, randomYposArr.Length);
+        int rand = randomYposArr[sortNum];
         Vector3 tmpPos = new(0f, rand, 0f);
         return tr.position + tmpPos;
     }

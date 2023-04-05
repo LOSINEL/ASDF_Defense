@@ -12,4 +12,8 @@ public static class Nums
 
     // 옵션창 BGM/SFX +- 선택시 볼륨 증감량 1f = 100%
     public const float volumeBarScale = 0.1f;
+
+    public const int characterSortNumBase = 8;
+
+    public const int enemySortNumBase = 7;
 }

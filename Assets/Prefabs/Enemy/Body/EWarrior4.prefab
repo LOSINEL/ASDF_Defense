@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7841216297226089246}
   - component: {fileID: 7841216297226089244}
   - component: {fileID: -1255508782537883264}
+  - component: {fileID: -591465390240556038}
   m_Layer: 6
   m_Name: EWarrior4
   m_TagString: Enemy
@@ -133,13 +134,13 @@ MonoBehaviour:
   nowHp: 0
   boxCollider: {fileID: 0}
   enemyData: {fileID: 11400000, guid: 63596ed6dbef6674fbadf82df9373775, type: 2}
+  enemies: []
   moveSpeed: 0
   attackSpeed: 0
-  attackCooltime: 0
   damage: 0
   recoverManaNum: 0
+  attackCooltime: 0
   isEnemyChecked: 0
-  enemies: []
   cooltimeCheck: 0
   canAttack: 1
   weaponCollider: {fileID: 7841216299239582183}
@@ -184,6 +185,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!210 &-591465390240556038
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841216297226089245}
+  m_Enabled: 1
+  m_SortingLayerID: -229271567
+  m_SortingLayer: 1
+  m_SortingOrder: 0
 --- !u!1 &7841216298828828585
 GameObject:
   m_ObjectHideFlags: 0
