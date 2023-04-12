@@ -26,13 +26,13 @@ public class SummonPortrait : MonoBehaviour
     {
         while(true)
         {
-            if (rectTransform.anchoredPosition.x - moveSpeed * Time.deltaTime <= 0f)
+            if (rectTransform.anchoredPosition.x - moveSpeed * Time.deltaTime * TimeManager.instance.TimeScale <= 0f)
             {
                 rectTransform.anchoredPosition = Vector3.zero;
                 SetSuperImage();
                 yield break;
             }
-            rectTransform.Translate(-1 * moveSpeed * Time.deltaTime, 0f, 0f);
+            rectTransform.Translate(-1 * moveSpeed * Time.deltaTime * TimeManager.instance.TimeScale, 0f, 0f);
             yield return null;
         }
     }
@@ -48,7 +48,7 @@ public class SummonPortrait : MonoBehaviour
                 StartCoroutine(AlphaDown());
                 yield break;
             }
-            color.a += Time.deltaTime * 2f;
+            color.a += Time.deltaTime * 2f * TimeManager.instance.TimeScale;
             image.color = color;
             yield return null;
         }
@@ -64,7 +64,7 @@ public class SummonPortrait : MonoBehaviour
                 Destroy(this.gameObject);
                 yield break;
             }
-            color.a -= Time.deltaTime * 2f;
+            color.a -= Time.deltaTime * 2f * TimeManager.instance.TimeScale;
             image.color = color;
             yield return null;
         }
